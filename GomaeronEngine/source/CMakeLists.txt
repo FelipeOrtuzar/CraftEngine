@@ -1,0 +1,2 @@
+add_subdirectory(GomaEngineLib)
+add_subdirectory(Examples)
