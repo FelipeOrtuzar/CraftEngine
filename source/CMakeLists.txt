@@ -1,0 +1,6 @@
+#add_subdirectory(grafica)
+#add_subdirectory(examples)
+#add_subdirectory(examples_cpp)
+#add_subdirectory(examples_libs)
+add_subdirectory(gomaengine)
+add_subdirectory(gomaengine_ex)
