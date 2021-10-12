@@ -1,26 +1,32 @@
+#pragma once
 
 #include <iostream>
+#include <SFML/Window.hpp>
+#include "texture.h"
 
 namespace gomaengine {
 
-	struct Vector_pos {
-		int pos_x;
-		int pos_y;
-	};
-	struct Texture {
-		std::string* path_to_texture;
-	};
+
+
+	//struct Input {
+	//	sf::Keyboard down;
+	//	sf::Keyboard up;
+	//	sf::Keyboard left;
+	//	sf::Keyboard right;
+	//};
 
 	class Model {
 		private:
-			Vector_pos position;
-			Texture texture;
+			sf::Vector2f position = sf::Vector2f(0.0, 0.0);
+			Texture texture = Texture("", Vector(0.0, 0.0), Vector(0.0, 0.0));
 		public:
-			Vector_pos get_Position();
-			Texture get_Path_to_texture();
-			void set_Position(Vector_pos _vector_pos);
-			void set_Path_to_texture(Texture _texture);
-			Model(Vector_pos _vector_pos, Texture _texture);
+			Vector get_position();
+			Texture get_texture();
+
+			void set_position(Vector _position);
+			void set_texture(Texture _texture);
+
+			Model(Vector _position, Texture _texture);
 
 	};
 	

@@ -1,17 +1,20 @@
-#include "model.h";
-#include <iostream>;
+#include "model.h"
+#include <iostream>
 
 namespace gomaengine {
 
-	Texture Model::get_Path_to_texture() { return texture; }
-	Vector_pos Model::get_Position() { return position; }
+	Model::Model(Vector _position, Texture _texture) {
+		position = sf::Vector2f(_position.x, _position.y);
+		texture = _texture;
+	};
 
-	void Model::set_Path_to_texture(Texture _texture) { texture = _texture; }
-	void Model::set_Position(Vector_pos _vector_pos) { this->position = _vector_pos; }
+
+	Texture Model::get_texture() { return texture; };
+	Vector Model::get_position() { return Vector(position.x, position.y); };
+
+	void Model::set_texture(Texture _texture) { texture = _texture; };
+	void Model::set_position(Vector _position) { position = sf::Vector2f(_position.x, _position.y); };
 
 
-	Model::Model(Vector_pos _vector_pos, Texture _texture) {
-		set_Path_to_texture(_texture);
-		set_Position(_vector_pos);
-	}
-}
+	
+};

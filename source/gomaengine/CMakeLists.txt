@@ -1,11 +1,13 @@
 set(GOMAENGINE_HEADERS
 	aplication.h
 	#model.h
+	#texture.h
  )
 
 set(GOMAENGINE_SOURCES
 	aplication.cpp
 	#model.cpp
+	#texture.cpp
  )
 
 add_library(gomaengine STATIC ${GOMAENGINE_SOURCES} ${GOMAENGINE_HEADERS} gomaengine.h)

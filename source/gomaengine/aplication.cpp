@@ -1,11 +1,12 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <SFML/System.hpp>
 #include <iostream>
 #include "aplication.h"
 #include "model.h"
 #include <string>
-
+#include "model.h"
 namespace gomaengine {
 
 
@@ -17,23 +18,33 @@ namespace gomaengine {
         sf::RenderWindow window(sf::VideoMode(window_app.window_size_x, window_app.window_size_y), "My window");
 
         //boo def
-        std::string boo_path = absolute_path + "imgs\\boo.png";
-        int boo_pos_x = 600.0; int boo_pos_y = 300.0;
-        int boo_scale = 3;
-        int boo_speed = 10;
+        std::string boo_path = absolute_path + "imgs\\CABALLO_2.png";
+        int boo_pos_x = 200.0; int boo_pos_y = 300.0;
+        int boo_scale = 4;
+        int boo_speed = 20;
+        int boo_dir = 1;
 
 
         // Cavalry heavy
-        std::string cavalry_heavy_path = absolute_path + "imgs\\cavalry_heavy.png";
-        int cavalry_heavy_pos_x = 400.0; int cavalry_heavy_pos_y = 200.0;
+        std::string cavalry_heavy_path = absolute_path + "imgs\\CABALLO_1.png";
+        int cavalry_heavy_pos_x = 600.0; int cavalry_heavy_pos_y = 200.0;
         int cavalry_heavy_scale = 4;
-        int cavalry_heavy_speed = 10;
+        int cavalry_heavy_speed = 20;
+        int cavalry_heavy_dir = 1;
+
+
+        //boo def
+        std::string tres_path = absolute_path + "imgs\\CABALLO_3.png";
+        int tres_pos_x = 200.0; int tres_pos_y = 300.0;
+        int tres_scale = 4;
+        int tres_speed = 20;
+        int tres_dir = 1;
 
 
         //UI
-        std::string rect_path = absolute_path + "imgs\\rectUI.png";
-        int rect_pos_x = 0.0; int rect_pos_y = 470.0;
-        int rect_scale = 1.5;
+        std::string rect_path = absolute_path + "imgs\\RECTANGULO_1.png";
+        int rect_pos_x = 0.0; int rect_pos_y = 450.0;
+        int rect_scale = 1.40;
         int rect_speed = 10;
 
         //Grass
@@ -45,10 +56,10 @@ namespace gomaengine {
 
 
         //Listener
-        int listener_pos_x = 300.0f; int listener_pos_y = 450.0f;
+        int listener_pos_x = 0.0f; int listener_pos_y = 0.0f;
         int listener_dir_x = 1.0f; int listener_dir_y = 1.0f;
-        sf::Listener::setPosition(listener_dir_x, listener_dir_y, 0.0f);
-        sf::Listener::setGlobalVolume(50.f);
+        sf::Listener::setPosition(listener_pos_x, listener_pos_y, 0.0f);
+        sf::Listener::setGlobalVolume(10.f);
 
         //SOUND
         sf::SoundBuffer buffer;
@@ -59,13 +70,14 @@ namespace gomaengine {
         sf::Sound sound;
         sound.setBuffer(buffer);
         sound.setPosition(cavalry_heavy_pos_x, cavalry_heavy_pos_y, 0.f);
-        
+        //sound.setAttenuation(10.f);
 
 
         //MUSIC
         sf::Music music;
         if (!music.openFromFile("C:\\Felipe\\Universidad\\Arquitectura de motores de juegos\\GomaeronEngine\\git\\assets\\sounds\\field_theme_1.wav"))
             printf("Could load music");
+        music.setLoop(true);
         music.play();
 
 
@@ -87,7 +99,7 @@ namespace gomaengine {
         text1.setString("Last input P1: None");
         // set the character size
         text1.setCharacterSize(24);
-        text1.setPosition(200.0, 520.0);
+        text1.setPosition(200.0, 500.0);
 
         //TEXTO2
         //fonts
@@ -99,16 +111,30 @@ namespace gomaengine {
         text2.setString("Last input P2: None");
         // set the character size
         text2.setCharacterSize(24);
-        text2.setPosition(500.0, 520.0);
+        text2.setPosition(500.0, 500.0);
+
+
+        //TEXTO3
+        sf::Text text3;
+        // select the font
+        text3.setFont(font); // font is a sf::Font
+        // set the string to display
+
+        text3.setString("FPS: None");
+        // set the character size
+        text3.setCharacterSize(24);
+        text3.setPosition(1050.0, 20.0);
 
 
 
-
+        sf::Time elapsed_time = sf::seconds(0);
 
 
         // run the program as long as the window is open
         while (window.isOpen())
         {
+            // Se toma el tiempo
+            sf::Clock clock;
             
             // check all the window's events that were triggered since the last iteration of the loop
             sf::Event event;
@@ -132,11 +158,13 @@ namespace gomaengine {
                     {
                         text1.setString("Last input P1: A");
                         boo_pos_x -= 1 * boo_speed;
+                        boo_dir = -1;
                     }
                     if (event.key.code == sf::Keyboard::D)
                     {
                         text1.setString("Last input P1: D");
                         boo_pos_x += 1 * boo_speed;
+                        boo_dir = 1;
                     }
                     if (event.key.code == sf::Keyboard::W)
                     {
@@ -148,18 +176,22 @@ namespace gomaengine {
                         text1.setString("Last input P1: S");
                         boo_pos_y += 1 * boo_speed;
                     }
+                    sf::Listener::setPosition(boo_pos_x, boo_pos_y, 0.0f);
+
 
                     // heavy cavalry
                     if (event.key.code == sf::Keyboard::Left)
                     {
                         text2.setString("Last input P2: Left");
                         cavalry_heavy_pos_x -= 1 * cavalry_heavy_speed;
+                        cavalry_heavy_dir = -1;
 
                     }
                     if (event.key.code == sf::Keyboard::Right)
                     {
                         text2.setString("Last input P2: Right");
                         cavalry_heavy_pos_x += 1 * cavalry_heavy_speed;
+                        cavalry_heavy_dir = 1;
                     }
                     if (event.key.code == sf::Keyboard::Up)
                     {
@@ -171,17 +203,24 @@ namespace gomaengine {
                         text2.setString("Last input P2: Down");
                         cavalry_heavy_pos_y += 1 * cavalry_heavy_speed;
                     }
-
-
+                    sound.setPosition(cavalry_heavy_pos_x, cavalry_heavy_pos_y, 0.f);
+                    //std::cout << "x: " << sound.getPosition().x << " y: " << sound.getPosition().y << "\n";
 
                     //listener_dir_x = boo_pos_x; listener_dir_y = boo_pos_y;
                     //sf::Listener::setPosition(listener_dir_x, listener_dir_y, 0.0f);
-                    sound.setRelativeToListener(true);
 
+                    //sound.setRelativeToListener(true);
                     if (event.key.code == sf::Keyboard::Space)
                     {
-                        
+                        sound.setRelativeToListener(true);
+                        int dif_x = boo_pos_x - cavalry_heavy_pos_x; int dif_y = boo_pos_y - cavalry_heavy_pos_y;
+                        int distance = std::sqrt(dif_x * dif_x + dif_y * dif_y);
+                        int total_distance = std::sqrt(window_app.window_size_x * window_app.window_size_x + window_app.window_size_y * window_app.window_size_y);
+                        float coef = (distance * 1.0) / (total_distance * 1.0);
+                        sound.setVolume(100.0 * (1.0 - coef));
                         sound.play();
+                        std::cout << "xS: " << sound.getPosition().x << " yS: " << sound.getPosition().y << "\n";
+                        std::cout << "xL: " << sf::Listener::getPosition().x << " y:: " << sf::Listener::getPosition().y << "\n";
                     }
                     
                     
@@ -218,8 +257,28 @@ namespace gomaengine {
             sf::Sprite boo_sprite;
             boo_sprite.setTexture(boo_texture);
             boo_sprite.setPosition(boo_pos_x, boo_pos_y);
-            boo_sprite.setScale(boo_scale, boo_scale);
+            //boo_sprite.setScale(boo_scale, boo_scale);
+            boo_sprite.setOrigin(10.0, 10.0);
+            boo_sprite.setScale(boo_scale* boo_dir, boo_scale);
+            
             window.draw(boo_sprite);
+
+
+            //SPRITE TRES
+            sf::Texture tres_texture;
+            if (!tres_texture.loadFromFile(tres_path)) {
+                printf("error");
+            }
+            sf::Sprite tres_sprite;
+            
+            tres_sprite.setTexture(tres_texture);
+            sf::Vector2i mouse_pos = sf::Mouse::getPosition();
+            tres_sprite.setPosition(mouse_pos.x * 1.0 - 90.0, mouse_pos.y * 1.0 - 100.0);
+            tres_sprite.setOrigin(10.0, 10.0);
+            tres_sprite.setScale(tres_scale * tres_dir, tres_scale);
+
+            window.draw(tres_sprite);
+
 
             // SPRITE CAVALRY 
             sf::Texture cavalry_heavy_texture;
@@ -229,7 +288,8 @@ namespace gomaengine {
             sf::Sprite cavalry_heavy_sprite;
             cavalry_heavy_sprite.setTexture(cavalry_heavy_texture);
             cavalry_heavy_sprite.setPosition(cavalry_heavy_pos_x, cavalry_heavy_pos_y);
-            cavalry_heavy_sprite.setScale(cavalry_heavy_scale, cavalry_heavy_scale);
+            cavalry_heavy_sprite.setScale(cavalry_heavy_scale * cavalry_heavy_dir, cavalry_heavy_scale);
+            cavalry_heavy_sprite.setOrigin(10.0, 10.0);
             window.draw(cavalry_heavy_sprite);
             
             // UI RECT
@@ -243,39 +303,31 @@ namespace gomaengine {
             rect_sprite.setScale(rect_scale*2.9, rect_scale);
             window.draw(rect_sprite);
 
-
-            
-
             //TEXT
             window.draw(text1);
             window.draw(text2);
-
-
-
+            window.draw(text3);
 
             window.display();
+
+            sf::Time elapsed_time = clock.getElapsedTime();
+            int fps_f =  (int) 1.0 / elapsed_time.asSeconds() ;
+
+
+            std::string fps_s = "FPS: "; std::string fps = std::to_string(fps_f);
+            text3.setString(fps_s + fps );
+            
         }
         printf("Update: Out\n");
         return 0;
 	}
 
-    //Aplication::Aplication(Window _window, Model_vect _model_vector) {
-	Aplication::Aplication(Window _window){
+    Aplication::Aplication(Window _window) {
+	//Aplication::Aplication(Window _window, std::map<std::string, Model> _model_map){
         printf("Constructor: 1\n");
 
-        //gomaengine::Window win = {window_size_x, window_size_y};
         this->window_app = _window;
-        //this->model_vector = _model_vector;
-        
-        /*for (int i = 0; i < path_list.size(); i++) {
-            sf::Texture texture;
-            if (!texture.loadFromFile(path_list.at(i))){
-                printf("error");
-            }
-            sf::Sprite sprite;
-            sprite.setTexture(texture);
-            spriteVector.push_back(sprite);
-        }*/
-        //printf("Constructor: 2\n");
+        //this->model_map = _model_map;
+       
 	}
 }

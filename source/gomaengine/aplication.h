@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
-//#include <gomaengine/model.h>
+#include "model.h"
 #include <vector>
 
 namespace gomaengine {
@@ -12,16 +12,17 @@ namespace gomaengine {
     };
     
     //struct Model_vect {
-    //    //std::map<Model>
-    //    std::vector<Model> model_vector;
+    //    std::map<Model>;
+    //    //std::vector<Model> model_vector;
     //};
 
     class Aplication {
         private:
             Window window_app;
+            //std::map<std::string, Model> model_map;
             //Model_vect model_vector;
         public:
-            //Aplication(Window _window, Model_vect _model_vector);
+            //Aplication(Window _window, std::map<std::string, Model> _model_map);
             Aplication(Window _window);
             int update();
     };
