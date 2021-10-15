@@ -8,7 +8,7 @@
 namespace Grafica
 {
 	
-static const char * const source_directory = "C:/Felipe/Universidad/Arquitectura de motores de juegos/GomaeronEngine/git/";
+static const char * const source_directory = "C:/uwu/hola/videotest/";
 
 static std::filesystem::path getPath(const std::string &relative_path){
 	return source_directory + relative_path;

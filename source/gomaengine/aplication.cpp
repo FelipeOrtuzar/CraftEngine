@@ -12,7 +12,7 @@ namespace gomaengine {
 
 	int Aplication::update() {
 
-        std::string absolute_path = "C:\\Felipe\\Universidad\\Arquitectura de motores de juegos\\GomaeronEngine\\git\\assets\\";
+        std::string absolute_path = "C:\\uwu\\hola\\videotest\\assets\\";
         //printf("update: 1\n");
         //sf::RenderWindow window = app.render_window;
         sf::RenderWindow window(sf::VideoMode(window_app.window_size_x, window_app.window_size_y), "My window");
@@ -75,7 +75,7 @@ namespace gomaengine {
 
         //MUSIC
         sf::Music music;
-        if (!music.openFromFile("C:\\Felipe\\Universidad\\Arquitectura de motores de juegos\\GomaeronEngine\\git\\assets\\sounds\\field_theme_1.wav"))
+        if (!music.openFromFile("C:\\uwu\\hola\\videotest\\assets\\sounds\\field_theme_1.wav"))
             printf("Could load music");
         music.setLoop(true);
         music.play();
