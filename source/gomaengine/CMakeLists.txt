@@ -1,16 +1,16 @@
 set(GOMAENGINE_HEADERS
 	aplication.h
-	#model.h
-	#texture.h
+	model.h
+	texture.h
  )
 
 set(GOMAENGINE_SOURCES
 	aplication.cpp
-	#model.cpp
-	#texture.cpp
+	model.cpp
+	texture.cpp
  )
 
-add_library(gomaengine STATIC ${GOMAENGINE_SOURCES} ${GOMAENGINE_HEADERS} gomaengine.h)
+add_library(gomaengine STATIC ${GOMAENGINE_SOURCES} ${GOMAENGINE_HEADERS} gomaengine.h root_directory.h)
 if (MSVC)
     target_compile_options(gomaengine PUBLIC /wd5033)
 endif(MSVC)

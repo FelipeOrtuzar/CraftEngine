@@ -20,10 +20,11 @@ namespace gomaengine {
         private:
             Window window_app;
             //std::map<std::string, Model> model_map;
+            std::vector<Model*> model_vct;
             //Model_vect model_vector;
         public:
-            //Aplication(Window _window, std::map<std::string, Model> _model_map);
-            Aplication(Window _window);
+            Aplication(Window _window, std::vector<Model*> _model_vct);
+            //Aplication(Window _window);
             int update();
     };
 
