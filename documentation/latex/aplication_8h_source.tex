@@ -1,0 +1,28 @@
+\hypertarget{aplication_8h_source}{}\doxysection{aplication.\+h}
+\label{aplication_8h_source}\index{source/gomaengine/aplication.h@{source/gomaengine/aplication.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}model.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }gomaengine \{}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{12     \textcolor{keyword}{struct }\mbox{\hyperlink{structgomaengine_1_1_window}{Window}} \{}
+\DoxyCodeLine{16         \textcolor{keywordtype}{int} \mbox{\hyperlink{structgomaengine_1_1_window_a0ed9c90a51564e5a75b34e362976ceb4}{window\_size\_x}};}
+\DoxyCodeLine{20         \textcolor{keywordtype}{int} \mbox{\hyperlink{structgomaengine_1_1_window_a04d8a1764c714c787e6d5e462daea4e8}{window\_size\_y}};}
+\DoxyCodeLine{21     \};}
+\DoxyCodeLine{25     \textcolor{keyword}{class }\mbox{\hyperlink{classgomaengine_1_1_aplication}{Aplication}} \{}
+\DoxyCodeLine{26         \textcolor{keyword}{private}:}
+\DoxyCodeLine{30             \mbox{\hyperlink{structgomaengine_1_1_window}{Window}} window\_app;}
+\DoxyCodeLine{34             std::vector<Model*> model\_vct;}
+\DoxyCodeLine{35         \textcolor{keyword}{public}:}
+\DoxyCodeLine{41             \mbox{\hyperlink{classgomaengine_1_1_aplication_aef564db625b2f3625ba7f700e2511763}{Aplication}}(\mbox{\hyperlink{structgomaengine_1_1_window}{Window}} \_window, std::vector<Model*> \_model\_vct);}
+\DoxyCodeLine{46             \textcolor{keywordtype}{int} \mbox{\hyperlink{classgomaengine_1_1_aplication_afad33ce7549400cb18d0bce505e8463e}{update}}();}
+\DoxyCodeLine{47     \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \} \textcolor{comment}{//namespace gomaengine}}
+
+\end{DoxyCode}

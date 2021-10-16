@@ -24,8 +24,10 @@ namespace gomaengine {
     void Texture::set_texture(sf::Texture* _texture) { this->texture = _texture; };
     void Texture::set_sprite(sf::Sprite* _sprite) { this->sprite = _sprite; };
     void Texture::set_path_to_texture(std::string _path_to_texture) { this->path_to_texture = _path_to_texture; };
-    void Texture::set_sprite_position(Vector _position) { this->position = sf::Vector2f(_position.x, _position.y); };
-    void Texture::set_sprite_scale(Vector _scale) { this->scale = sf::Vector2f(_scale.x, _scale.y); };
+    void Texture::set_sprite_position(Vector _position) {
+        this->position = sf::Vector2f(_position.x, _position.y); sprite->setPosition(position);
+    };
+    void Texture::set_sprite_scale(Vector _scale) { this->scale = sf::Vector2f(_scale.x, _scale.y); sprite->setScale(scale); };
     //funct
     void Texture::load_resources() {
         if (!texture->loadFromFile(path_to_texture)) {
@@ -37,11 +39,14 @@ namespace gomaengine {
         }
         sprite->setTexture(*texture);
         sprite->setPosition(position);
+        sprite->setOrigin(10.0, 10.0);
         sprite->setScale(scale);
         printf("\nsprite setted");
         
     }
-
+    void Texture::translate(Vector _vector) {
+        this->set_sprite_position(this->get_position().sum(_vector));
+    }
 
 
 

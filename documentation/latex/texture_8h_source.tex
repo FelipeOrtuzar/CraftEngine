@@ -1,0 +1,46 @@
+\hypertarget{texture_8h_source}{}\doxysection{texture.\+h}
+\label{texture_8h_source}\index{source/gomaengine/texture.h@{source/gomaengine/texture.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{namespace }gomaengine \{}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{9     \textcolor{keyword}{struct }\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \{}
+\DoxyCodeLine{13         \textcolor{keywordtype}{float} \mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} = 0.0;}
+\DoxyCodeLine{17         \textcolor{keywordtype}{float} \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}} = 0.0;}
+\DoxyCodeLine{22         sf::Vector2f \mbox{\hyperlink{structgomaengine_1_1_vector_ab15a609444f098a262c06f450f01f40c}{to\_sfVector}}() \{ \textcolor{keywordflow}{return} sf::Vector2f(\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}}, \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}}); \};}
+\DoxyCodeLine{23     \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keyword}{class }\mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}} \{}
+\DoxyCodeLine{26     \textcolor{keyword}{private}:}
+\DoxyCodeLine{30         sf::Texture* texture;}
+\DoxyCodeLine{34         sf::Sprite* sprite;}
+\DoxyCodeLine{38         std::string path\_to\_texture = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{42         sf::Vector2f position;}
+\DoxyCodeLine{46         sf::Vector2f scale;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keyword}{public}:}
+\DoxyCodeLine{55         \mbox{\hyperlink{classgomaengine_1_1_texture_a8a1d768eaf7e79b97a8f9d4856756815}{Texture}}(std::string \_path\_to\_texture, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_scale);}
+\DoxyCodeLine{60         sf::Texture* \mbox{\hyperlink{classgomaengine_1_1_texture_a72dce19e65802dfd09a872a90caaf47b}{get\_texture}}();}
+\DoxyCodeLine{65         sf::Sprite* \mbox{\hyperlink{classgomaengine_1_1_texture_a21349883fa10e66970df6832ce5c3400}{get\_sprite}}();}
+\DoxyCodeLine{70         std::string \mbox{\hyperlink{classgomaengine_1_1_texture_a8d2d23a6db67bd5f2286c4a5f538c8dc}{get\_path\_to\_texture}}();}
+\DoxyCodeLine{75         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{classgomaengine_1_1_texture_a18f60c9445a05cbd58e73f444a0449a3}{get\_position}}();}
+\DoxyCodeLine{80         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{classgomaengine_1_1_texture_af7b2272cb2e313b2ba76eafab1f418f5}{get\_scale}}();}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{86         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_texture_a3f8f49e0b0e4abdbfc925a4cefdf75f6}{set\_texture}}(sf::Texture* \_texture);}
+\DoxyCodeLine{91         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_texture_af7588ceeaa6a861c490cf80f2d7cb11a}{set\_sprite}}(sf::Sprite* \_sprite);}
+\DoxyCodeLine{96         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_texture_ac9089ea91c368de5b3c7f4105b97c8ed}{set\_path\_to\_texture}}(std::string \_path\_to\_texture);}
+\DoxyCodeLine{101         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_texture_a31ca739b770652fc29974f0a9f1c25ac}{set\_sprite\_position}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position);}
+\DoxyCodeLine{106         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_texture_a46fe367288fd75d88aba0a7b05ddc83b}{set\_sprite\_scale}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_scale);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{111         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_texture_a014134edfe5e8f979056471ba25a1112}{load\_resources}}();}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \}}
+
+\end{DoxyCode}

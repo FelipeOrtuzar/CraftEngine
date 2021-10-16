@@ -3,20 +3,19 @@
 #include <gomaengine/model.h>
 #include <gomaengine/root_directory.h>
 
-float main() {
+int main() {
     namespace ge = gomaengine;
     
 
 	// Se hace la ventana
-	float win_size_x = 1200;
-	float win_size_y = 600;
+	int win_size_x = 1200;
+	int win_size_y = 600;
 	ge::Window window = { win_size_x, win_size_y };
 
     
 
 	/////////////////textures////////////////
     //boo def
-    //std::string boo_path = absolute_path + "imgs\\CABALLO_1.png";
 
     std::string boo_path = ge::getPath("assets/imgs/CABALLO_1.png").string();
     float boo_pos_x = 200.0; float boo_pos_y = 300.0;
@@ -66,7 +65,7 @@ float main() {
 
  //   //rectUI def
     std::string rectUI_path = ge::getPath("assets/imgs/RECTANGULO_1.png").string();
-    float rectUI_pos_x = 5.0; float rectUI_pos_y = 450.0;
+    float rectUI_pos_x = 35.0; float rectUI_pos_y = 460.0;
     float rectUI_scale_x = 2.85; float rectUI_scale_y = 1.0;
     float rectUI_speed = 20;
     float rectUI_dir = 1;
@@ -80,7 +79,7 @@ float main() {
 
     //  grass def
     std::string grass_path = ge::getPath("assets/imgs/grass.png").string();
-    float grass_pos_x = 0.0; float grass_pos_y = 0.0;
+    float grass_pos_x = 60.0; float grass_pos_y = 10.0;
     float grass_scale_x = 9; float grass_scale_y = 9;
     float grass_speed = 20;
     float grass_dir = 1;

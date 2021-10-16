@@ -7,6 +7,7 @@ project(gomaengine C CXX)
 find_package(OpenGL REQUIRED)
 add_definitions(-D_USE_MATH_DEFINES)
 add_definitions(-DSFML_STATIC)
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/third_party/")
 set(THIRD_PARTY_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/third_party/glad/include"
 									"${CMAKE_CURRENT_SOURCE_DIR}/third_party/glfw-3.3.2/include"

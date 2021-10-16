@@ -121,32 +121,59 @@ namespace gomaengine {
                     {
                         window.close();
                     }
-                    //// boo
-                    //if (event.key.code == sf::Keyboard::A)
-                    //{
-                    //    text1.setString("Last input P1: A");
-                    //    boo_pos_x -= 1 * boo_speed;
-                    //    boo_dir = -1;
-                    //}
-                    //if (event.key.code == sf::Keyboard::D)
-                    //{
-                    //    text1.setString("Last input P1: D");
-                    //    boo_pos_x += 1 * boo_speed;
-                    //    boo_dir = 1;
-                    //}
-                    //if (event.key.code == sf::Keyboard::W)
-                    //{
-                    //    text1.setString("Last input P1: W");
-                    //    boo_pos_y -= 1 * boo_speed;
-                    //}
-                    //if (event.key.code == sf::Keyboard::S)
-                    //{
-                    //    text1.setString("Last input P1: S");
-                    //    boo_pos_y += 1 * boo_speed;
-                    //}
+
+                    
+
+                    
+                    // boo
+                    if (event.key.code == sf::Keyboard::A)
+                    {
+                        text1.setString("Last input P1: A");
+                        model_vct.at(4)->translate(Vector(-20.0, 0));
+
+                    }
+                    if (event.key.code == sf::Keyboard::D)
+                    {
+                        text1.setString("Last input P1: D");
+                        model_vct.at(4)->translate(Vector(20.0, 0));
+                    }
+                    if (event.key.code == sf::Keyboard::W)
+                    {
+                        text1.setString("Last input P1: W");
+                        model_vct.at(4)->translate(Vector(0.0, -20.0));
+                    }
+                    if (event.key.code == sf::Keyboard::S)
+                    {
+                        text1.setString("Last input P1: S");
+                        model_vct.at(4)->translate(Vector(0.0, 20.0));
+                    }
+                    
+                    ////////////////////////////////////////
+                    
+                    if (event.key.code == sf::Keyboard::Left)
+                    {
+                        text2.setString("Last input P2: Left");
+                        model_vct.at(3)->translate(Vector(-20.0, 0));
+
+                    }
+                    if (event.key.code == sf::Keyboard::Right)
+                    {
+                        text2.setString("Last input P2: Right");
+                        model_vct.at(3)->translate(Vector(20.0, 0));
+                    }
+                    if (event.key.code == sf::Keyboard::Up)
+                    {
+                        text2.setString("Last input P2: UP");
+                        model_vct.at(3)->translate(Vector(0.0, -20.0));
+                    }
+                    if (event.key.code == sf::Keyboard::Down)
+                    {
+                        text2.setString("Last input P2: Down");
+                        model_vct.at(3)->translate(Vector(0.0, 20.0));
+                    }
                     //sf::Listener::setPosition(boo_pos_x, boo_pos_y, 0.0f);
 
-
+                    
                     //// heavy cavalry
                     //if (event.key.code == sf::Keyboard::Left)
                     //{
@@ -178,18 +205,22 @@ namespace gomaengine {
                     //sf::Listener::setPosition(listener_dir_x, listener_dir_y, 0.0f);
 
                     //sound.setRelativeToListener(true);
-                    /*if (event.key.code == sf::Keyboard::Space)
+                    if (event.key.code == sf::Keyboard::Space)
                     {
+
+                        Vector obj1 = model_vct.at(3)->get_position();
+                        Vector obj2 = model_vct.at(4)->get_position();
                         sound.setRelativeToListener(true);
-                        int dif_x = boo_pos_x - cavalry_heavy_pos_x; int dif_y = boo_pos_y - cavalry_heavy_pos_y;
+                        int dif_x = obj1.x - obj2.x; int dif_y = obj1.y- obj2.y;
                         int distance = std::sqrt(dif_x * dif_x + dif_y * dif_y);
                         int total_distance = std::sqrt(window_app.window_size_x * window_app.window_size_x + window_app.window_size_y * window_app.window_size_y);
                         float coef = (distance * 1.0) / (total_distance * 1.0);
                         sound.setVolume(100.0 * (1.0 - coef));
+                        std::cout << "Dynamic volumen: " << 100.0 * (1.0 - coef) << "\n";
                         sound.play();
-                        std::cout << "xS: " << sound.getPosition().x << " yS: " << sound.getPosition().y << "\n";
-                        std::cout << "xL: " << sf::Listener::getPosition().x << " y:: " << sf::Listener::getPosition().y << "\n";
-                    }*/
+                        //std::cout << "xS: " << sound.getPosition().x << " yS: " << sound.getPosition().y << "\n";
+                        //std::cout << "xL: " << sf::Listener::getPosition().x << " y:: " << sf::Listener::getPosition().y << "\n";
+                    }
                     
                     
 
@@ -198,6 +229,7 @@ namespace gomaengine {
                     break;
                 }
             }
+            model_vct.at(2)->set_position((Vector::to_Vector(sf::Mouse::getPosition())).sum(Vector(-90.0, -120.0)));
             window.clear(sf::Color::Cyan);
 
             for (Model* model : model_vct) {
