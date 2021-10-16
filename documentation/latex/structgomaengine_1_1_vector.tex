@@ -13,7 +13,22 @@ Estructura de un vector en 2D (x, y)
 \begin{DoxyCompactItemize}
 \item 
 sf\+::\+Vector2f \mbox{\hyperlink{structgomaengine_1_1_vector_ab15a609444f098a262c06f450f01f40c}{to\+\_\+sf\+Vector}} ()
-\begin{DoxyCompactList}\small\item\em Funcion que transforma el vector a un vector de la libreria SFML \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Funcion que transforma el vector a un vector de la libreria SFML \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_a100ddaaf3d3b3ea580f643636a4a7c38}{sum}} (\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Sum between this vector and another \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_ad477270cac80be776c49e2e8ac1c01b9}{multiply}} (float k)
+\begin{DoxyCompactList}\small\item\em Funcion que multiplica el \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} por una constante y lo devuelve. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_a418a8e07ad05840a3bdd0d50250573a3}{multiply}} (\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Funcion que multiplica el \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} por otro, punto a punto, y lo devuelve. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_a5ceadf12bf1e8892db9c0db7950dc6aa}{abs}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que aplica el valor absoluto sobre todas la dimensiones del \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_a0a989b1573c271183efffbe203a70c80}{to\+\_\+\+Vector}} (sf\+::\+Vector2f \+\_\+sf\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Static function to generate a \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} from a sf\+::\+Vector2f \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_afc775afc2a7edff11ec13998b14eb533}{to\+\_\+\+Vector}} (sf\+::\+Vector2i \+\_\+sf\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Static function to generate a \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} from a sf\+::\+Vector2i \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,6 +44,70 @@ float {\bfseries y} = 0.\+0
 Estructura de un vector en 2D (x, y) 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgomaengine_1_1_vector_a5ceadf12bf1e8892db9c0db7950dc6aa}\label{structgomaengine_1_1_vector_a5ceadf12bf1e8892db9c0db7950dc6aa}} 
+\index{gomaengine::Vector@{gomaengine::Vector}!abs@{abs}}
+\index{abs@{abs}!gomaengine::Vector@{gomaengine::Vector}}
+\doxysubsubsection{\texorpdfstring{abs()}{abs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} gomaengine\+::\+Vector\+::abs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcion que aplica el valor absoluto sobre todas la dimensiones del \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} (this)
+\end{DoxyReturn}
+\mbox{\Hypertarget{structgomaengine_1_1_vector_ad477270cac80be776c49e2e8ac1c01b9}\label{structgomaengine_1_1_vector_ad477270cac80be776c49e2e8ac1c01b9}} 
+\index{gomaengine::Vector@{gomaengine::Vector}!multiply@{multiply}}
+\index{multiply@{multiply}!gomaengine::Vector@{gomaengine::Vector}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} gomaengine\+::\+Vector\+::multiply (\begin{DoxyParamCaption}\item[{float}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcion que multiplica el \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} por una constante y lo devuelve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Constante a multiplicar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} (this)
+\end{DoxyReturn}
+\mbox{\Hypertarget{structgomaengine_1_1_vector_a418a8e07ad05840a3bdd0d50250573a3}\label{structgomaengine_1_1_vector_a418a8e07ad05840a3bdd0d50250573a3}} 
+\index{gomaengine::Vector@{gomaengine::Vector}!multiply@{multiply}}
+\index{multiply@{multiply}!gomaengine::Vector@{gomaengine::Vector}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} gomaengine\+::\+Vector\+::multiply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funcion que multiplica el \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} por otro, punto a punto, y lo devuelve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vector} & \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} a multiplicar punto a punto\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} (this)
+\end{DoxyReturn}
+\mbox{\Hypertarget{structgomaengine_1_1_vector_a100ddaaf3d3b3ea580f643636a4a7c38}\label{structgomaengine_1_1_vector_a100ddaaf3d3b3ea580f643636a4a7c38}} 
+\index{gomaengine::Vector@{gomaengine::Vector}!sum@{sum}}
+\index{sum@{sum}!gomaengine::Vector@{gomaengine::Vector}}
+\doxysubsubsection{\texorpdfstring{sum()}{sum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} gomaengine\+::\+Vector\+::sum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sum between this vector and another 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vector} & \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} that will be summed to this one\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{structgomaengine_1_1_vector_ab15a609444f098a262c06f450f01f40c}\label{structgomaengine_1_1_vector_ab15a609444f098a262c06f450f01f40c}} 
 \index{gomaengine::Vector@{gomaengine::Vector}!to\_sfVector@{to\_sfVector}}
 \index{to\_sfVector@{to\_sfVector}!gomaengine::Vector@{gomaengine::Vector}}
@@ -41,6 +120,42 @@ Funcion que transforma el vector a un vector de la libreria SFML
 
 \begin{DoxyReturn}{Returns}
 sf\+::\+Vector como las propiedades del vector
+\end{DoxyReturn}
+\mbox{\Hypertarget{structgomaengine_1_1_vector_a0a989b1573c271183efffbe203a70c80}\label{structgomaengine_1_1_vector_a0a989b1573c271183efffbe203a70c80}} 
+\index{gomaengine::Vector@{gomaengine::Vector}!to\_Vector@{to\_Vector}}
+\index{to\_Vector@{to\_Vector}!gomaengine::Vector@{gomaengine::Vector}}
+\doxysubsubsection{\texorpdfstring{to\_Vector()}{to\_Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} gomaengine\+::\+Vector\+::to\+\_\+\+Vector (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{\+\_\+sf\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Static function to generate a \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} from a sf\+::\+Vector2f 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sf\+\_\+vector} & The original sf\+::\+Vector2f\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The output \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}
+\end{DoxyReturn}
+\mbox{\Hypertarget{structgomaengine_1_1_vector_afc775afc2a7edff11ec13998b14eb533}\label{structgomaengine_1_1_vector_afc775afc2a7edff11ec13998b14eb533}} 
+\index{gomaengine::Vector@{gomaengine::Vector}!to\_Vector@{to\_Vector}}
+\index{to\_Vector@{to\_Vector}!gomaengine::Vector@{gomaengine::Vector}}
+\doxysubsubsection{\texorpdfstring{to\_Vector()}{to\_Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} gomaengine\+::\+Vector\+::to\+\_\+\+Vector (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i}]{\+\_\+sf\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Static function to generate a \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} from a sf\+::\+Vector2i 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sf\+\_\+vector} & The original sf\+::\+Vector2i\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The output \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}
 \end{DoxyReturn}
 
 

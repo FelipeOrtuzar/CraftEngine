@@ -6,5 +6,6 @@ var searchData=
   ['set_5fsprite_3',['set_sprite',['../classgomaengine_1_1_texture.html#af7588ceeaa6a861c490cf80f2d7cb11a',1,'gomaengine::Texture']]],
   ['set_5fsprite_5fposition_4',['set_sprite_position',['../classgomaengine_1_1_texture.html#a31ca739b770652fc29974f0a9f1c25ac',1,'gomaengine::Texture']]],
   ['set_5fsprite_5fscale_5',['set_sprite_scale',['../classgomaengine_1_1_texture.html#a46fe367288fd75d88aba0a7b05ddc83b',1,'gomaengine::Texture']]],
-  ['set_5ftexture_6',['set_texture',['../classgomaengine_1_1_model.html#aedada6f5e40c875546c230494a456193',1,'gomaengine::Model::set_texture()'],['../classgomaengine_1_1_texture.html#a3f8f49e0b0e4abdbfc925a4cefdf75f6',1,'gomaengine::Texture::set_texture()']]]
+  ['set_5ftexture_6',['set_texture',['../classgomaengine_1_1_model.html#aedada6f5e40c875546c230494a456193',1,'gomaengine::Model::set_texture()'],['../classgomaengine_1_1_texture.html#a3f8f49e0b0e4abdbfc925a4cefdf75f6',1,'gomaengine::Texture::set_texture()']]],
+  ['sum_7',['sum',['../structgomaengine_1_1_vector.html#a100ddaaf3d3b3ea580f643636a4a7c38',1,'gomaengine::Vector']]]
 ];

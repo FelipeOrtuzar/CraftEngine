@@ -7,36 +7,43 @@
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
 \DoxyCodeLine{4 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
 \DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}texture.h"{}}}
-\DoxyCodeLine{6 }
-\DoxyCodeLine{7 \textcolor{keyword}{namespace }gomaengine \{}
-\DoxyCodeLine{8 }
-\DoxyCodeLine{17     \textcolor{keyword}{class }\mbox{\hyperlink{classgomaengine_1_1_model}{Model}} \{}
-\DoxyCodeLine{18         \textcolor{keyword}{private}:}
-\DoxyCodeLine{22             sf::Vector2f position = sf::Vector2f(0.0, 0.0);}
-\DoxyCodeLine{26             \textcolor{keywordtype}{int} orientation = 1;}
-\DoxyCodeLine{30             \mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}} texture = \mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}}(\textcolor{stringliteral}{"{}"{}}, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(0.0, 0.0), \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(0.0, 0.0));}
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32         \textcolor{keyword}{public}:}
-\DoxyCodeLine{37             \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{classgomaengine_1_1_model_aad62e662ec64f1cd8939dbac2a010a55}{get\_position}}();}
-\DoxyCodeLine{42             \mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}} \mbox{\hyperlink{classgomaengine_1_1_model_a51192db2ba340c82b299d71f00ae1b40}{get\_texture}}();}
-\DoxyCodeLine{43 }
-\DoxyCodeLine{48             \textcolor{keywordtype}{int} \mbox{\hyperlink{classgomaengine_1_1_model_a1277d9fdd60cada60393238796d3a90d}{get\_orientation}}();}
-\DoxyCodeLine{49             }
-\DoxyCodeLine{54             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_model_a2b25bfb4954e602e9e8b8d74d60cd5cb}{set\_position}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position);}
-\DoxyCodeLine{55 }
-\DoxyCodeLine{60             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_model_aedada6f5e40c875546c230494a456193}{set\_texture}}(\mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}} \_texture);}
-\DoxyCodeLine{61 }
-\DoxyCodeLine{66             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_model_a79060c5789c5c47546f15cc9152300ff}{set\_orientation}}(\textcolor{keywordtype}{int} \_orientation); }
-\DoxyCodeLine{67 }
-\DoxyCodeLine{74             \mbox{\hyperlink{classgomaengine_1_1_model_ad6eb6d35e491bb9d6a73c13c13fd07c4}{Model}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position, \mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}} \_texture, \textcolor{keywordtype}{int} \_orientation);}
-\DoxyCodeLine{75 }
-\DoxyCodeLine{80             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_model_a67d7507d5b7b5f347ab20b38fe876f5c}{translate}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_delta\_pos);}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{82 }
-\DoxyCodeLine{83     \};}
-\DoxyCodeLine{84     }
-\DoxyCodeLine{85 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }gomaengine \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{20     \textcolor{keyword}{class }\mbox{\hyperlink{classgomaengine_1_1_model}{Model}} \{}
+\DoxyCodeLine{21         \textcolor{keyword}{private}:}
+\DoxyCodeLine{25             sf::Vector2f position = sf::Vector2f(0.0, 0.0);}
+\DoxyCodeLine{29             \textcolor{keywordtype}{int} orientation = 1;}
+\DoxyCodeLine{33             \mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}} texture = \mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}}(\textcolor{stringliteral}{"{}"{}}, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(0.0, 0.0), \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(0.0, 0.0));}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35             }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{keyword}{public}:}
+\DoxyCodeLine{42             \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{classgomaengine_1_1_model_aad62e662ec64f1cd8939dbac2a010a55}{get\_position}}();}
+\DoxyCodeLine{47             \mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}} \mbox{\hyperlink{classgomaengine_1_1_model_a51192db2ba340c82b299d71f00ae1b40}{get\_texture}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53             \textcolor{keywordtype}{int} \mbox{\hyperlink{classgomaengine_1_1_model_a1277d9fdd60cada60393238796d3a90d}{get\_orientation}}();}
+\DoxyCodeLine{54             }
+\DoxyCodeLine{59             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_model_a2b25bfb4954e602e9e8b8d74d60cd5cb}{set\_position}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_model_aedada6f5e40c875546c230494a456193}{set\_texture}}(\mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}} \_texture);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_model_a79060c5789c5c47546f15cc9152300ff}{set\_orientation}}(\textcolor{keywordtype}{int} \_orientation); }
+\DoxyCodeLine{72 }
+\DoxyCodeLine{79             \mbox{\hyperlink{classgomaengine_1_1_model_ad6eb6d35e491bb9d6a73c13c13fd07c4}{Model}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position, \mbox{\hyperlink{classgomaengine_1_1_texture}{Texture}} \_texture, \textcolor{keywordtype}{int} \_orientation);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{85             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_model_a67d7507d5b7b5f347ab20b38fe876f5c}{translate}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_delta\_pos);}
 \DoxyCodeLine{86 }
-\DoxyCodeLine{87 \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \};}
+\DoxyCodeLine{89     }
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \}}
 
 \end{DoxyCode}
