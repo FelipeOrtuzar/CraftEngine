@@ -1,4 +1,4 @@
-#include "input_layer.h"
+#include "InputComponent.h"
 
 
 
@@ -7,7 +7,6 @@
 
 
 namespace gomaengine {
-
 
 
 

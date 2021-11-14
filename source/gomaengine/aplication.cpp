@@ -18,7 +18,7 @@ namespace gomaengine {
         window.setFramerateLimit(60);
 
 
-
+        Model* clicked_model = nullptr;
 
         //LOADING THE TEXTURES
         for (Model* model : model_vct) {
@@ -26,6 +26,10 @@ namespace gomaengine {
         }
 
    
+        /*for (Model* model : model_vct) {
+            model->get_sound_component()->reload_sound();
+        }*/
+
         //Listener
         int listener_pos_x = 0.0f; int listener_pos_y = 0.0f;
         int listener_dir_x = 1.0f; int listener_dir_y = 1.0f;
@@ -33,14 +37,14 @@ namespace gomaengine {
         sf::Listener::setGlobalVolume(10.f);
 
         //SOUND
-        sf::SoundBuffer buffer;
+        //sf::SoundBuffer buffer;
 
-        if (!buffer.loadFromFile(getPath("assets/sounds/melee sound.wav").string())) {
-            printf("Could load sound");
-        }
-        sf::Sound sound;
-        sound.setBuffer(buffer);
-        sound.setPosition(300.0, 4.00, 0.f);
+        //if (!buffer.loadFromFile(getPath("assets/sounds/melee sound.wav").string())) {
+        //    printf("Could load sound");
+        //}
+        //sf::Sound sound;
+        //sound.setBuffer(buffer);
+        //sound.setPosition(300.0, 4.00, 0.f);
         //sound.setAttenuation(10.f);
 
 
@@ -124,7 +128,7 @@ namespace gomaengine {
 
                     
 
-                    
+                    /*
                     // boo
                     if (event.key.code == sf::Keyboard::A)
                     {
@@ -172,7 +176,7 @@ namespace gomaengine {
                         model_vct.at(3)->translate(Vector(0.0, 20.0));
                     }
                     //sf::Listener::setPosition(boo_pos_x, boo_pos_y, 0.0f);
-
+                    */
                     
                     //// heavy cavalry
                     //if (event.key.code == sf::Keyboard::Left)
@@ -208,7 +212,7 @@ namespace gomaengine {
                     if (event.key.code == sf::Keyboard::Space)
                     {
 
-                        Vector obj1 = model_vct.at(3)->get_position();
+                        /*Vector obj1 = model_vct.at(3)->get_position();
                         Vector obj2 = model_vct.at(4)->get_position();
                         sound.setRelativeToListener(true);
                         int dif_x = obj1.x - obj2.x; int dif_y = obj1.y- obj2.y;
@@ -217,7 +221,7 @@ namespace gomaengine {
                         float coef = (distance * 1.0) / (total_distance * 1.0);
                         sound.setVolume(100.0 * (1.0 - coef));
                         std::cout << "Dynamic volumen: " << 100.0 * (1.0 - coef) << "\n";
-                        sound.play();
+                        sound.play();*/
                         //std::cout << "xS: " << sound.getPosition().x << " yS: " << sound.getPosition().y << "\n";
                         //std::cout << "xL: " << sf::Listener::getPosition().x << " y:: " << sf::Listener::getPosition().y << "\n";
                     }
@@ -229,7 +233,42 @@ namespace gomaengine {
                     break;
                 }
             }
-            model_vct.at(2)->set_position((Vector::to_Vector(sf::Mouse::getPosition())).sum(Vector(-90.0, -120.0)));
+            
+
+
+
+            if (!(this->was_Mouse_Left_pressed_before) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                text2.setString("key pressed");
+
+                if (!model_vct.empty()) {
+
+                    Vector local_position = Vector::to_Vector(sf::Mouse::getPosition(window));
+
+                    float min_radio = 25.0f;
+                    float min_distance = 100000000.0f;
+                    Model* min_model = nullptr;
+                    // left mouse button is pressed
+                    for (Model* model : model_vct) {
+                        float actual_dist = Vector::distance(model->get_position(), local_position);
+                        min_model = min_radio > actual_dist ? model : min_model;
+                    }
+                    clicked_model = min_model;
+
+                    
+                }
+
+                if (clicked_model != nullptr) {
+                    text2.setString(clicked_model->get_name());
+                    clicked_model->is_clicked();
+                }
+                
+            }
+
+
+
+
+            //model_vct.at(2)->set_position((Vector::to_Vector(sf::Mouse::getPosition())).sum(Vector(-90.0, -120.0)));
             window.clear(sf::Color::Cyan);
 
             for (Model* model : model_vct) {
@@ -237,6 +276,10 @@ namespace gomaengine {
             }
 
             
+            this->was_Mouse_Left_pressed_before = sf::Mouse::isButtonPressed(sf::Mouse::Left);
+           
+
+
             //TEXT
             window.draw(text1);
             window.draw(text2);

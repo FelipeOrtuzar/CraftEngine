@@ -1,6 +1,7 @@
 
 #include <gomaengine/aplication.h>
 #include <gomaengine/model.h>
+#include <gomaengine/SoundComponent.h>
 #include <gomaengine/root_directory.h>
 
 int main() {
@@ -22,16 +23,22 @@ int main() {
     float boo_scale_x = 4; float boo_scale_y = 4;
     float boo_speed = 20;
     float boo_dir = 1;
+
+
+    //
+    ge::SoundComponent boo_sc = ge::SoundComponent();
+    boo_sc.insert_data(ge::getPath("assets/sounds/horse_sound.wav").string());
+    //
     ge::Model* boo_model = new ge::Model(
         ge::Vector(boo_pos_x, boo_pos_y),
         ge::Texture(boo_path,
             ge::Vector(boo_pos_x, boo_pos_y),
             ge::Vector(boo_scale_x, boo_scale_y)), 
-        boo_dir
-    
+        boo_dir, 
+        boo_sc
     );
 
-
+    /*
  //   //pony def
 
     std::string pony_path = ge::getPath("assets/imgs/CABALLO_2.png").string();
@@ -39,12 +46,14 @@ int main() {
     float pony_scale_x = 4; float pony_scale_y = 4;
     float pony_speed = 20;
     float pony_dir = 1;
+
     ge::Model* pony_model = new ge::Model(
         ge::Vector(pony_pos_x, pony_pos_y),
         ge::Texture(pony_path,
             ge::Vector(pony_pos_x, pony_pos_y),
             ge::Vector(pony_scale_x, pony_scale_y)), 
-        pony_dir
+        pony_dir,
+        ge::SoundComponent(ge::getPath("assets/sounds/horse_sound.wav").string())
     );
 
 
@@ -60,7 +69,8 @@ int main() {
         ge::Texture(mouse_path,
             ge::Vector(mouse_pos_x, mouse_pos_y),
             ge::Vector(mouse_scale_x, mouse_scale_y)), 
-        mouse_dir
+        mouse_dir,
+        ge::SoundComponent(ge::getPath("assets/sounds/horse_sound.wav").string())
     );
 
  //   //rectUI def
@@ -74,7 +84,8 @@ int main() {
         ge::Texture(rectUI_path,
             ge::Vector(rectUI_pos_x, rectUI_pos_y),
             ge::Vector(rectUI_scale_x, rectUI_scale_y)),
-        rectUI_dir
+        rectUI_dir,
+        ge::SoundComponent(ge::getPath("assets/sounds/horse_sound.wav").string())
     );
 
     //  grass def
@@ -88,15 +99,16 @@ int main() {
         ge::Texture(grass_path,
             ge::Vector(grass_pos_x, grass_pos_y),
             ge::Vector(grass_scale_x, grass_scale_y)), 
-        grass_dir
+        grass_dir,
+        ge::SoundComponent(ge::getPath("assets/sounds/horse_sound.wav").string())
     );
 
 
-
-    std::vector<ge::Model*> model_vector = { grass_model, rectUI_model, boo_model, pony_model, mouse_model };
+    */
+    //std::vector<ge::Model*> model_vector = { grass_model, rectUI_model, boo_model, pony_model, mouse_model };
 
  
-
+    std::vector<ge::Model*> model_vector = {boo_model};
 
 
 

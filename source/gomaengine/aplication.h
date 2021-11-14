@@ -32,6 +32,9 @@ namespace gomaengine {
             /// Vector con un listado de modelos que estaran en la aplicacion
             /// </summary>
             std::vector<Model*> model_vct;
+
+
+            bool was_Mouse_Left_pressed_before = 0;
         public:
             /// <summary>
             /// Constructor de la aplicacion

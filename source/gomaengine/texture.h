@@ -55,8 +55,23 @@ namespace gomaengine {
         /// <returns>Vector (this)</returns>
         Vector abs() { x = std::abs(x), y = std::abs(y); return *this; };
 
+        /// <summary>
+        /// Funcion que calcula la distancia euclidiana entre dos vectores
+        /// </summary>
+        /// <param name="_vector1">Primer vector</param>
+        /// <param name="_vector2">Segundo vector</param>
+        /// <returns>Un float de la distancia entre ambos vectores</returns>
+        static float distance(Vector _vector1, Vector _vector2) {
+            float dif_x = _vector1.x - _vector2.x;
+            float dif_y = _vector1.y - _vector2.y;
+
+            return sqrt(dif_x * dif_x + dif_x * dif_y);
+        }
     };
 
+    /// <summary>
+    /// Class para definir la textura de un objeto
+    /// </summary>
     class Texture {
     private:
         /// <summary>

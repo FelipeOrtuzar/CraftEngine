@@ -2,14 +2,16 @@ set(GOMAENGINE_HEADERS
 	aplication.h
 	model.h
 	texture.h
-	input_layer.h
+	InputComponent.h
+	SoundComponent.h
  )
 
 set(GOMAENGINE_SOURCES
 	aplication.cpp
 	model.cpp
 	texture.cpp
-	input_layer.cpp
+	InputComponent.cpp
+	SoundComponent.cpp
  )
 
 add_library(gomaengine STATIC ${GOMAENGINE_SOURCES} ${GOMAENGINE_HEADERS} gomaengine.h root_directory.h)

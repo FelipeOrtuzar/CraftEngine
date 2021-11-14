@@ -5,12 +5,20 @@ namespace gomaengine {
 
 
 	
-	Model::Model(Vector _position, Texture _texture, int _orientation) {
+	Model::Model(Vector _position, Texture _texture, int _orientation, SoundComponent _soundComponent) {
 		
 		position = sf::Vector2f(_position.x, _position.y);
 		texture = _texture;
 		orientation = _orientation;
+		sound_component = _soundComponent;
+		std::cout << "Constructor Model\n";
+		_soundComponent.reload_sound();
+		sound_component.reload_sound();
 	};
+
+	Model::~Model() {
+		std::cout << "Destructor of Model\n";
+	}
 
 
 
@@ -25,6 +33,8 @@ namespace gomaengine {
 	};
 	void Model::set_orientation(int _orientation) { orientation = _orientation; };
 
+
+
 	void Model::translate(Vector _delta_pos) {
 		position = sf::Vector2f(position.x + _delta_pos.x, position.y + _delta_pos.y);
 		if (std::abs(_delta_pos.y) < 0.0001) {
@@ -34,4 +44,21 @@ namespace gomaengine {
 		this->texture.translate(_delta_pos);
 	}
 	
+	std::string Model::get_name() { return "uwu"; }
+
+	SoundComponent Model::get_sound_component() { return sound_component; }
+
+	Model* Model::get_me() { return this; }
+
+	void Model::is_clicked() { sound_component.play_sound(); }
+
+	/*bool Model::has_soundComponent() {
+		if (sound_component) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	
+	}*/
 };
