@@ -1,7 +1,7 @@
 set(GOMAENGINE_HEADERS
 	aplication.h
 	model.h
-	texture.h
+	GraphicComponent.h
 	InputComponent.h
 	SoundComponent.h
 	Utils.h
@@ -10,7 +10,7 @@ set(GOMAENGINE_HEADERS
 set(GOMAENGINE_SOURCES
 	aplication.cpp
 	model.cpp
-	texture.cpp
+	GraphicComponent.cpp
 	InputComponent.cpp
 	SoundComponent.cpp
 	Utils.cpp

@@ -9,7 +9,7 @@ namespace gomaengine {
     /// <summary>
     /// Class para definir la textura de un objeto
     /// </summary>
-    class Texture {
+    class GraphicComponent {
     private:
         /// <summary>
         /// Textura de la libreria SFML
@@ -39,7 +39,7 @@ namespace gomaengine {
         /// <param name="_path_to_texture">String de la direccion en memoria del archivo</param>
         /// <param name="_position">Vector con la posicion de la textura en pantalla</param>
         /// <param name="_scale">Vector con el escalamiento de la textura</param>
-        Texture(std::string _path_to_texture, Vector _position, Vector _scale);
+        GraphicComponent(std::string _path_to_texture, Vector _position, Vector _scale);
         /// <summary>
         /// Funcion que obtiene la textura 
         /// </summary>

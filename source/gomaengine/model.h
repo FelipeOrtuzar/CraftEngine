@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <SFML/Window.hpp>
-#include "texture.h"
+#include "GraphicComponent.h"
 #include "SoundComponent.h"
 #include <SFML/Audio.hpp>
 
@@ -31,7 +31,7 @@ namespace gomaengine {
 			/// <summary>
 			/// Textura que define la visualizacion del modelo
 			/// </summary>
-			Texture texture = Texture("", Vector(0.0, 0.0), Vector(0.0, 0.0));
+			GraphicComponent graphicComponent = GraphicComponent("", Vector(0.0, 0.0), Vector(0.0, 0.0));
 
 			SoundComponent sound_component;
 
@@ -49,7 +49,7 @@ namespace gomaengine {
 			/// Funcion que retorna la textura usada por el modelo.
 			/// </summary>
 			/// <returns>Una textura.</returns>
-			Texture get_texture();
+			GraphicComponent get_texture();
 
 			/// <summary>
 			/// Funcion que retorna la orientacion de hacia donde mira el modelo.
@@ -67,7 +67,7 @@ namespace gomaengine {
 			/// Funcion que define la textura en el modelo
 			/// </summary>
 			/// <param name="_texture">Textura a settear </param>
-			void set_texture(Texture _texture);
+			void set_graphicComponent(GraphicComponent _graphicComponent);
 
 			/// <summary>
 			/// Funcion que define la orientacion en el modelo
@@ -82,7 +82,7 @@ namespace gomaengine {
 			/// <param name="_texture"> Textura del modelo</param>
 			/// <param name="_orientation">Orientacion del modelo</param>
 			/// <param name="_soundComponent">Componente de sonido</param>
-			Model(Vector _position, Texture _texture, int _orientation, SoundComponent _soundComponent);
+			Model(Vector _position, GraphicComponent _graphicComponent, int _orientation, SoundComponent _soundComponent);
 
 			~Model();
 

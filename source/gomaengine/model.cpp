@@ -5,10 +5,10 @@ namespace gomaengine {
 
 
 	
-	Model::Model(Vector _position, Texture _texture, int _orientation, SoundComponent _soundComponent) {
+	Model::Model(Vector _position, GraphicComponent _graphicComponent, int _orientation, SoundComponent _soundComponent) {
 		std::cout << "Constructor Model\n";
 		position = sf::Vector2f(_position.x, _position.y);
-		texture = _texture;
+		graphicComponent = _graphicComponent;
 		orientation = _orientation;
 		sound_component = _soundComponent;
 
@@ -21,14 +21,14 @@ namespace gomaengine {
 
 
 
-	Texture Model::get_texture() { return texture; };
+	GraphicComponent Model::get_texture() { return graphicComponent; };
 	Vector Model::get_position() { return Vector(position.x, position.y); };
 	int Model::get_orientation() { return orientation; };
 
-	void Model::set_texture(Texture _texture) { texture = _texture; };
+	void Model::set_graphicComponent(GraphicComponent _graphicComponent) { graphicComponent = _graphicComponent; };
 	void Model::set_position(Vector _position) { 
 		position = sf::Vector2f(_position.x, _position.y); 
-		texture.set_sprite_position(_position);
+		graphicComponent.set_sprite_position(_position);
 	};
 	void Model::set_orientation(int _orientation) { orientation = _orientation; };
 
@@ -38,9 +38,9 @@ namespace gomaengine {
 		position = sf::Vector2f(position.x + _delta_pos.x, position.y + _delta_pos.y);
 		if (std::abs(_delta_pos.y) < 0.0001) {
 			orientation = _delta_pos.x > 0.0 ? 1.0 : -1.0;
-			this->texture.set_sprite_scale(this->texture.get_scale().abs().multiply(Vector(orientation, 1.0)));
+			this->graphicComponent.set_sprite_scale(this->graphicComponent.get_scale().abs().multiply(Vector(orientation, 1.0)));
 		}
-		this->texture.translate(_delta_pos);
+		this->graphicComponent.translate(_delta_pos);
 	}
 	
 	std::string Model::get_name() { return "uwu"; }

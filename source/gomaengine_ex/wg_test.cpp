@@ -2,6 +2,7 @@
 #include <gomaengine/aplication.h>
 #include <gomaengine/model.h>
 #include <gomaengine/SoundComponent.h>
+#include <gomaengine/GraphicComponent.h>
 #include <gomaengine/root_directory.h>
 
 int main() {
@@ -31,7 +32,7 @@ int main() {
     //
     ge::Model* boo_model = new ge::Model(
         ge::Vector(boo_pos_x, boo_pos_y),
-        ge::Texture(boo_path,
+        ge::GraphicComponent(boo_path,
             ge::Vector(boo_pos_x, boo_pos_y),
             ge::Vector(boo_scale_x, boo_scale_y)), 
         boo_dir, 
