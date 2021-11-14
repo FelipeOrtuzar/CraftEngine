@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "model.h"
 #include <vector>
+#include "Utils.h"
 
 namespace gomaengine {
 

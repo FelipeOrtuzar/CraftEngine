@@ -14,9 +14,13 @@ namespace gomaengine {
 
     public:
         SoundComponent();
+        ~SoundComponent();
+
+        void update();
+
         void insert_data(std::string path_to_sound_when_clicked);
 
-        ~SoundComponent();
+        
         void reload_sound();
         void play_sound();
     };

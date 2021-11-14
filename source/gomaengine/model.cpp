@@ -6,14 +6,13 @@ namespace gomaengine {
 
 	
 	Model::Model(Vector _position, Texture _texture, int _orientation, SoundComponent _soundComponent) {
-		
+		std::cout << "Constructor Model\n";
 		position = sf::Vector2f(_position.x, _position.y);
 		texture = _texture;
 		orientation = _orientation;
 		sound_component = _soundComponent;
-		std::cout << "Constructor Model\n";
-		_soundComponent.reload_sound();
-		sound_component.reload_sound();
+
+		
 	};
 
 	Model::~Model() {

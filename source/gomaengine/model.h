@@ -35,6 +35,8 @@ namespace gomaengine {
 
 			SoundComponent sound_component;
 
+
+
 			
 
 		public:

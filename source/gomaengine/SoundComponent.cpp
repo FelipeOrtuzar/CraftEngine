@@ -34,6 +34,8 @@ namespace gomaengine {
         
     }
 
+    void SoundComponent::update() {}
+
 
     void SoundComponent::reload_sound() {
         std::cout << "reload_sound\n";

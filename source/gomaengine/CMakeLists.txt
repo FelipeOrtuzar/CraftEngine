@@ -4,6 +4,7 @@ set(GOMAENGINE_HEADERS
 	texture.h
 	InputComponent.h
 	SoundComponent.h
+	Utils.h
  )
 
 set(GOMAENGINE_SOURCES
@@ -12,6 +13,8 @@ set(GOMAENGINE_SOURCES
 	texture.cpp
 	InputComponent.cpp
 	SoundComponent.cpp
+	Utils.cpp
+
  )
 
 add_library(gomaengine STATIC ${GOMAENGINE_SOURCES} ${GOMAENGINE_HEADERS} gomaengine.h root_directory.h)
