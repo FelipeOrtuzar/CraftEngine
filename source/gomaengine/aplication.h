@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
-#include "model.h"
+#include "GameObject.h"
 #include <vector>
 #include "Utils.h"
 
@@ -32,7 +32,7 @@ namespace gomaengine {
             /// <summary>
             /// Vector con un listado de modelos que estaran en la aplicacion
             /// </summary>
-            std::vector<Model*> model_vct;
+            std::vector<GameObject*> model_vct;
 
 
             bool was_Mouse_Left_pressed_before = 0;
@@ -43,7 +43,7 @@ namespace gomaengine {
             /// </summary>
             /// <param name="_window">Ventana de visualizacion</param>
             /// <param name="_model_vct">Vector con los modelos a usar</param>
-            Aplication(Window _window, std::vector<Model*> _model_vct);
+            Aplication(Window _window, std::vector<GameObject*> _model_vct);
             /// <summary>
             /// Funcion con el ciclo del juego
             /// </summary>

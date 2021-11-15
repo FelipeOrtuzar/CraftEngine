@@ -101,6 +101,9 @@ namespace gomaengine {
         /// </summary>
         /// <param name="_vector">Delta distancia</param>
         void translate(Vector _vector);
+
+
+        void update();
 	};
 
 

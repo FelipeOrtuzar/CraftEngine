@@ -14,7 +14,7 @@ namespace gomaengine {
 
     }
 
-    void SoundComponent::insert_data(std::string path_to_sound_when_clicked) {
+    void SoundComponent::insert_clicked(std::string path_to_sound_when_clicked) {
         std::cout << "Inserting data\n";
         this->path_clicked = path_to_sound_when_clicked;
 

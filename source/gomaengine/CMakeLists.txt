@@ -1,6 +1,6 @@
 set(GOMAENGINE_HEADERS
 	aplication.h
-	model.h
+	GameObject.h
 	GraphicComponent.h
 	InputComponent.h
 	SoundComponent.h
@@ -10,7 +10,7 @@ set(GOMAENGINE_HEADERS
 
 set(GOMAENGINE_SOURCES
 	aplication.cpp
-	model.cpp
+	GameObject.cpp
 	GraphicComponent.cpp
 	InputComponent.cpp
 	SoundComponent.cpp

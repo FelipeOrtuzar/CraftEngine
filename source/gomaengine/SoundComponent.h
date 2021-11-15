@@ -9,6 +9,7 @@ namespace gomaengine {
     class SoundComponent {
     private:
         std::string path_clicked = "";
+        std::string path_moved = "";
         sf::Sound sound;
         sf::SoundBuffer sound_buffer;
 
@@ -18,7 +19,7 @@ namespace gomaengine {
 
         void update();
 
-        void insert_data(std::string path_to_sound_when_clicked);
+        void insert_clicked(std::string path_to_sound_when_clicked);
 
         
         void reload_sound();

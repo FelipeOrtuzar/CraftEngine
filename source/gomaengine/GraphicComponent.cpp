@@ -47,6 +47,10 @@ namespace gomaengine {
         this->set_sprite_position(this->get_position().sum(_vector));
     }
 
+    void GraphicComponent::update()
+    {
+    }
+
 
 
 }

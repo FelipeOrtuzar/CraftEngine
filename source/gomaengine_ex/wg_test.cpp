@@ -1,6 +1,6 @@
 
 #include <gomaengine/aplication.h>
-#include <gomaengine/model.h>
+#include <gomaengine/GameObject.h>
 #include <gomaengine/SoundComponent.h>
 #include <gomaengine/GraphicComponent.h>
 #include <gomaengine/root_directory.h>
@@ -12,13 +12,12 @@ int main() {
 
 	// Se hace la ventana
 	int win_size_x = 1200;
-	int win_size_y = 600;
+	int win_size_y = 680;
 	ge::Window window = { win_size_x, win_size_y };
 
     
 
-	/////////////////textures////////////////
-    //boo def
+    ////////////////////////BOO///////
 
     std::string boo_path = ge::getPath("assets/imgs/CABALLO_1.png").string();
     float boo_pos_x = 200.0; float boo_pos_y = 300.0;
@@ -26,10 +25,10 @@ int main() {
     float boo_speed = 20;
     float boo_dir = 1;
 
-    ge::SoundComponent boo_sc = ge::SoundComponent(); boo_sc.insert_data(ge::getPath("assets/sounds/horse_sound.wav").string());
+    ge::SoundComponent boo_sc = ge::SoundComponent(); boo_sc.insert_clicked(ge::getPath("assets/sounds/horse_sound.wav").string());
     ge::GraphicComponent boo_gc = ge::GraphicComponent(boo_path, ge::Vector(boo_pos_x, boo_pos_y), ge::Vector(boo_scale_x, boo_scale_y));
     //
-    ge::Model* boo_model = new ge::Model(
+    ge::GameObject* boo_model = new ge::GameObject(
         ge::Vector(boo_pos_x, boo_pos_y),
         "boo",
         boo_gc,
@@ -40,7 +39,7 @@ int main() {
     
 
 
- //   //pony def
+////////////////////////PONY///////
 
     std::string pony_path = ge::getPath("assets/imgs/CABALLO_2.png").string();
     float pony_pos_x = 600.0; float pony_pos_y = 200.0;
@@ -48,11 +47,11 @@ int main() {
     float pony_speed = 20;
     float pony_dir = 1;
 
-    ge::SoundComponent pony_sc = ge::SoundComponent(); pony_sc.insert_data(ge::getPath("assets/sounds/vill_sound.wav").string());
+    ge::SoundComponent pony_sc = ge::SoundComponent(); pony_sc.insert_clicked(ge::getPath("assets/sounds/vill_sound.wav").string());
     ge::GraphicComponent pony_gc = ge::GraphicComponent(pony_path, ge::Vector(pony_pos_x, pony_pos_y), ge::Vector(pony_scale_x, pony_scale_y));
 
 
-    ge::Model* pony_model = new ge::Model(
+    ge::GameObject* pony_model = new ge::GameObject(
         ge::Vector(pony_pos_x, pony_pos_y),
         "pony",
         pony_gc,
@@ -113,14 +112,14 @@ int main() {
     //std::vector<ge::Model*> model_vector = { grass_model, rectUI_model, boo_model, pony_model, mouse_model };
 
  
-    std::vector<ge::Model*> model_vector = {boo_model, pony_model};
+    std::vector<ge::GameObject*> model_vector = {boo_model, pony_model};
 
 
 
 	ge::Aplication ge_app = ge::Aplication(window, model_vector);
 	ge_app.update();
 
-    for (ge::Model* model : model_vector ) {
+    for (ge::GameObject* model : model_vector ) {
         delete model;
     }
 }
