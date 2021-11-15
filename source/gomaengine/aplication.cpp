@@ -17,7 +17,7 @@ namespace gomaengine {
         sf::RenderWindow window(sf::VideoMode(window_app.window_size_x, window_app.window_size_y), "My windoow");
 
 
-        sf::View view1(sf::Vector2f(window_app.window_size_x/2.f, window_app.window_size_y / 2.f),
+        sf::View terrain_view(sf::Vector2f(window_app.window_size_x/2.f, window_app.window_size_y / 2.f),
             sf::Vector2f(window_app.window_size_x , window_app.window_size_y));
         
         window.setFramerateLimit(60);
@@ -103,50 +103,33 @@ namespace gomaengine {
             sf::Event event;
             while (window.pollEvent(event))
             {
-                //printf("update: 3\n");
                 switch (event.type)
                 {
-                    // window closed
-                case sf::Event::Closed:
+                case sf::Event::Closed: // window closed
                     window.close();
-
-                    // key pressed
-                case sf::Event::KeyPressed:
-                    if (event.key.code == sf::Keyboard::Escape)
-                    {
+                case sf::Event::KeyPressed: // key pressed
+                    switch (event.key.code) {
+                    case sf::Keyboard::Escape:
                         window.close();
+                    case sf::Keyboard::A:
+                        terrain_view.move(-20.f, 0.f);
+                    case sf::Keyboard::S:
+                        terrain_view.move(0.f, 20.f);
+                    case sf::Keyboard::D:
+                        terrain_view.move(20.f, 0.f);
+                    case sf::Keyboard::W:
+                        terrain_view.move(0.f, -20.f);
+                    default:
+                        break;
                     }
-                    if (event.key.code == sf::Keyboard::A)
-                    {
-                        view1.move(-20.f, 0.f);
-                    }
-                    if (event.key.code == sf::Keyboard::S)
-                    {
-                        view1.move(0.f, 20.f);
-                    }
-                    if (event.key.code == sf::Keyboard::D)
-                    {
-                        view1.move(20.f, 0.f);
-                    }
-                    if (event.key.code == sf::Keyboard::W)
-                    {
-                        view1.move(0.f, -20.f);
-                    }
-
-                    // we don't process other types of events
                 default:
                     break;
                 }
             }
-            
-
-
 
             if (!(this->was_Mouse_Left_pressed_before) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
-
                 text2.setString("key pressed");
-
                 if (!model_vct.empty()) {
 
                     Vector local_position = Vector::to_Vector(sf::Mouse::getPosition(window));
@@ -160,18 +143,13 @@ namespace gomaengine {
                         min_model = min_radio > actual_dist ? model : min_model;
                     }
                     clicked_model = min_model;
-
-                    
                 }
 
                 if (clicked_model != nullptr) {
                     text2.setString(clicked_model->get_name());
                     clicked_model->is_clicked();
-
                 }
-                
             }
-
 
             if (!(this->was_Mouse_Right_pressed_before) && sf::Mouse::isButtonPressed(sf::Mouse::Right))
             {
@@ -180,8 +158,6 @@ namespace gomaengine {
                     clicked_model->set_target(mouse_pos);
 
                 }
-                
-
             }
 
 
@@ -191,26 +167,23 @@ namespace gomaengine {
                 //model->get_position().print();
             }
 
-
             //model_vct.at(2)->set_position((Vector::to_Vector(sf::Mouse::getPosition())).sum(Vector(-90.0, -120.0)));
             window.clear(sf::Color::Cyan);
 
+            //////////////UPDATE////////////////////
             for (GameObject* model : model_vct) {
 
                 model->update(elapsed_time.asSeconds(), window);
-                window.draw(*(model->get_texture().get_sprite()));
             }
 
-            
             this->was_Mouse_Left_pressed_before = sf::Mouse::isButtonPressed(sf::Mouse::Left);
             this->was_Mouse_Right_pressed_before = sf::Mouse::isButtonPressed(sf::Mouse::Right);
-
 
             //TEXT
             window.draw(text1);
             window.draw(text2);
             window.draw(text3);
-            window.setView(view1);
+            window.setView(terrain_view);
 
             window.display();
 
@@ -218,21 +191,16 @@ namespace gomaengine {
             sf::Time elapsed_time = clock.getElapsedTime();
             int fps_f =  (int) 1.0 / elapsed_time.asSeconds() ;
 
-
             std::string fps_s = "FPS: "; std::string fps = std::to_string(fps_f);
-            text3.setString(fps_s + fps );
-            
-        }
+            text3.setString(fps_s + fps );        }
         printf("Update: Out\n");
         return 0;
 	}
-
 
 	Aplication::Aplication(Window _window, std::vector<GameObject*> _model_vct){
         printf("Constructor: 1\n");
 
         this->window_app = _window;
         this->model_vct = _model_vct;
-       
 	}
 }

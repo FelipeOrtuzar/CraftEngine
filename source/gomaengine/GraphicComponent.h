@@ -103,7 +103,7 @@ namespace gomaengine {
         void translate(Vector _vector);
 
 
-        void update();
+        void update(sf::RenderWindow& _window);
 	};
 
 

@@ -75,7 +75,7 @@ namespace gomaengine {
 	void GameObject::update(float _delta_time, sf::RenderWindow& _window) {
 	
 
-		this->graphicComponent.update();
+		this->graphicComponent.update(_window);
 		this->sound_component.update();
 
 

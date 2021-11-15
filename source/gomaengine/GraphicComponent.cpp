@@ -46,9 +46,12 @@ namespace gomaengine {
     void GraphicComponent::translate(Vector _vector) {
         this->set_sprite_position(this->get_position().sum(_vector));
     }
+ 
 
-    void GraphicComponent::update()
+    void GraphicComponent::update(sf::RenderWindow& _window)
     {
+
+        _window.draw(*(this->sprite));
     }
 
 
