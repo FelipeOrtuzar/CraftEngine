@@ -2,12 +2,14 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/System.hpp>
+
 #include <iostream>
+#include <string>
+
 #include "aplication.h"
 #include "model.h"
 #include "root_directory.h"
-#include <string>
-#include "model.h"
+
 namespace gomaengine {
 
 
@@ -24,6 +26,8 @@ namespace gomaengine {
         for (Model* model : model_vct) {
             model->get_texture().load_resources();
         }
+
+
 
    
         /*for (Model* model : model_vct) {
@@ -239,13 +243,14 @@ namespace gomaengine {
 
             if (!(this->was_Mouse_Left_pressed_before) && sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
+
                 text2.setString("key pressed");
 
                 if (!model_vct.empty()) {
 
                     Vector local_position = Vector::to_Vector(sf::Mouse::getPosition(window));
 
-                    float min_radio = 25.0f;
+                    float min_radio = 35.0f;
                     float min_distance = 100000000.0f;
                     Model* min_model = nullptr;
                     // left mouse button is pressed
@@ -261,11 +266,29 @@ namespace gomaengine {
                 if (clicked_model != nullptr) {
                     text2.setString(clicked_model->get_name());
                     clicked_model->is_clicked();
+
                 }
                 
             }
 
 
+            if (!(this->was_Mouse_Right_pressed_before) && sf::Mouse::isButtonPressed(sf::Mouse::Right))
+            {
+                if (clicked_model != nullptr) {
+                    Vector mouse_pos = Vector::to_Vector(sf::Mouse::getPosition(window));
+                    clicked_model->set_target(mouse_pos);
+
+                }
+                
+
+            }
+
+
+            //Updating MovableComponent
+            for (Model* model : model_vct) {
+                model->update();
+                //model->get_position().print();
+            }
 
 
             //model_vct.at(2)->set_position((Vector::to_Vector(sf::Mouse::getPosition())).sum(Vector(-90.0, -120.0)));
@@ -277,7 +300,7 @@ namespace gomaengine {
 
             
             this->was_Mouse_Left_pressed_before = sf::Mouse::isButtonPressed(sf::Mouse::Left);
-           
+            this->was_Mouse_Right_pressed_before = sf::Mouse::isButtonPressed(sf::Mouse::Right);
 
 
             //TEXT

@@ -36,6 +36,7 @@ namespace gomaengine {
 
 
             bool was_Mouse_Left_pressed_before = 0;
+            bool was_Mouse_Right_pressed_before = 0;
         public:
             /// <summary>
             /// Constructor de la aplicacion

@@ -4,6 +4,7 @@
 #include <gomaengine/SoundComponent.h>
 #include <gomaengine/GraphicComponent.h>
 #include <gomaengine/root_directory.h>
+//#include <gomaengine/CR_MovableComponent.h>
 
 int main() {
     namespace ge = gomaengine;
@@ -25,21 +26,20 @@ int main() {
     float boo_speed = 20;
     float boo_dir = 1;
 
-
-    //
-    ge::SoundComponent boo_sc = ge::SoundComponent();
-    boo_sc.insert_data(ge::getPath("assets/sounds/horse_sound.wav").string());
+    ge::SoundComponent boo_sc = ge::SoundComponent(); boo_sc.insert_data(ge::getPath("assets/sounds/horse_sound.wav").string());
+    ge::GraphicComponent boo_gc = ge::GraphicComponent(boo_path, ge::Vector(boo_pos_x, boo_pos_y), ge::Vector(boo_scale_x, boo_scale_y));
     //
     ge::Model* boo_model = new ge::Model(
         ge::Vector(boo_pos_x, boo_pos_y),
-        ge::GraphicComponent(boo_path,
-            ge::Vector(boo_pos_x, boo_pos_y),
-            ge::Vector(boo_scale_x, boo_scale_y)), 
-        boo_dir, 
+        "boo",
+        boo_gc,
         boo_sc
     );
+    boo_model->set_velocity(5.0f);
+    //boo_model->insert_movableComponent_data(5.f);
+    
 
-    /*
+
  //   //pony def
 
     std::string pony_path = ge::getPath("assets/imgs/CABALLO_2.png").string();
@@ -48,15 +48,19 @@ int main() {
     float pony_speed = 20;
     float pony_dir = 1;
 
+    ge::SoundComponent pony_sc = ge::SoundComponent(); pony_sc.insert_data(ge::getPath("assets/sounds/vill_sound.wav").string());
+    ge::GraphicComponent pony_gc = ge::GraphicComponent(pony_path, ge::Vector(pony_pos_x, pony_pos_y), ge::Vector(pony_scale_x, pony_scale_y));
+
+
     ge::Model* pony_model = new ge::Model(
         ge::Vector(pony_pos_x, pony_pos_y),
-        ge::Texture(pony_path,
-            ge::Vector(pony_pos_x, pony_pos_y),
-            ge::Vector(pony_scale_x, pony_scale_y)), 
-        pony_dir,
-        ge::SoundComponent(ge::getPath("assets/sounds/horse_sound.wav").string())
+        "pony",
+        pony_gc,
+        pony_sc
+        
     );
-
+    pony_model->set_velocity(5.0f);
+/*
 
  //   //mouse def
     
@@ -109,7 +113,7 @@ int main() {
     //std::vector<ge::Model*> model_vector = { grass_model, rectUI_model, boo_model, pony_model, mouse_model };
 
  
-    std::vector<ge::Model*> model_vector = {boo_model};
+    std::vector<ge::Model*> model_vector = {boo_model, pony_model};
 
 
 

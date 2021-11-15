@@ -4,13 +4,16 @@
 #include <SFML/Window.hpp>
 #include "GraphicComponent.h"
 #include "SoundComponent.h"
+//#include "CR_MovableComponent.h"
 #include <SFML/Audio.hpp>
+
+//class CR_MovableComponent;
 
 namespace gomaengine {
 
 
 
-	
+
 
 	/** 
 	* Clase que define los modelos del engine.
@@ -23,7 +26,7 @@ namespace gomaengine {
 			/// <summary>
 			/// Vector que identifica la posicion abstracta del modelo en el juego.
 			/// </summary>
-			sf::Vector2f position = sf::Vector2f(0.0, 0.0);
+			Vector position = Vector(0.0f, 0.0f);
 			/// <summary>
 			/// Int que define si mira hacia la derecha o la izquierda
 			/// </summary>
@@ -35,8 +38,12 @@ namespace gomaengine {
 
 			SoundComponent sound_component;
 
+			Vector target_position = Vector(0.0f, 0.0f);
 
+			float velocity = 1.0f;
+			//CR_MovableComponent* movable_component;
 
+			std::string name = "";
 			
 
 		public:
@@ -82,8 +89,8 @@ namespace gomaengine {
 			/// <param name="_texture"> Textura del modelo</param>
 			/// <param name="_orientation">Orientacion del modelo</param>
 			/// <param name="_soundComponent">Componente de sonido</param>
-			Model(Vector _position, GraphicComponent _graphicComponent, int _orientation, SoundComponent _soundComponent);
-
+			//Model(Vector _position, GraphicComponent _graphicComponent, int _orientation, SoundComponent _soundComponent, CR_MovableComponent* _movableComponent);
+			Model(Vector _position, std::string _name, GraphicComponent _graphicComponent, SoundComponent _soundComponent);
 			~Model();
 
 			/// <summary>
@@ -100,14 +107,23 @@ namespace gomaengine {
 
 			SoundComponent get_sound_component();
 
+
+			void set_velocity(float _velocity);
+			//CR_MovableComponent get_movableCompoment();
+
+			//void insert_movableComponent_data(float _velocity);
+
 			void is_clicked();
 
 			//bool has_soundComponent();
 
 			Model* get_me();
 
+			void update();
+
+			void set_target(Vector _target);
 	};
 	
 
 
-}
+};

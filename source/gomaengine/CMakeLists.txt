@@ -4,6 +4,7 @@ set(GOMAENGINE_HEADERS
 	GraphicComponent.h
 	InputComponent.h
 	SoundComponent.h
+	#CR_MovableComponent.h
 	Utils.h
  )
 
@@ -13,6 +14,7 @@ set(GOMAENGINE_SOURCES
 	GraphicComponent.cpp
 	InputComponent.cpp
 	SoundComponent.cpp
+	#CR_MovableComponent.cpp
 	Utils.cpp
 
  )

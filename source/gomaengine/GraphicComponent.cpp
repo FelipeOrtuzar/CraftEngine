@@ -1,5 +1,4 @@
 #include "GraphicComponent.h"
-#include <SFML/Graphics.hpp>
 
 
 namespace gomaengine {
