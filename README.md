@@ -22,6 +22,14 @@ Es es en la línea 15, 78.
 - Ir a la carpeta <path>\out\build\x64-Release\source\gomaengine_ex\ y pegar del portapapeles el archivo openal32.dll
 - Abrir de nuevo el archivo wg_test.cpp y hacer click en el boton "play" verde que dice: "Documento actual (wg_test.cpp)"
 - Ahora debería abrir el demo.
+  
+## User input:
+  Teclado: 
+    - O , P para alternar entre música de fondo.
+    - A, S, D, W para mover la vista.
+    - Escape para salir del juego.
+  Mouse:
+    - Se puede hacer click izquierdo sobre los objetos en pantalla para seleccionarlos y moverlos con el click derecho. 
 
-
-# REVISAR DOCUMENTACION RESTANTE EN LA CARPETA documentacion/
+## REVISAR DOCUMENTACION RESTANTE EN LA CARPETA documentacion/
+  - También hay un ejemplo de uso en la carpeta source/gomaengine_ex
