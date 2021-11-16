@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="CABALLO_5_logo_color.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">CraftEngine<span id="projectnumber">&#160;1.5</span>
+   <div id="projectname">CraftEngine<span id="projectnumber">&#160;2.1</span>
    </div>
    <div id="projectbrief">Engine para videojuegos</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('aplication_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,11 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_816090a8a8ae37f0cd70e1568f406dec.html">gomaengine</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">aplication.h</div></div>
 </div><!--header-->
@@ -74,35 +90,51 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;SFML/Window.hpp&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;model.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;GameObject.h&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>gomaengine {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structgomaengine_1_1_window.html">   12</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structgomaengine_1_1_window.html">Window</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structgomaengine_1_1_window.html#a0ed9c90a51564e5a75b34e362976ceb4">   16</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structgomaengine_1_1_window.html#a0ed9c90a51564e5a75b34e362976ceb4">window_size_x</a>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structgomaengine_1_1_window.html#a04d8a1764c714c787e6d5e462daea4e8">   20</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structgomaengine_1_1_window.html#a04d8a1764c714c787e6d5e462daea4e8">window_size_y</a>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classgomaengine_1_1_aplication.html">   25</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classgomaengine_1_1_aplication.html">Aplication</a> {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <a class="code hl_struct" href="structgomaengine_1_1_window.html">Window</a> window_app;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            std::vector&lt;Model*&gt; model_vct;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <a class="code hl_function" href="classgomaengine_1_1_aplication.html#aef564db625b2f3625ba7f700e2511763">Aplication</a>(<a class="code hl_struct" href="structgomaengine_1_1_window.html">Window</a> _window, std::vector&lt;Model*&gt; _model_vct);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordtype">int</span> <a class="code hl_function" href="classgomaengine_1_1_aplication.html#afad33ce7549400cb18d0bce505e8463e">update</a>();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    };</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">//namespace gomaengine</span></div>
-<div class="ttc" id="aclassgomaengine_1_1_aplication_html"><div class="ttname"><a href="classgomaengine_1_1_aplication.html">gomaengine::Aplication</a></div><div class="ttdoc">Clase que define y organiza los modelos y clases del game engine</div><div class="ttdef"><b>Definition:</b> aplication.h:25</div></div>
-<div class="ttc" id="aclassgomaengine_1_1_aplication_html_aef564db625b2f3625ba7f700e2511763"><div class="ttname"><a href="classgomaengine_1_1_aplication.html#aef564db625b2f3625ba7f700e2511763">gomaengine::Aplication::Aplication</a></div><div class="ttdeci">Aplication(Window _window, std::vector&lt; Model * &gt; _model_vct)</div><div class="ttdoc">Constructor de la aplicacion</div><div class="ttdef"><b>Definition:</b> aplication.cpp:261</div></div>
-<div class="ttc" id="aclassgomaengine_1_1_aplication_html_afad33ce7549400cb18d0bce505e8463e"><div class="ttname"><a href="classgomaengine_1_1_aplication.html#afad33ce7549400cb18d0bce505e8463e">gomaengine::Aplication::update</a></div><div class="ttdeci">int update()</div><div class="ttdoc">Funcion con el ciclo del juego</div><div class="ttdef"><b>Definition:</b> aplication.cpp:14</div></div>
-<div class="ttc" id="astructgomaengine_1_1_window_html"><div class="ttname"><a href="structgomaengine_1_1_window.html">gomaengine::Window</a></div><div class="ttdoc">Estructura con atributos de la pantalla de visualizacion</div><div class="ttdef"><b>Definition:</b> aplication.h:12</div></div>
-<div class="ttc" id="astructgomaengine_1_1_window_html_a04d8a1764c714c787e6d5e462daea4e8"><div class="ttname"><a href="structgomaengine_1_1_window.html#a04d8a1764c714c787e6d5e462daea4e8">gomaengine::Window::window_size_y</a></div><div class="ttdeci">int window_size_y</div><div class="ttdoc">Alto de la pantalla</div><div class="ttdef"><b>Definition:</b> aplication.h:20</div></div>
-<div class="ttc" id="astructgomaengine_1_1_window_html_a0ed9c90a51564e5a75b34e362976ceb4"><div class="ttname"><a href="structgomaengine_1_1_window.html#a0ed9c90a51564e5a75b34e362976ceb4">gomaengine::Window::window_size_x</a></div><div class="ttdeci">int window_size_x</div><div class="ttdoc">Ancho de la pantalla</div><div class="ttdef"><b>Definition:</b> aplication.h:16</div></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Utils.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>gomaengine {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structgomaengine_1_1_window.html">   13</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structgomaengine_1_1_window.html">Window</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structgomaengine_1_1_window.html#a0ed9c90a51564e5a75b34e362976ceb4">   18</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structgomaengine_1_1_window.html#a0ed9c90a51564e5a75b34e362976ceb4">window_size_x</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structgomaengine_1_1_window.html#a04d8a1764c714c787e6d5e462daea4e8">   23</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structgomaengine_1_1_window.html#a04d8a1764c714c787e6d5e462daea4e8">window_size_y</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classgomaengine_1_1_aplication.html">   28</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classgomaengine_1_1_aplication.html">Aplication</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_struct" href="structgomaengine_1_1_window.html">Window</a> window_app;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            std::vector&lt;GameObject*&gt; model_vct;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordtype">bool</span> was_Mouse_Left_pressed_before = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordtype">bool</span> was_Mouse_Right_pressed_before = 0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordtype">float</span> previous_dt = 1.0f / 60.0f;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_function" href="classgomaengine_1_1_aplication.html#a3c0e60ba742d603292216b525c0049bc">Aplication</a>(<a class="code hl_struct" href="structgomaengine_1_1_window.html">Window</a> _window, std::vector&lt;GameObject*&gt; _model_vct);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordtype">int</span> <a class="code hl_function" href="classgomaengine_1_1_aplication.html#afad33ce7549400cb18d0bce505e8463e">update</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    };</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>} <span class="comment">//namespace gomaengine</span></div>
+<div class="ttc" id="aclassgomaengine_1_1_aplication_html"><div class="ttname"><a href="classgomaengine_1_1_aplication.html">gomaengine::Aplication</a></div><div class="ttdoc">Clase que define y organiza los modelos y clases del game engine</div><div class="ttdef"><b>Definition:</b> aplication.h:28</div></div>
+<div class="ttc" id="aclassgomaengine_1_1_aplication_html_a3c0e60ba742d603292216b525c0049bc"><div class="ttname"><a href="classgomaengine_1_1_aplication.html#a3c0e60ba742d603292216b525c0049bc">gomaengine::Aplication::Aplication</a></div><div class="ttdeci">Aplication(Window _window, std::vector&lt; GameObject * &gt; _model_vct)</div><div class="ttdoc">Constructor de la aplicacion</div><div class="ttdef"><b>Definition:</b> aplication.cpp:201</div></div>
+<div class="ttc" id="aclassgomaengine_1_1_aplication_html_afad33ce7549400cb18d0bce505e8463e"><div class="ttname"><a href="classgomaengine_1_1_aplication.html#afad33ce7549400cb18d0bce505e8463e">gomaengine::Aplication::update</a></div><div class="ttdeci">int update()</div><div class="ttdoc">Funcion con el ciclo del juego</div><div class="ttdef"><b>Definition:</b> aplication.cpp:15</div></div>
+<div class="ttc" id="astructgomaengine_1_1_window_html"><div class="ttname"><a href="structgomaengine_1_1_window.html">gomaengine::Window</a></div><div class="ttdoc">Estructura con atributos de la pantalla de visualizacion</div><div class="ttdef"><b>Definition:</b> aplication.h:13</div></div>
+<div class="ttc" id="astructgomaengine_1_1_window_html_a04d8a1764c714c787e6d5e462daea4e8"><div class="ttname"><a href="structgomaengine_1_1_window.html#a04d8a1764c714c787e6d5e462daea4e8">gomaengine::Window::window_size_y</a></div><div class="ttdeci">int window_size_y</div><div class="ttdoc">Alto de la pantalla</div><div class="ttdef"><b>Definition:</b> aplication.h:23</div></div>
+<div class="ttc" id="astructgomaengine_1_1_window_html_a0ed9c90a51564e5a75b34e362976ceb4"><div class="ttname"><a href="structgomaengine_1_1_window.html#a0ed9c90a51564e5a75b34e362976ceb4">gomaengine::Window::window_size_x</a></div><div class="ttdeci">int window_size_x</div><div class="ttdoc">Ancho de la pantalla</div><div class="ttdef"><b>Definition:</b> aplication.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_816090a8a8ae37f0cd70e1568f406dec.html">gomaengine</a></li><li class="navelem"><b>aplication.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classgomaengine_1_1_input" kind="class" language="C++" prot="public">
+    <compoundname>gomaengine::Input</compoundname>
+    <includes refid="_input_component_8h" local="no">InputComponent.h</includes>
+    <briefdescription>
+<para>Clase para definir y operar elementos de la funcion <ref refid="classgomaengine_1_1_input" kindref="compound">Input</ref> (en construccion) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/gomaengine/InputComponent.h" line="40" column="1" bodyfile="source/gomaengine/InputComponent.h" bodystart="40" bodyend="47"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

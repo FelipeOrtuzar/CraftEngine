@@ -1,0 +1,26 @@
+digraph "gomaengine::Aplication::update"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="gomaengine::Aplication\l::update",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Funcion con el ciclo del juego"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="gomaengine::Vector\l::distance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgomaengine_1_1_vector.html#a42bde5df1aa513349980ee4f9b72cc30",tooltip="Funcion que calcula la distancia euclidiana entre dos vectores"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="gomaengine::GameObject\l::get_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_game_object.html#a70c438101a5b5c9bf7f3cf7eb4639330",tooltip="Funcion que te da el nombre del modelo"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="gomaengine::GameObject\l::get_texture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_game_object.html#a38987365e507d8ddf7f30c8c2e11a9a1",tooltip="Funcion que retorna la textura usada por el modelo."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="gomaengine::GameObject\l::is_clicked",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_game_object.html#a22b648b13c2bb159647510adcdc6ef08",tooltip="Funcion que define algoritmos para cuando el objeto se cliquea"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="gomaengine::SoundComponent\l::play_sound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_sound_component.html#ae4417c24f1822929c4cd2840a6dbe920",tooltip="Funcion que hace sonar la musica precargada"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="gomaengine::GraphicComponent\l::load_resources",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_graphic_component.html#ad26eddc59d388063101ebad999438a42",tooltip="Funcion que carga los atributos y genera lo objetos en la textura"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="gomaengine::GraphicComponent\l::get_path_to_texture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_graphic_component.html#ad455e63941bf2dbee7b33a9de739f2a4",tooltip="Funcion que retorna el string de la direccion en memoria del archivo de la textura"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="gomaengine::GameObject\l::set_target",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_game_object.html#a4f88fee54cbf9a371558c2af073185da",tooltip="Funcion que settea la posicion objetivo del modelo"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="gomaengine::Vector\l::to_Vector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgomaengine_1_1_vector.html#a0a989b1573c271183efffbe203a70c80",tooltip="Static function to generate a Vector from a sf::Vector2f"];
+}

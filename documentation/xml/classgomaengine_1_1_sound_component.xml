@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classgomaengine_1_1_sound_component" kind="class" language="C++" prot="public">
+    <compoundname>gomaengine::SoundComponent</compoundname>
+    <includes refid="_sound_component_8h" local="no">SoundComponent.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgomaengine_1_1_sound_component_1ac920256f46dace942cf2f20c2e3f60f2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gomaengine::SoundComponent::path_clicked</definition>
+        <argsstring></argsstring>
+        <name>path_clicked</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+<para>Ruta de archivo para cuando se haga click sobre el objeto </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/SoundComponent.h" line="17" column="21" bodyfile="source/gomaengine/SoundComponent.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_sound_component_1ac1d34cc33944207b4b34e64782db3f51" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gomaengine::SoundComponent::path_moved</definition>
+        <argsstring></argsstring>
+        <name>path_moved</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+<para>Ruta de archivo para cuando se desplaze el objeto </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/SoundComponent.h" line="22" column="21" bodyfile="source/gomaengine/SoundComponent.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_sound_component_1afd255e6a0803ff59b9e264abb891c1c9" prot="private" static="no" mutable="no">
+        <type>sf::Sound</type>
+        <definition>sf::Sound gomaengine::SoundComponent::sound</definition>
+        <argsstring></argsstring>
+        <name>sound</name>
+        <briefdescription>
+<para>Componente de sonido de la libreria sfml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/SoundComponent.h" line="27" column="19" bodyfile="source/gomaengine/SoundComponent.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_sound_component_1ae1dfc1f79413490fc237ccaca1629315" prot="private" static="no" mutable="no">
+        <type>sf::SoundBuffer</type>
+        <definition>sf::SoundBuffer gomaengine::SoundComponent::sound_buffer</definition>
+        <argsstring></argsstring>
+        <name>sound_buffer</name>
+        <briefdescription>
+<para>Buffer del sonido de sfml </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/SoundComponent.h" line="32" column="25" bodyfile="source/gomaengine/SoundComponent.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgomaengine_1_1_sound_component_1a19797858bb1b94d623324eae8c129007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gomaengine::SoundComponent::SoundComponent</definition>
+        <argsstring>()</argsstring>
+        <name>SoundComponent</name>
+        <briefdescription>
+<para>Constructor de la clase </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/SoundComponent.h" line="39" column="9" bodyfile="source/gomaengine/SoundComponent.cpp" bodystart="9" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_sound_component_1abcd7b4c65c44932ee42dc17227e51446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gomaengine::SoundComponent::~SoundComponent</definition>
+        <argsstring>()</argsstring>
+        <name>~SoundComponent</name>
+        <briefdescription>
+<para>Destructor de la clase </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/SoundComponent.h" line="44" column="9" bodyfile="source/gomaengine/SoundComponent.cpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_sound_component_1ab052998ebe33cd2dea670d29a6dbcb2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::SoundComponent::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+<para>Funcion de actualizacion, que se llama en cada loop </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/SoundComponent.h" line="49" column="14" bodyfile="source/gomaengine/SoundComponent.cpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_sound_component_1a5e770e785dfed3dc5259dbe3c92f4c96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::SoundComponent::insert_clicked</definition>
+        <argsstring>(std::string path_to_sound_when_clicked)</argsstring>
+        <name>insert_clicked</name>
+        <param>
+          <type>std::string</type>
+          <declname>path_to_sound_when_clicked</declname>
+        </param>
+        <briefdescription>
+<para>Funcion que settea el valor de this.path_clicked </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path_to_sound_when_clicked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ruta del archivo de sonido</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/SoundComponent.h" line="55" column="14" bodyfile="source/gomaengine/SoundComponent.cpp" bodystart="17" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_sound_component_1a446ea1afa8aba471eb02441e870f57cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::SoundComponent::reload_sound</definition>
+        <argsstring>()</argsstring>
+        <name>reload_sound</name>
+        <briefdescription>
+<para>Funcion que actualiza el sonido y el buffer segun los parametros del objeto </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/SoundComponent.h" line="60" column="14" bodyfile="source/gomaengine/SoundComponent.cpp" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_sound_component_1ae4417c24f1822929c4cd2840a6dbe920" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::SoundComponent::play_sound</definition>
+        <argsstring>()</argsstring>
+        <name>play_sound</name>
+        <briefdescription>
+<para>Funcion que hace sonar la musica precargada </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/SoundComponent.h" line="65" column="14" bodyfile="source/gomaengine/SoundComponent.cpp" bodystart="45" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Clase referente a un componente de sonido </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/gomaengine/SoundComponent.h" line="12" column="5" bodyfile="source/gomaengine/SoundComponent.h" bodystart="12" bodyend="66"/>
+    <listofallmembers>
+      <member refid="classgomaengine_1_1_sound_component_1a5e770e785dfed3dc5259dbe3c92f4c96" prot="public" virt="non-virtual"><scope>gomaengine::SoundComponent</scope><name>insert_clicked</name></member>
+      <member refid="classgomaengine_1_1_sound_component_1ac920256f46dace942cf2f20c2e3f60f2" prot="private" virt="non-virtual"><scope>gomaengine::SoundComponent</scope><name>path_clicked</name></member>
+      <member refid="classgomaengine_1_1_sound_component_1ac1d34cc33944207b4b34e64782db3f51" prot="private" virt="non-virtual"><scope>gomaengine::SoundComponent</scope><name>path_moved</name></member>
+      <member refid="classgomaengine_1_1_sound_component_1ae4417c24f1822929c4cd2840a6dbe920" prot="public" virt="non-virtual"><scope>gomaengine::SoundComponent</scope><name>play_sound</name></member>
+      <member refid="classgomaengine_1_1_sound_component_1a446ea1afa8aba471eb02441e870f57cb" prot="public" virt="non-virtual"><scope>gomaengine::SoundComponent</scope><name>reload_sound</name></member>
+      <member refid="classgomaengine_1_1_sound_component_1afd255e6a0803ff59b9e264abb891c1c9" prot="private" virt="non-virtual"><scope>gomaengine::SoundComponent</scope><name>sound</name></member>
+      <member refid="classgomaengine_1_1_sound_component_1ae1dfc1f79413490fc237ccaca1629315" prot="private" virt="non-virtual"><scope>gomaengine::SoundComponent</scope><name>sound_buffer</name></member>
+      <member refid="classgomaengine_1_1_sound_component_1a19797858bb1b94d623324eae8c129007" prot="public" virt="non-virtual"><scope>gomaengine::SoundComponent</scope><name>SoundComponent</name></member>
+      <member refid="classgomaengine_1_1_sound_component_1ab052998ebe33cd2dea670d29a6dbcb2c" prot="public" virt="non-virtual"><scope>gomaengine::SoundComponent</scope><name>update</name></member>
+      <member refid="classgomaengine_1_1_sound_component_1abcd7b4c65c44932ee42dc17227e51446" prot="public" virt="non-virtual"><scope>gomaengine::SoundComponent</scope><name>~SoundComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

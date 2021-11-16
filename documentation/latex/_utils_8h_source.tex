@@ -1,0 +1,76 @@
+\hypertarget{_utils_8h_source}{}\doxysection{Utils.\+h}
+\label{_utils_8h_source}\index{source/gomaengine/Utils.h@{source/gomaengine/Utils.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{namespace }gomaengine \{}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{12     \textcolor{keyword}{struct }\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17         \textcolor{keywordtype}{float} \mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} = 0.0;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{22         \textcolor{keywordtype}{float} \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}} = 0.0;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{28         sf::Vector2f \mbox{\hyperlink{structgomaengine_1_1_vector_ab15a609444f098a262c06f450f01f40c}{to\_sfVector}}() \{ \textcolor{keywordflow}{return} sf::Vector2f(\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}}, \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}}); \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_a100ddaaf3d3b3ea580f643636a4a7c38}{sum}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_vector) \{ this-\/>x += \_vector.\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}}, this-\/>y += \_vector.\mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}}; \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{41         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_aa9e6d516b153e626e33a2b7e8ef98fb4}{substract}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_vector) \{ this-\/>x -\/= \_vector.\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}}, this-\/>y -\/= \_vector.\mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}}; \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{48         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_a2a4c0ab30da893ce962b8dd8a78674e0}{subs}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_vector) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(this-\/>x -\/ \_vector.\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}}, this-\/>y -\/ \_vector.\mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}}); \};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{54         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_a6b58c989725993a7c1fabb5714a5beff}{normalize}}() \{}
+\DoxyCodeLine{55             \textcolor{keywordtype}{float} dist = \mbox{\hyperlink{structgomaengine_1_1_vector_a42bde5df1aa513349980ee4f9b72cc30}{distance}}(*\textcolor{keyword}{this}, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(0.0f, 0.0f));}
+\DoxyCodeLine{56             \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{structgomaengine_1_1_vector_ad477270cac80be776c49e2e8ac1c01b9}{multiply}}(1.0 / dist);}
+\DoxyCodeLine{57         \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{64         \textcolor{keyword}{static} \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_a0a989b1573c271183efffbe203a70c80}{to\_Vector}}(sf::Vector2f \_sf\_vector) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(\_sf\_vector.x, \_sf\_vector.y); \};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{71         \textcolor{keyword}{static} \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_afc775afc2a7edff11ec13998b14eb533}{to\_Vector}}(sf::Vector2i \_sf\_vector) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}((\textcolor{keywordtype}{float})\_sf\_vector.x, (\textcolor{keywordtype}{float})\_sf\_vector.y); \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{78         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_ad477270cac80be776c49e2e8ac1c01b9}{multiply}}(\textcolor{keywordtype}{float} k) \{ \mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} *= k, \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}} *= k; \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{85         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_a418a8e07ad05840a3bdd0d50250573a3}{multiply}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_vector) \{ \mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} *= \_vector.\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}}, \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}} *= \_vector.\mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}}; \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{91         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_vector_a5ceadf12bf1e8892db9c0db7950dc6aa}{abs}}() \{ \mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} = std::abs(\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}}), \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}} = std::abs(\mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}}); \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{99         \textcolor{keyword}{static} \textcolor{keywordtype}{float} \mbox{\hyperlink{structgomaengine_1_1_vector_a42bde5df1aa513349980ee4f9b72cc30}{distance}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_vector1, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_vector2) \{}
+\DoxyCodeLine{100             \textcolor{keywordtype}{float} dif\_x = \_vector1.\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} -\/ \_vector2.\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}};}
+\DoxyCodeLine{101             \textcolor{keywordtype}{float} dif\_y = \_vector1.\mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}} -\/ \_vector2.\mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103             \textcolor{keywordflow}{return} sqrt(dif\_x * dif\_x + dif\_y * dif\_y);}
+\DoxyCodeLine{104         \}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{110         \textcolor{keywordtype}{float} \mbox{\hyperlink{structgomaengine_1_1_vector_a3b014ba4c29d9829f52814b58aa45ad8}{magnitude}}() \{}
+\DoxyCodeLine{111             \textcolor{keywordflow}{return} sqrt(\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} * \mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} + \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}} * \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}});}
+\DoxyCodeLine{112         \}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{117         \textcolor{keywordtype}{void} \mbox{\hyperlink{structgomaengine_1_1_vector_a911a366df0e2734acdb8de3004f5fc9e}{print}}() \{}
+\DoxyCodeLine{118             std::cout << \textcolor{stringliteral}{"{}x: "{}} << \mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} << \textcolor{stringliteral}{"{}. y: "{}} << \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}} << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{119         \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{126         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structgomaengine_1_1_vector_aa16726f3686eabf290ca6267ad8145bc}{eq}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_vector) \{}
+\DoxyCodeLine{127             \textcolor{keywordflow}{return} \mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} == \_vector.\mbox{\hyperlink{structgomaengine_1_1_vector_ae36a8dc0833e75ec7ab72b9441ff9b93}{x}} \&\& \mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}} == \_vector.\mbox{\hyperlink{structgomaengine_1_1_vector_af8ca15f3b5d5ded5ff6238b5e1235a05}{y}};}
+\DoxyCodeLine{128         \}}
+\DoxyCodeLine{129     \};}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{134     \textcolor{keyword}{struct }\mbox{\hyperlink{structgomaengine_1_1_c_p}{CP}} \{}
+\DoxyCodeLine{135         std::string GRAPHIC = \textcolor{stringliteral}{"{}Graphic\_component"{}};}
+\DoxyCodeLine{136         std::string SOUND   = \textcolor{stringliteral}{"{}Sound\_component"{}};}
+\DoxyCodeLine{137         std::string MOVABLE = \textcolor{stringliteral}{"{}Movable\_component"{}};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139     \};}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     \textcolor{keyword}{const} \mbox{\hyperlink{structgomaengine_1_1_c_p}{CP}} Component\_types;}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \}}
+
+\end{DoxyCode}

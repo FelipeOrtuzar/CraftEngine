@@ -11,16 +11,9 @@
 
 namespace gomaengine {
 
-
-
-
-
-	/** 
-	* Clase que define los modelos del engine.
-	*
-	* GameObject define las caracteristicas intrinsecas de una unidad en el game engine.
-	*
-	*/
+	/// <summary>
+	/// Clase que define los modelos del engine. GameObject define las caracteristicas intrinsecas de una unidad en el game engine.
+	/// </summary>
 	class GameObject {
 		private:
 			/// <summary>

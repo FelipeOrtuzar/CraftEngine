@@ -1,0 +1,24 @@
+digraph "gomaengine::GameObject::translate"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="gomaengine::GameObject\l::translate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Funcion que traslada la posicion abstracta del modelo"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="gomaengine::Vector::abs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgomaengine_1_1_vector.html#a5ceadf12bf1e8892db9c0db7950dc6aa",tooltip="Funcion que aplica el valor absoluto sobre todas la dimensiones del Vector"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="gomaengine::GraphicComponent\l::get_scale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_graphic_component.html#aa915e39c124efc213680b0fe19064243",tooltip="Funcion que retorna el Vector del escalamiento de la textura"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="gomaengine::Vector\l::multiply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgomaengine_1_1_vector.html#ad477270cac80be776c49e2e8ac1c01b9",tooltip="Funcion que multiplica el Vector por una constante y lo devuelve."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="gomaengine::GraphicComponent\l::set_sprite_scale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_graphic_component.html#a708d6eba4c526cb69a936fb1f39e27f8",tooltip="Funcion que establece la escala del sprite en la textura"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="gomaengine::Vector::sum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgomaengine_1_1_vector.html#a100ddaaf3d3b3ea580f643636a4a7c38",tooltip="Sum between this vector and another"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="gomaengine::GraphicComponent\l::translate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_graphic_component.html#a60abcce9508d24275db357eb9dba2df4",tooltip="Funcion para mover de posicion la posicion de la textura"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="gomaengine::GraphicComponent\l::get_position",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_graphic_component.html#aeb5fec2c36cd19cb703c2114da226f01",tooltip="Funcion que retorna el"];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="gomaengine::GraphicComponent\l::set_sprite_position",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgomaengine_1_1_graphic_component.html#a7a1b85a01fe69e94157eb3b61537f360",tooltip="Funcion que establece la posicion del sprite de la textura"];
+}

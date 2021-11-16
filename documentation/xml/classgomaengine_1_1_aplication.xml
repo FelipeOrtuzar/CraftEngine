@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classgomaengine_1_1_aplication" kind="class" language="C++" prot="public">
+    <compoundname>gomaengine::Aplication</compoundname>
+    <includes refid="aplication_8h" local="no">aplication.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgomaengine_1_1_aplication_1a9a2a02916363738aaff52315a6e23e50" prot="private" static="no" mutable="no">
+        <type><ref refid="structgomaengine_1_1_window" kindref="compound">Window</ref></type>
+        <definition>Window gomaengine::Aplication::window_app</definition>
+        <argsstring></argsstring>
+        <name>window_app</name>
+        <briefdescription>
+<para>Estructura referente a la ventana de visualizacion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/aplication.h" line="33" column="20" bodyfile="source/gomaengine/aplication.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_aplication_1a2be4f70cb73f989ae30547572f2117ee" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classgomaengine_1_1_game_object" kindref="compound">GameObject</ref> * &gt;</type>
+        <definition>std::vector&lt;GameObject*&gt; gomaengine::Aplication::model_vct</definition>
+        <argsstring></argsstring>
+        <name>model_vct</name>
+        <briefdescription>
+<para><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref> con un listado de modelos que estaran en la aplicacion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/aplication.h" line="38" column="25" bodyfile="source/gomaengine/aplication.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_aplication_1a69574d04c7bf8221cbb757852efa3fbe" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gomaengine::Aplication::was_Mouse_Left_pressed_before</definition>
+        <argsstring></argsstring>
+        <name>was_Mouse_Left_pressed_before</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Booleano sobre si se ha apretado el boton izquierdo antes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/aplication.h" line="43" column="18" bodyfile="source/gomaengine/aplication.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_aplication_1aee6a6c71d7fc2dac8232704867180db7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gomaengine::Aplication::was_Mouse_Right_pressed_before</definition>
+        <argsstring></argsstring>
+        <name>was_Mouse_Right_pressed_before</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Booleano sobre si se ha apretado el boton derecho antes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/aplication.h" line="48" column="18" bodyfile="source/gomaengine/aplication.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_aplication_1a3851444ef21d9e9a96e00682199fc784" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gomaengine::Aplication::previous_dt</definition>
+        <argsstring></argsstring>
+        <name>previous_dt</name>
+        <initializer>= 1.0f / 60.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/aplication.h" line="50" column="19" bodyfile="source/gomaengine/aplication.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgomaengine_1_1_aplication_1a3c0e60ba742d603292216b525c0049bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gomaengine::Aplication::Aplication</definition>
+        <argsstring>(Window _window, std::vector&lt; GameObject * &gt; _model_vct)</argsstring>
+        <name>Aplication</name>
+        <param>
+          <type><ref refid="structgomaengine_1_1_window" kindref="compound">Window</ref></type>
+          <declname>_window</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="classgomaengine_1_1_game_object" kindref="compound">GameObject</ref> * &gt;</type>
+          <declname>_model_vct</declname>
+        </param>
+        <briefdescription>
+<para>Constructor de la aplicacion </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ventana de visualizacion</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_model_vct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref> con los modelos a usar</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/aplication.h" line="58" column="13" bodyfile="source/gomaengine/aplication.cpp" bodystart="201" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_aplication_1afad33ce7549400cb18d0bce505e8463e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gomaengine::Aplication::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+<para>Funcion con el ciclo del juego </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Int de retorno de correctitud del programa</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/aplication.h" line="64" column="17" bodyfile="source/gomaengine/aplication.cpp" bodystart="15" bodyend="199"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Clase que define y organiza los modelos y clases del game engine </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/gomaengine/aplication.h" line="28" column="5" bodyfile="source/gomaengine/aplication.h" bodystart="28" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classgomaengine_1_1_aplication_1a3c0e60ba742d603292216b525c0049bc" prot="public" virt="non-virtual"><scope>gomaengine::Aplication</scope><name>Aplication</name></member>
+      <member refid="classgomaengine_1_1_aplication_1a2be4f70cb73f989ae30547572f2117ee" prot="private" virt="non-virtual"><scope>gomaengine::Aplication</scope><name>model_vct</name></member>
+      <member refid="classgomaengine_1_1_aplication_1a3851444ef21d9e9a96e00682199fc784" prot="private" virt="non-virtual"><scope>gomaengine::Aplication</scope><name>previous_dt</name></member>
+      <member refid="classgomaengine_1_1_aplication_1afad33ce7549400cb18d0bce505e8463e" prot="public" virt="non-virtual"><scope>gomaengine::Aplication</scope><name>update</name></member>
+      <member refid="classgomaengine_1_1_aplication_1a69574d04c7bf8221cbb757852efa3fbe" prot="private" virt="non-virtual"><scope>gomaengine::Aplication</scope><name>was_Mouse_Left_pressed_before</name></member>
+      <member refid="classgomaengine_1_1_aplication_1aee6a6c71d7fc2dac8232704867180db7" prot="private" virt="non-virtual"><scope>gomaengine::Aplication</scope><name>was_Mouse_Right_pressed_before</name></member>
+      <member refid="classgomaengine_1_1_aplication_1a9a2a02916363738aaff52315a6e23e50" prot="private" virt="non-virtual"><scope>gomaengine::Aplication</scope><name>window_app</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

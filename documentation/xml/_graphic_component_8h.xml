@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_graphic_component_8h" kind="file" language="C++">
+    <compoundname>GraphicComponent.h</compoundname>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes refid="_utils_8h" local="yes">Utils.h</includes>
+    <includedby refid="_game_object_8h" local="yes">source/gomaengine/GameObject.h</includedby>
+    <includedby refid="_graphic_component_8cpp" local="yes">source/gomaengine/GraphicComponent.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>source/gomaengine/GraphicComponent.h</label>
+        <link refid="_graphic_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Utils.h</label>
+        <link refid="_utils_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>source/gomaengine/GameObject.h</label>
+        <link refid="_game_object_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>source/gomaengine/GraphicComponent.h</label>
+        <link refid="_graphic_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>source/gomaengine/aplication.h</label>
+        <link refid="aplication_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgomaengine_1_1_graphic_component" prot="public">gomaengine::GraphicComponent</innerclass>
+    <innernamespace refid="namespacegomaengine">gomaengine</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">gomaengine<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classgomaengine_1_1_graphic_component" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgomaengine_1_1_graphic_component" kindref="compound">GraphicComponent</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Texture*<sp/>texture;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Sprite*<sp/>sprite;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>path_to_texture<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Vector2f<sp/>position;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Vector2f<sp/>scale;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgomaengine_1_1_graphic_component_1a43aea95d3d1b37e071ec4207f1e0ba6e" kindref="member">GraphicComponent</ref>(std::string<sp/>_path_to_texture,<sp/><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref><sp/>_position,<sp/><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref><sp/>_scale);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Texture*<sp/><ref refid="classgomaengine_1_1_graphic_component_1a6d8e3dee786703caf7729c0ec49c6b5e" kindref="member">get_texture</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Sprite*<sp/><ref refid="classgomaengine_1_1_graphic_component_1a900edfd553f8fdf488482758d7704dad" kindref="member">get_sprite</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classgomaengine_1_1_graphic_component_1ad455e63941bf2dbee7b33a9de739f2a4" kindref="member">get_path_to_texture</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref><sp/><ref refid="classgomaengine_1_1_graphic_component_1aeb5fec2c36cd19cb703c2114da226f01" kindref="member">get_position</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref><sp/><ref refid="classgomaengine_1_1_graphic_component_1aa915e39c124efc213680b0fe19064243" kindref="member">get_scale</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgomaengine_1_1_graphic_component_1ad9ff3dd294976228c6a1082ad3fd4630" kindref="member">set_texture</ref>(sf::Texture*<sp/>_texture);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgomaengine_1_1_graphic_component_1a40116e59410573c27d160a64be59a99c" kindref="member">set_sprite</ref>(sf::Sprite*<sp/>_sprite);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgomaengine_1_1_graphic_component_1a51baf21ec5f0c53a7163a268a258e95c" kindref="member">set_path_to_texture</ref>(std::string<sp/>_path_to_texture);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgomaengine_1_1_graphic_component_1a7a1b85a01fe69e94157eb3b61537f360" kindref="member">set_sprite_position</ref>(<ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref><sp/>_position);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgomaengine_1_1_graphic_component_1a708d6eba4c526cb69a936fb1f39e27f8" kindref="member">set_sprite_scale</ref>(<ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref><sp/>_scale);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgomaengine_1_1_graphic_component_1ad26eddc59d388063101ebad999438a42" kindref="member">load_resources</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgomaengine_1_1_graphic_component_1a60abcce9508d24275db357eb9dba2df4" kindref="member">translate</ref>(<ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref><sp/>_vector);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgomaengine_1_1_graphic_component_1aa42e6e90f64905ab222858df23fbb366" kindref="member">update</ref>(sf::RenderWindow&amp;<sp/>_window);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="source/gomaengine/GraphicComponent.h"/>
+  </compounddef>
+</doxygen>

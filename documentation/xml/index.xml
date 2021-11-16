@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="classgomaengine_1_1_aplication" kind="class"><name>gomaengine::Aplication</name>
+    <member refid="classgomaengine_1_1_aplication_1a9a2a02916363738aaff52315a6e23e50" kind="variable"><name>window_app</name></member>
+    <member refid="classgomaengine_1_1_aplication_1a2be4f70cb73f989ae30547572f2117ee" kind="variable"><name>model_vct</name></member>
+    <member refid="classgomaengine_1_1_aplication_1a69574d04c7bf8221cbb757852efa3fbe" kind="variable"><name>was_Mouse_Left_pressed_before</name></member>
+    <member refid="classgomaengine_1_1_aplication_1aee6a6c71d7fc2dac8232704867180db7" kind="variable"><name>was_Mouse_Right_pressed_before</name></member>
+    <member refid="classgomaengine_1_1_aplication_1a3851444ef21d9e9a96e00682199fc784" kind="variable"><name>previous_dt</name></member>
+    <member refid="classgomaengine_1_1_aplication_1a3c0e60ba742d603292216b525c0049bc" kind="function"><name>Aplication</name></member>
+    <member refid="classgomaengine_1_1_aplication_1afad33ce7549400cb18d0bce505e8463e" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="classgomaengine_1_1_component" kind="class"><name>gomaengine::Component</name>
+    <member refid="classgomaengine_1_1_component_1a600f631ef4ad0b5811238d303d8aa3ff" kind="variable"><name>type_of_component</name></member>
+    <member refid="classgomaengine_1_1_component_1a53c002f219321be799ed4267866c0094" kind="variable"><name>parent</name></member>
+    <member refid="classgomaengine_1_1_component_1a87157ec23443bd3ca7bba08372fc2a20" kind="variable"><name>children</name></member>
+    <member refid="classgomaengine_1_1_component_1ae4f71554a84d0ba3de50089906a0bb4a" kind="function"><name>get_parent_component</name></member>
+    <member refid="classgomaengine_1_1_component_1adc690a71e45e743fb9b696f4fd232103" kind="function"><name>get_children</name></member>
+    <member refid="classgomaengine_1_1_component_1ae2c73ac2be45d8ca6de2c90449530fdb" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="structgomaengine_1_1_c_p" kind="struct"><name>gomaengine::CP</name>
+    <member refid="structgomaengine_1_1_c_p_1a4b2c676df7e365df23c65d61156e32b3" kind="variable"><name>GRAPHIC</name></member>
+    <member refid="structgomaengine_1_1_c_p_1aab1a97960ff9644c5fc757343533be6f" kind="variable"><name>SOUND</name></member>
+    <member refid="structgomaengine_1_1_c_p_1a20550226f720fca9f5f133c56ac83b7e" kind="variable"><name>MOVABLE</name></member>
+  </compound>
+  <compound refid="classgomaengine_1_1_c_r___movable_component" kind="class"><name>gomaengine::CR_MovableComponent</name>
+    <member refid="classgomaengine_1_1_c_r___movable_component_1a3b9ceb06a5019c51a5d3b87f131c7b0f" kind="variable"><name>velocity</name></member>
+    <member refid="classgomaengine_1_1_c_r___movable_component_1a364a4ecdfa271f03888452b0f8118d3b" kind="variable"><name>target_position</name></member>
+    <member refid="classgomaengine_1_1_c_r___movable_component_1abb21cc666097aa6e1d7611e561e0096f" kind="function"><name>CR_MovableComponent</name></member>
+    <member refid="classgomaengine_1_1_c_r___movable_component_1aa728e894cf8f71b18131d02a0e2708b9" kind="function"><name>~CR_MovableComponent</name></member>
+    <member refid="classgomaengine_1_1_c_r___movable_component_1a092765358686e864efdd53d6dfed09a0" kind="function"><name>insert_data</name></member>
+    <member refid="classgomaengine_1_1_c_r___movable_component_1ad328a1546b720c0b15e0be983f040e79" kind="function"><name>update</name></member>
+    <member refid="classgomaengine_1_1_c_r___movable_component_1a634d1f68ca21ca966b0da240f9c1a797" kind="function"><name>set_target_position</name></member>
+    <member refid="classgomaengine_1_1_c_r___movable_component_1a5102546c85b005197d24cfa9dd69aa55" kind="function"><name>set_velocity</name></member>
+  </compound>
+  <compound refid="classgomaengine_1_1_game_object" kind="class"><name>gomaengine::GameObject</name>
+    <member refid="classgomaengine_1_1_game_object_1a72e1a9071574c3bca9ef694ab8473223" kind="variable"><name>position</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a6fe0ab06276e43023564d8707f542008" kind="variable"><name>orientation</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a4650e356193958d140983ff7329ed01c" kind="variable"><name>graphicComponent</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a78205b5c1e19c5fac06daa0c90c8f6e6" kind="variable"><name>sound_component</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a5a54a0cf58ab8bfc2ed783bdee74c173" kind="variable"><name>target_position</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a69d2252488571489c234279b5dba4270" kind="variable"><name>velocity</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a13a72d20333781927047e1bc38989176" kind="variable"><name>name</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a76cf69ff1dc2701dce763fb9b76aa75c" kind="function"><name>get_position</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a38987365e507d8ddf7f30c8c2e11a9a1" kind="function"><name>get_texture</name></member>
+    <member refid="classgomaengine_1_1_game_object_1ac1d14b21cbe294e8a51d1f7e2e32be70" kind="function"><name>get_orientation</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a9d598e1af60093b7929e3f8fa677a7f5" kind="function"><name>set_position</name></member>
+    <member refid="classgomaengine_1_1_game_object_1ad02abbb592ff3f568916957c2c191653" kind="function"><name>set_graphicComponent</name></member>
+    <member refid="classgomaengine_1_1_game_object_1aed1f44e92f4b1d6b23a94ce108288a4d" kind="function"><name>set_orientation</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a9adcd34c7ea1f7f128de819a1f2858b4" kind="function"><name>GameObject</name></member>
+    <member refid="classgomaengine_1_1_game_object_1ad39d1d14bb03658d6991a0e325e12869" kind="function"><name>~GameObject</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a5d6a414003baa21722254cb98a7905f3" kind="function"><name>translate</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a70c438101a5b5c9bf7f3cf7eb4639330" kind="function"><name>get_name</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a41d626a5d5dd0a2bdad070da6caee532" kind="function"><name>get_sound_component</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a169057587a1dea4dbb6fdf0fcad6c0c9" kind="function"><name>set_velocity</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a22b648b13c2bb159647510adcdc6ef08" kind="function"><name>is_clicked</name></member>
+    <member refid="classgomaengine_1_1_game_object_1ab8fb5f67a845327161507739f1dcfc07" kind="function"><name>get_me</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a8e6c00070d22715d09df577f2a3610de" kind="function"><name>update</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a2ab104eaa6cd2e1d58f6a5d5d4b6e8a3" kind="function"><name>move_to_target</name></member>
+    <member refid="classgomaengine_1_1_game_object_1a4f88fee54cbf9a371558c2af073185da" kind="function"><name>set_target</name></member>
+  </compound>
+  <compound refid="classgomaengine_1_1_graphic_component" kind="class"><name>gomaengine::GraphicComponent</name>
+    <member refid="classgomaengine_1_1_graphic_component_1a7d1fa31f5017ab7f6153b417720b4856" kind="variable"><name>texture</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a1812f675f17a0baa0d7095792c3eb72d" kind="variable"><name>sprite</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a5b02a0186dea36452ac30f63d921bee1" kind="variable"><name>path_to_texture</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a3083fb5844c3ce970fcd4c4058aad8cf" kind="variable"><name>position</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a31c4f85ffb1f1c36abd97552cc2e5157" kind="variable"><name>scale</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a43aea95d3d1b37e071ec4207f1e0ba6e" kind="function"><name>GraphicComponent</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a6d8e3dee786703caf7729c0ec49c6b5e" kind="function"><name>get_texture</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a900edfd553f8fdf488482758d7704dad" kind="function"><name>get_sprite</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1ad455e63941bf2dbee7b33a9de739f2a4" kind="function"><name>get_path_to_texture</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1aeb5fec2c36cd19cb703c2114da226f01" kind="function"><name>get_position</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1aa915e39c124efc213680b0fe19064243" kind="function"><name>get_scale</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1ad9ff3dd294976228c6a1082ad3fd4630" kind="function"><name>set_texture</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a40116e59410573c27d160a64be59a99c" kind="function"><name>set_sprite</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a51baf21ec5f0c53a7163a268a258e95c" kind="function"><name>set_path_to_texture</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a7a1b85a01fe69e94157eb3b61537f360" kind="function"><name>set_sprite_position</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a708d6eba4c526cb69a936fb1f39e27f8" kind="function"><name>set_sprite_scale</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1ad26eddc59d388063101ebad999438a42" kind="function"><name>load_resources</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1a60abcce9508d24275db357eb9dba2df4" kind="function"><name>translate</name></member>
+    <member refid="classgomaengine_1_1_graphic_component_1aa42e6e90f64905ab222858df23fbb366" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="classgomaengine_1_1_input" kind="class"><name>gomaengine::Input</name>
+  </compound>
+  <compound refid="structgomaengine_1_1_keyboard" kind="struct"><name>gomaengine::Keyboard</name>
+    <member refid="structgomaengine_1_1_keyboard_1ae63e692bc597e9a18379124b089d64ed" kind="variable"><name>key</name></member>
+    <member refid="structgomaengine_1_1_keyboard_1ab95b73cd903b2c340b1e8bfc464d5058" kind="variable"><name>keyboard_key</name></member>
+  </compound>
+  <compound refid="classgomaengine_1_1_sound_component" kind="class"><name>gomaengine::SoundComponent</name>
+    <member refid="classgomaengine_1_1_sound_component_1ac920256f46dace942cf2f20c2e3f60f2" kind="variable"><name>path_clicked</name></member>
+    <member refid="classgomaengine_1_1_sound_component_1ac1d34cc33944207b4b34e64782db3f51" kind="variable"><name>path_moved</name></member>
+    <member refid="classgomaengine_1_1_sound_component_1afd255e6a0803ff59b9e264abb891c1c9" kind="variable"><name>sound</name></member>
+    <member refid="classgomaengine_1_1_sound_component_1ae1dfc1f79413490fc237ccaca1629315" kind="variable"><name>sound_buffer</name></member>
+    <member refid="classgomaengine_1_1_sound_component_1a19797858bb1b94d623324eae8c129007" kind="function"><name>SoundComponent</name></member>
+    <member refid="classgomaengine_1_1_sound_component_1abcd7b4c65c44932ee42dc17227e51446" kind="function"><name>~SoundComponent</name></member>
+    <member refid="classgomaengine_1_1_sound_component_1ab052998ebe33cd2dea670d29a6dbcb2c" kind="function"><name>update</name></member>
+    <member refid="classgomaengine_1_1_sound_component_1a5e770e785dfed3dc5259dbe3c92f4c96" kind="function"><name>insert_clicked</name></member>
+    <member refid="classgomaengine_1_1_sound_component_1a446ea1afa8aba471eb02441e870f57cb" kind="function"><name>reload_sound</name></member>
+    <member refid="classgomaengine_1_1_sound_component_1ae4417c24f1822929c4cd2840a6dbe920" kind="function"><name>play_sound</name></member>
+  </compound>
+  <compound refid="structgomaengine_1_1_vector" kind="struct"><name>gomaengine::Vector</name>
+    <member refid="structgomaengine_1_1_vector_1ae36a8dc0833e75ec7ab72b9441ff9b93" kind="variable"><name>x</name></member>
+    <member refid="structgomaengine_1_1_vector_1af8ca15f3b5d5ded5ff6238b5e1235a05" kind="variable"><name>y</name></member>
+    <member refid="structgomaengine_1_1_vector_1ab15a609444f098a262c06f450f01f40c" kind="function"><name>to_sfVector</name></member>
+    <member refid="structgomaengine_1_1_vector_1a100ddaaf3d3b3ea580f643636a4a7c38" kind="function"><name>sum</name></member>
+    <member refid="structgomaengine_1_1_vector_1aa9e6d516b153e626e33a2b7e8ef98fb4" kind="function"><name>substract</name></member>
+    <member refid="structgomaengine_1_1_vector_1a2a4c0ab30da893ce962b8dd8a78674e0" kind="function"><name>subs</name></member>
+    <member refid="structgomaengine_1_1_vector_1a6b58c989725993a7c1fabb5714a5beff" kind="function"><name>normalize</name></member>
+    <member refid="structgomaengine_1_1_vector_1ad477270cac80be776c49e2e8ac1c01b9" kind="function"><name>multiply</name></member>
+    <member refid="structgomaengine_1_1_vector_1a418a8e07ad05840a3bdd0d50250573a3" kind="function"><name>multiply</name></member>
+    <member refid="structgomaengine_1_1_vector_1a5ceadf12bf1e8892db9c0db7950dc6aa" kind="function"><name>abs</name></member>
+    <member refid="structgomaengine_1_1_vector_1a3b014ba4c29d9829f52814b58aa45ad8" kind="function"><name>magnitude</name></member>
+    <member refid="structgomaengine_1_1_vector_1a911a366df0e2734acdb8de3004f5fc9e" kind="function"><name>print</name></member>
+    <member refid="structgomaengine_1_1_vector_1aa16726f3686eabf290ca6267ad8145bc" kind="function"><name>eq</name></member>
+    <member refid="structgomaengine_1_1_vector_1a0a989b1573c271183efffbe203a70c80" kind="function"><name>to_Vector</name></member>
+    <member refid="structgomaengine_1_1_vector_1afc775afc2a7edff11ec13998b14eb533" kind="function"><name>to_Vector</name></member>
+    <member refid="structgomaengine_1_1_vector_1a42bde5df1aa513349980ee4f9b72cc30" kind="function"><name>distance</name></member>
+  </compound>
+  <compound refid="structgomaengine_1_1_window" kind="struct"><name>gomaengine::Window</name>
+    <member refid="structgomaengine_1_1_window_1a0ed9c90a51564e5a75b34e362976ceb4" kind="variable"><name>window_size_x</name></member>
+    <member refid="structgomaengine_1_1_window_1a04d8a1764c714c787e6d5e462daea4e8" kind="variable"><name>window_size_y</name></member>
+  </compound>
+  <compound refid="namespacegomaengine" kind="namespace"><name>gomaengine</name>
+    <member refid="_input_component_8h_1a79d003ff53be237b9c37ed4834ce01a2" kind="variable"><name>A</name></member>
+    <member refid="_input_component_8h_1a0cd8208b1fefb0ed9dd6d17cb33aad09" kind="variable"><name>S</name></member>
+    <member refid="_input_component_8h_1acc68f2bbd7ad6aa1b63d9f9099bc6f42" kind="variable"><name>D</name></member>
+    <member refid="_input_component_8h_1ac430c0609e80a6381f4a44dd5094a07d" kind="variable"><name>W</name></member>
+    <member refid="_input_component_8h_1a8b849e560ec647faa08b29221759af0a" kind="variable"><name>Left</name></member>
+    <member refid="_input_component_8h_1a0255550f26ecec500e36b7711ed2b17d" kind="variable"><name>Right</name></member>
+    <member refid="_input_component_8h_1a5f4e8d778fae51957cf01b39a1eb2102" kind="variable"><name>Up</name></member>
+    <member refid="_input_component_8h_1afe0c4ad0736607ef0735099c7cf278af" kind="variable"><name>Down</name></member>
+    <member refid="_input_component_8h_1a38f09cc0920e9c2e13ecc19bdd61bb1c" kind="variable"><name>Q</name></member>
+    <member refid="_input_component_8h_1a27792635761fc8c56ce76d7169a621c7" kind="variable"><name>Space</name></member>
+    <member refid="_input_component_8h_1a8a47373bc3fa08e9a232f9f79d3bcf9d" kind="variable"><name>O</name></member>
+    <member refid="_input_component_8h_1ad03502dcd18e106800e3abf7f1dbfa07" kind="variable"><name>P</name></member>
+    <member refid="root__directory_8h_1a8ddbe8a674f1b61caa77849c1f9499f2" kind="variable"><name>source_directory</name></member>
+    <member refid="_utils_8h_1acb80bc934b2aff17c0635bb8350f4b11" kind="variable"><name>Component_types</name></member>
+    <member refid="root__directory_8h_1ac7c5722ff348a45d900c22793f17ec70" kind="function"><name>getPath</name></member>
+  </compound>
+  <compound refid="aplication_8cpp" kind="file"><name>aplication.cpp</name>
+  </compound>
+  <compound refid="aplication_8h" kind="file"><name>aplication.h</name>
+  </compound>
+  <compound refid="_component_8cpp" kind="file"><name>Component.cpp</name>
+  </compound>
+  <compound refid="_component_8h" kind="file"><name>Component.h</name>
+  </compound>
+  <compound refid="_c_r___movable_component_8cpp" kind="file"><name>CR_MovableComponent.cpp</name>
+  </compound>
+  <compound refid="_c_r___movable_component_8h" kind="file"><name>CR_MovableComponent.h</name>
+  </compound>
+  <compound refid="_game_object_8cpp" kind="file"><name>GameObject.cpp</name>
+  </compound>
+  <compound refid="_game_object_8h" kind="file"><name>GameObject.h</name>
+  </compound>
+  <compound refid="gomaengine_8h" kind="file"><name>gomaengine.h</name>
+  </compound>
+  <compound refid="_graphic_component_8cpp" kind="file"><name>GraphicComponent.cpp</name>
+  </compound>
+  <compound refid="_graphic_component_8h" kind="file"><name>GraphicComponent.h</name>
+  </compound>
+  <compound refid="_input_component_8cpp" kind="file"><name>InputComponent.cpp</name>
+  </compound>
+  <compound refid="_input_component_8h" kind="file"><name>InputComponent.h</name>
+  </compound>
+  <compound refid="root__directory_8h" kind="file"><name>root_directory.h</name>
+  </compound>
+  <compound refid="_sound_component_8cpp" kind="file"><name>SoundComponent.cpp</name>
+  </compound>
+  <compound refid="_sound_component_8h" kind="file"><name>SoundComponent.h</name>
+  </compound>
+  <compound refid="_utils_8cpp" kind="file"><name>Utils.cpp</name>
+  </compound>
+  <compound refid="_utils_8h" kind="file"><name>Utils.h</name>
+  </compound>
+  <compound refid="dir_816090a8a8ae37f0cd70e1568f406dec" kind="dir"><name>source/gomaengine</name>
+  </compound>
+  <compound refid="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b" kind="dir"><name>source</name>
+  </compound>
+</doxygenindex>

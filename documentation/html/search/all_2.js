@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['input_0',['Input',['../classgomaengine_1_1_input.html',1,'gomaengine']]]
+  ['distance_0',['distance',['../structgomaengine_1_1_vector.html#a42bde5df1aa513349980ee4f9b72cc30',1,'gomaengine::Vector']]]
 ];

@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespacegomaengine" kind="namespace" language="C++">
+    <compoundname>gomaengine</compoundname>
+    <innerclass refid="classgomaengine_1_1_aplication" prot="public">gomaengine::Aplication</innerclass>
+    <innerclass refid="classgomaengine_1_1_component" prot="public">gomaengine::Component</innerclass>
+    <innerclass refid="structgomaengine_1_1_c_p" prot="public">gomaengine::CP</innerclass>
+    <innerclass refid="classgomaengine_1_1_c_r___movable_component" prot="public">gomaengine::CR_MovableComponent</innerclass>
+    <innerclass refid="classgomaengine_1_1_game_object" prot="public">gomaengine::GameObject</innerclass>
+    <innerclass refid="classgomaengine_1_1_graphic_component" prot="public">gomaengine::GraphicComponent</innerclass>
+    <innerclass refid="classgomaengine_1_1_input" prot="public">gomaengine::Input</innerclass>
+    <innerclass refid="structgomaengine_1_1_keyboard" prot="public">gomaengine::Keyboard</innerclass>
+    <innerclass refid="classgomaengine_1_1_sound_component" prot="public">gomaengine::SoundComponent</innerclass>
+    <innerclass refid="structgomaengine_1_1_vector" prot="public">gomaengine::Vector</innerclass>
+    <innerclass refid="structgomaengine_1_1_window" prot="public">gomaengine::Window</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_input_component_8h_1a79d003ff53be237b9c37ed4834ce01a2" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::A</definition>
+        <argsstring></argsstring>
+        <name>A</name>
+        <initializer>= { &quot;A&quot;, sf::Keyboard::A }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="23" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1a0cd8208b1fefb0ed9dd6d17cb33aad09" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::S</definition>
+        <argsstring></argsstring>
+        <name>S</name>
+        <initializer>= { &quot;S&quot;, sf::Keyboard::S }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="24" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1acc68f2bbd7ad6aa1b63d9f9099bc6f42" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::D</definition>
+        <argsstring></argsstring>
+        <name>D</name>
+        <initializer>= { &quot;D&quot;, sf::Keyboard::D }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="25" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1ac430c0609e80a6381f4a44dd5094a07d" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::W</definition>
+        <argsstring></argsstring>
+        <name>W</name>
+        <initializer>= { &quot;W&quot;, sf::Keyboard::W }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="26" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1a8b849e560ec647faa08b29221759af0a" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::Left</definition>
+        <argsstring></argsstring>
+        <name>Left</name>
+        <initializer>= { &quot;Left&quot;, sf::Keyboard::Left }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="27" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1a0255550f26ecec500e36b7711ed2b17d" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::Right</definition>
+        <argsstring></argsstring>
+        <name>Right</name>
+        <initializer>= { &quot;Right&quot;, sf::Keyboard::Right }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="28" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1a5f4e8d778fae51957cf01b39a1eb2102" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::Up</definition>
+        <argsstring></argsstring>
+        <name>Up</name>
+        <initializer>= { &quot;Up&quot;, sf::Keyboard::Up }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="29" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1afe0c4ad0736607ef0735099c7cf278af" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::Down</definition>
+        <argsstring></argsstring>
+        <name>Down</name>
+        <initializer>= { &quot;Down&quot;, sf::Keyboard::Down }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="30" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1a38f09cc0920e9c2e13ecc19bdd61bb1c" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::Q</definition>
+        <argsstring></argsstring>
+        <name>Q</name>
+        <initializer>= { &quot;Q&quot;, sf::Keyboard::Q }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="31" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1a27792635761fc8c56ce76d7169a621c7" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::Space</definition>
+        <argsstring></argsstring>
+        <name>Space</name>
+        <initializer>= { &quot;Space&quot;, sf::Keyboard::Space }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="32" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1a8a47373bc3fa08e9a232f9f79d3bcf9d" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::O</definition>
+        <argsstring></argsstring>
+        <name>O</name>
+        <initializer>= { &quot;O&quot;, sf::Keyboard::O }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="33" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_input_component_8h_1ad03502dcd18e106800e3abf7f1dbfa07" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_keyboard" kindref="compound">Keyboard</ref></type>
+        <definition>const Keyboard gomaengine::P</definition>
+        <argsstring></argsstring>
+        <name>P</name>
+        <initializer>= { &quot;P&quot;, sf::Keyboard::P }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/InputComponent.h" line="34" column="23" bodyfile="source/gomaengine/InputComponent.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="root__directory_8h_1a8ddbe8a674f1b61caa77849c1f9499f2" prot="public" static="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const gomaengine::source_directory</definition>
+        <argsstring></argsstring>
+        <name>source_directory</name>
+        <initializer>= &quot;C:/uwu/hola/videotest/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/root_directory.h" line="11" column="26" bodyfile="source/gomaengine/root_directory.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_utils_8h_1acb80bc934b2aff17c0635bb8350f4b11" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structgomaengine_1_1_c_p" kindref="compound">CP</ref></type>
+        <definition>const CP gomaengine::Component_types</definition>
+        <argsstring></argsstring>
+        <name>Component_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/Utils.h" line="141" column="14" bodyfile="source/gomaengine/Utils.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="root__directory_8h_1ac7c5722ff348a45d900c22793f17ec70" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>static std::filesystem::path gomaengine::getPath</definition>
+        <argsstring>(const std::string &amp;relative_path)</argsstring>
+        <name>getPath</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>relative_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/root_directory.h" line="13" column="30" bodyfile="source/gomaengine/root_directory.h" bodystart="13" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/gomaengine/aplication.cpp" line="12" column="1"/>
+  </compounddef>
+</doxygen>

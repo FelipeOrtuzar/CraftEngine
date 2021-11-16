@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classgomaengine_1_1_component" kind="class" language="C++" prot="public">
+    <compoundname>gomaengine::Component</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgomaengine_1_1_component_1a600f631ef4ad0b5811238d303d8aa3ff" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gomaengine::Component::type_of_component</definition>
+        <argsstring></argsstring>
+        <name>type_of_component</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/Component.h" line="17" column="13" bodyfile="source/gomaengine/Component.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_component_1a53c002f219321be799ed4267866c0094" prot="private" static="no" mutable="no">
+        <type><ref refid="classgomaengine_1_1_component" kindref="compound">Component</ref> *</type>
+        <definition>Component* gomaengine::Component::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/Component.h" line="18" column="11" bodyfile="source/gomaengine/Component.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_component_1a87157ec23443bd3ca7bba08372fc2a20" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="classgomaengine_1_1_component" kindref="compound">Component</ref> &gt;</type>
+        <definition>std::map&lt;std::string, Component&gt; gomaengine::Component::children</definition>
+        <argsstring></argsstring>
+        <name>children</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/Component.h" line="19" column="10" bodyfile="source/gomaengine/Component.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgomaengine_1_1_component_1ae4f71554a84d0ba3de50089906a0bb4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgomaengine_1_1_component" kindref="compound">Component</ref></type>
+        <definition>Component gomaengine::Component::get_parent_component</definition>
+        <argsstring>()</argsstring>
+        <name>get_parent_component</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/Component.h" line="11" column="11" bodyfile="source/gomaengine/Component.cpp" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_component_1adc690a71e45e743fb9b696f4fd232103" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; std::string, <ref refid="classgomaengine_1_1_component" kindref="compound">Component</ref> &gt;</type>
+        <definition>std::map&lt; std::string, Component &gt; gomaengine::Component::get_children</definition>
+        <argsstring>()</argsstring>
+        <name>get_children</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/Component.h" line="13" column="10" bodyfile="source/gomaengine/Component.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_component_1ae2c73ac2be45d8ca6de2c90449530fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>gomaengine::Component::update</definition>
+        <argsstring>(Component _component)</argsstring>
+        <name>update</name>
+        <param>
+          <type><ref refid="classgomaengine_1_1_component" kindref="compound">Component</ref></type>
+          <declname>_component</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/Component.h" line="14" column="9" bodyfile="source/gomaengine/Component.cpp" bodystart="19" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/gomaengine/Component.h" line="8" column="1" bodyfile="source/gomaengine/Component.h" bodystart="8" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classgomaengine_1_1_component_1a87157ec23443bd3ca7bba08372fc2a20" prot="private" virt="non-virtual"><scope>gomaengine::Component</scope><name>children</name></member>
+      <member refid="classgomaengine_1_1_component_1adc690a71e45e743fb9b696f4fd232103" prot="public" virt="non-virtual"><scope>gomaengine::Component</scope><name>get_children</name></member>
+      <member refid="classgomaengine_1_1_component_1ae4f71554a84d0ba3de50089906a0bb4a" prot="public" virt="non-virtual"><scope>gomaengine::Component</scope><name>get_parent_component</name></member>
+      <member refid="classgomaengine_1_1_component_1a53c002f219321be799ed4267866c0094" prot="private" virt="non-virtual"><scope>gomaengine::Component</scope><name>parent</name></member>
+      <member refid="classgomaengine_1_1_component_1a600f631ef4ad0b5811238d303d8aa3ff" prot="private" virt="non-virtual"><scope>gomaengine::Component</scope><name>type_of_component</name></member>
+      <member refid="classgomaengine_1_1_component_1ae2c73ac2be45d8ca6de2c90449530fdb" prot="public" virt="virtual"><scope>gomaengine::Component</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

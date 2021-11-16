@@ -7,13 +7,15 @@ namespace gomaengine {
 
 
     /// <summary>
-        /// Estructura de un vector en 2D (x, y)
-        /// </summary>
+    /// Estructura de un vector en 2D (x, y)
+    /// </summary>
     struct Vector {
+
         /// <summary>
         /// Float x, usualmente visto como ancho (izquierda hacia derecha)
         /// </summary>
         float x = 0.0;
+
         /// <summary>
         /// Float y, usualmente visto como altura (arriba hacia abajo)
         /// </summary>

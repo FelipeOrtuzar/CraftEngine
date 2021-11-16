@@ -1,0 +1,39 @@
+\hypertarget{_sound_component_8h_source}{}\doxysection{Sound\+Component.\+h}
+\label{_sound_component_8h_source}\index{source/gomaengine/SoundComponent.h@{source/gomaengine/SoundComponent.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }gomaengine \{}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{12     \textcolor{keyword}{class }\mbox{\hyperlink{classgomaengine_1_1_sound_component}{SoundComponent}} \{}
+\DoxyCodeLine{13     \textcolor{keyword}{private}:}
+\DoxyCodeLine{17         std::string path\_clicked = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{18         }
+\DoxyCodeLine{22         std::string path\_moved = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27         sf::Sound sound;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{32         sf::SoundBuffer sound\_buffer;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keyword}{public}:}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39         \mbox{\hyperlink{classgomaengine_1_1_sound_component_a19797858bb1b94d623324eae8c129007}{SoundComponent}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{44         \mbox{\hyperlink{classgomaengine_1_1_sound_component_abcd7b4c65c44932ee42dc17227e51446}{\string~SoundComponent}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{49         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_sound_component_ab052998ebe33cd2dea670d29a6dbcb2c}{update}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_sound_component_a5e770e785dfed3dc5259dbe3c92f4c96}{insert\_clicked}}(std::string path\_to\_sound\_when\_clicked);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{60         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_sound_component_a446ea1afa8aba471eb02441e870f57cb}{reload\_sound}}();}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_sound_component_ae4417c24f1822929c4cd2840a6dbe920}{play\_sound}}();}
+\DoxyCodeLine{66     \};}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}

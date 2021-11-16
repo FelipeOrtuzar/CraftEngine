@@ -1,0 +1,566 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classgomaengine_1_1_game_object" kind="class" language="C++" prot="public">
+    <compoundname>gomaengine::GameObject</compoundname>
+    <includes refid="_game_object_8h" local="no">GameObject.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgomaengine_1_1_game_object_1a72e1a9071574c3bca9ef694ab8473223" prot="private" static="no" mutable="no">
+        <type><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref></type>
+        <definition>Vector gomaengine::GameObject::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <initializer>= <ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref>(0.0f, 0.0f)</initializer>
+        <briefdescription>
+<para><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref> que identifica la posicion abstracta del modelo en el juego. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="22" column="8" bodyfile="source/gomaengine/GameObject.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_game_object_1a6fe0ab06276e43023564d8707f542008" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gomaengine::GameObject::orientation</definition>
+        <argsstring></argsstring>
+        <name>orientation</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Int que define si mira hacia la derecha o la izquierda </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="27" column="5" bodyfile="source/gomaengine/GameObject.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_game_object_1a4650e356193958d140983ff7329ed01c" prot="private" static="no" mutable="no">
+        <type><ref refid="classgomaengine_1_1_graphic_component" kindref="compound">GraphicComponent</ref></type>
+        <definition>GraphicComponent gomaengine::GameObject::graphicComponent</definition>
+        <argsstring></argsstring>
+        <name>graphicComponent</name>
+        <initializer>= <ref refid="classgomaengine_1_1_graphic_component" kindref="compound">GraphicComponent</ref>(&quot;&quot;, <ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref>(0.0, 0.0), <ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref>(0.0, 0.0))</initializer>
+        <briefdescription>
+<para>Componente de graficos del modelo </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="32" column="18" bodyfile="source/gomaengine/GameObject.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_game_object_1a78205b5c1e19c5fac06daa0c90c8f6e6" prot="private" static="no" mutable="no">
+        <type><ref refid="classgomaengine_1_1_sound_component" kindref="compound">SoundComponent</ref></type>
+        <definition>SoundComponent gomaengine::GameObject::sound_component</definition>
+        <argsstring></argsstring>
+        <name>sound_component</name>
+        <briefdescription>
+<para>Componente de sonido del modelo </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="37" column="16" bodyfile="source/gomaengine/GameObject.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_game_object_1a5a54a0cf58ab8bfc2ed783bdee74c173" prot="private" static="no" mutable="no">
+        <type><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref></type>
+        <definition>Vector gomaengine::GameObject::target_position</definition>
+        <argsstring></argsstring>
+        <name>target_position</name>
+        <initializer>= <ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref>(0.0f, 0.0f)</initializer>
+        <briefdescription>
+<para>Posicion objetivo en la que deberia estar el modelo en pantalla </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="42" column="8" bodyfile="source/gomaengine/GameObject.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_game_object_1a69d2252488571489c234279b5dba4270" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gomaengine::GameObject::velocity</definition>
+        <argsstring></argsstring>
+        <name>velocity</name>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+<para>Velocidad del modelo </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="47" column="7" bodyfile="source/gomaengine/GameObject.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgomaengine_1_1_game_object_1a13a72d20333781927047e1bc38989176" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gomaengine::GameObject::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+<para>Nombre del modelo </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="52" column="13" bodyfile="source/gomaengine/GameObject.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a76cf69ff1dc2701dce763fb9b76aa75c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref></type>
+        <definition>Vector gomaengine::GameObject::get_position</definition>
+        <argsstring>()</argsstring>
+        <name>get_position</name>
+        <briefdescription>
+<para>Funcion que retorna la posicion del modelo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Un vector de la posicion del modelo</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="60" column="8" bodyfile="source/gomaengine/GameObject.cpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a38987365e507d8ddf7f30c8c2e11a9a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgomaengine_1_1_graphic_component" kindref="compound">GraphicComponent</ref></type>
+        <definition>GraphicComponent gomaengine::GameObject::get_texture</definition>
+        <argsstring>()</argsstring>
+        <name>get_texture</name>
+        <briefdescription>
+<para>Funcion que retorna la textura usada por el modelo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Una textura.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="66" column="18" bodyfile="source/gomaengine/GameObject.cpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1ac1d14b21cbe294e8a51d1f7e2e32be70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gomaengine::GameObject::get_orientation</definition>
+        <argsstring>()</argsstring>
+        <name>get_orientation</name>
+        <briefdescription>
+<para>Funcion que retorna la orientacion de hacia donde mira el modelo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Un 1 o -1 dependiendo</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="72" column="5" bodyfile="source/gomaengine/GameObject.cpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a9d598e1af60093b7929e3f8fa677a7f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::GameObject::set_position</definition>
+        <argsstring>(Vector _position)</argsstring>
+        <name>set_position</name>
+        <param>
+          <type><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref></type>
+          <declname>_position</declname>
+        </param>
+        <briefdescription>
+<para>Funcion que define la posicion en el modelo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Posicion a settear </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="78" column="6" bodyfile="source/gomaengine/GameObject.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1ad02abbb592ff3f568916957c2c191653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::GameObject::set_graphicComponent</definition>
+        <argsstring>(GraphicComponent _graphicComponent)</argsstring>
+        <name>set_graphicComponent</name>
+        <param>
+          <type><ref refid="classgomaengine_1_1_graphic_component" kindref="compound">GraphicComponent</ref></type>
+          <declname>_graphicComponent</declname>
+        </param>
+        <briefdescription>
+<para>Funcion que define la textura en el modelo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_texture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Textura a settear </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="84" column="6" bodyfile="source/gomaengine/GameObject.cpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1aed1f44e92f4b1d6b23a94ce108288a4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::GameObject::set_orientation</definition>
+        <argsstring>(int _orientation)</argsstring>
+        <name>set_orientation</name>
+        <param>
+          <type>int</type>
+          <declname>_orientation</declname>
+        </param>
+        <briefdescription>
+<para>Funcion que define la orientacion en el modelo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Int a settear referente a la orientacion del modelo</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="90" column="6" bodyfile="source/gomaengine/GameObject.cpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a9adcd34c7ea1f7f128de819a1f2858b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gomaengine::GameObject::GameObject</definition>
+        <argsstring>(Vector _position, std::string _name, GraphicComponent _graphicComponent, SoundComponent _soundComponent)</argsstring>
+        <name>GameObject</name>
+        <param>
+          <type><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref></type>
+          <declname>_position</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>_name</declname>
+        </param>
+        <param>
+          <type><ref refid="classgomaengine_1_1_graphic_component" kindref="compound">GraphicComponent</ref></type>
+          <declname>_graphicComponent</declname>
+        </param>
+        <param>
+          <type><ref refid="classgomaengine_1_1_sound_component" kindref="compound">SoundComponent</ref></type>
+          <declname>_soundComponent</declname>
+        </param>
+        <briefdescription>
+<para>Constructor de <ref refid="classgomaengine_1_1_game_object" kindref="compound">GameObject</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Posicion abstracta del modelo</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_texture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Textura del modelo</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Orientacion del modelo</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_soundComponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Componente de sonido</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="99" column="1" bodyfile="source/gomaengine/GameObject.cpp" bodystart="11" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1ad39d1d14bb03658d6991a0e325e12869" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gomaengine::GameObject::~GameObject</definition>
+        <argsstring>()</argsstring>
+        <name>~GameObject</name>
+        <briefdescription>
+<para>Destructor de <ref refid="classgomaengine_1_1_game_object" kindref="compound">GameObject</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="104" column="1" bodyfile="source/gomaengine/GameObject.cpp" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a5d6a414003baa21722254cb98a7905f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::GameObject::translate</definition>
+        <argsstring>(Vector _delta_pos)</argsstring>
+        <name>translate</name>
+        <param>
+          <type><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref></type>
+          <declname>_delta_pos</declname>
+        </param>
+        <briefdescription>
+<para>Funcion que traslada la posicion abstracta del modelo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_delta_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref> con cambio en la posicion</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="110" column="6" bodyfile="source/gomaengine/GameObject.cpp" bodystart="43" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a70c438101a5b5c9bf7f3cf7eb4639330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string gomaengine::GameObject::get_name</definition>
+        <argsstring>()</argsstring>
+        <name>get_name</name>
+        <briefdescription>
+<para>Funcion que te da el nombre del modelo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Un std string del modelo</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="116" column="13" bodyfile="source/gomaengine/GameObject.cpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a41d626a5d5dd0a2bdad070da6caee532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgomaengine_1_1_sound_component" kindref="compound">SoundComponent</ref></type>
+        <definition>SoundComponent gomaengine::GameObject::get_sound_component</definition>
+        <argsstring>()</argsstring>
+        <name>get_sound_component</name>
+        <briefdescription>
+<para>Funcion que devuelve el componente de sonido </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classgomaengine_1_1_sound_component" kindref="compound">SoundComponent</ref> devuelto</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="122" column="16" bodyfile="source/gomaengine/GameObject.cpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a169057587a1dea4dbb6fdf0fcad6c0c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::GameObject::set_velocity</definition>
+        <argsstring>(float _velocity)</argsstring>
+        <name>set_velocity</name>
+        <param>
+          <type>float</type>
+          <declname>_velocity</declname>
+        </param>
+        <briefdescription>
+<para>Funcion que define la velocidad en el modelo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="128" column="6" bodyfile="source/gomaengine/GameObject.cpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a22b648b13c2bb159647510adcdc6ef08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::GameObject::is_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>is_clicked</name>
+        <briefdescription>
+<para>Funcion que define algoritmos para cuando el objeto se cliquea </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="133" column="6" bodyfile="source/gomaengine/GameObject.cpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1ab8fb5f67a845327161507739f1dcfc07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgomaengine_1_1_game_object" kindref="compound">GameObject</ref> *</type>
+        <definition>GameObject * gomaengine::GameObject::get_me</definition>
+        <argsstring>()</argsstring>
+        <name>get_me</name>
+        <briefdescription>
+<para>Funcion que se devuelve a si mismo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>This</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="139" column="12" bodyfile="source/gomaengine/GameObject.cpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a8e6c00070d22715d09df577f2a3610de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::GameObject::update</definition>
+        <argsstring>(float _delta_time, sf::RenderWindow &amp;_window)</argsstring>
+        <name>update</name>
+        <param>
+          <type>float</type>
+          <declname>_delta_time</declname>
+        </param>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>_window</declname>
+        </param>
+        <briefdescription>
+<para>Funcion que define la actualizacion del modelo en el gameloop </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_delta_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tiempo entre cada frame</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ventana de visualizacion</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="146" column="6" bodyfile="source/gomaengine/GameObject.cpp" bodystart="70" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a2ab104eaa6cd2e1d58f6a5d5d4b6e8a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::GameObject::move_to_target</definition>
+        <argsstring>(float _delta_time)</argsstring>
+        <name>move_to_target</name>
+        <param>
+          <type>float</type>
+          <declname>_delta_time</declname>
+        </param>
+        <briefdescription>
+<para>Funcion que mueve el objeto al vector objetivo target </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="151" column="6" bodyfile="source/gomaengine/GameObject.cpp" bodystart="81" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classgomaengine_1_1_game_object_1a4f88fee54cbf9a371558c2af073185da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gomaengine::GameObject::set_target</definition>
+        <argsstring>(Vector _target)</argsstring>
+        <name>set_target</name>
+        <param>
+          <type><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref></type>
+          <declname>_target</declname>
+        </param>
+        <briefdescription>
+<para>Funcion que settea la posicion objetivo del modelo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structgomaengine_1_1_vector" kindref="compound">Vector</ref> del nuevo objetivo</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/gomaengine/GameObject.h" line="157" column="6" bodyfile="source/gomaengine/GameObject.cpp" bodystart="91" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Clase que define los modelos del engine. <ref refid="classgomaengine_1_1_game_object" kindref="compound">GameObject</ref> define las caracteristicas intrinsecas de una unidad en el game engine. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/gomaengine/GameObject.h" line="17" column="1" bodyfile="source/gomaengine/GameObject.h" bodystart="17" bodyend="158"/>
+    <listofallmembers>
+      <member refid="classgomaengine_1_1_game_object_1a9adcd34c7ea1f7f128de819a1f2858b4" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>GameObject</name></member>
+      <member refid="classgomaengine_1_1_game_object_1ab8fb5f67a845327161507739f1dcfc07" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>get_me</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a70c438101a5b5c9bf7f3cf7eb4639330" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>get_name</name></member>
+      <member refid="classgomaengine_1_1_game_object_1ac1d14b21cbe294e8a51d1f7e2e32be70" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>get_orientation</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a76cf69ff1dc2701dce763fb9b76aa75c" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>get_position</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a41d626a5d5dd0a2bdad070da6caee532" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>get_sound_component</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a38987365e507d8ddf7f30c8c2e11a9a1" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>get_texture</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a4650e356193958d140983ff7329ed01c" prot="private" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>graphicComponent</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a22b648b13c2bb159647510adcdc6ef08" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>is_clicked</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a2ab104eaa6cd2e1d58f6a5d5d4b6e8a3" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>move_to_target</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a13a72d20333781927047e1bc38989176" prot="private" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>name</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a6fe0ab06276e43023564d8707f542008" prot="private" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>orientation</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a72e1a9071574c3bca9ef694ab8473223" prot="private" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>position</name></member>
+      <member refid="classgomaengine_1_1_game_object_1ad02abbb592ff3f568916957c2c191653" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>set_graphicComponent</name></member>
+      <member refid="classgomaengine_1_1_game_object_1aed1f44e92f4b1d6b23a94ce108288a4d" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>set_orientation</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a9d598e1af60093b7929e3f8fa677a7f5" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>set_position</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a4f88fee54cbf9a371558c2af073185da" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>set_target</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a169057587a1dea4dbb6fdf0fcad6c0c9" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>set_velocity</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a78205b5c1e19c5fac06daa0c90c8f6e6" prot="private" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>sound_component</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a5a54a0cf58ab8bfc2ed783bdee74c173" prot="private" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>target_position</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a5d6a414003baa21722254cb98a7905f3" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>translate</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a8e6c00070d22715d09df577f2a3610de" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>update</name></member>
+      <member refid="classgomaengine_1_1_game_object_1a69d2252488571489c234279b5dba4270" prot="private" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>velocity</name></member>
+      <member refid="classgomaengine_1_1_game_object_1ad39d1d14bb03658d6991a0e325e12869" prot="public" virt="non-virtual"><scope>gomaengine::GameObject</scope><name>~GameObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

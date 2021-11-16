@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vector_0',['Vector',['../structgomaengine_1_1_vector.html',1,'gomaengine']]]
+  ['soundcomponent_0',['SoundComponent',['../classgomaengine_1_1_sound_component.html',1,'gomaengine']]]
 ];
