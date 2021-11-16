@@ -2,7 +2,7 @@ set(GOMAENGINE_HEADERS
 	aplication.h
 	GameObject.h
 	GraphicComponent.h
-	InputComponent.h
+	#InputComponent.h
 	SoundComponent.h
 	#CR_MovableComponent.h
 	Utils.h
@@ -12,7 +12,7 @@ set(GOMAENGINE_SOURCES
 	aplication.cpp
 	GameObject.cpp
 	GraphicComponent.cpp
-	InputComponent.cpp
+	#InputComponent.cpp
 	SoundComponent.cpp
 	#CR_MovableComponent.cpp
 	Utils.cpp

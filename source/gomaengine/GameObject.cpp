@@ -63,14 +63,9 @@ namespace gomaengine {
 
 	GameObject* GameObject::get_me() { return this; }
 
+	void GameObject::is_clicked() { sound_component.play_sound(); };
 
-
-	void GameObject::is_clicked() { sound_component.play_sound(); }
-
-	void GameObject::set_velocity(float _velocity)
-	{
-		velocity = _velocity;
-	}
+	void GameObject::set_velocity(float _velocity) { velocity = _velocity; };
 
 	void GameObject::update(float _delta_time, sf::RenderWindow& _window) {
 	
@@ -78,15 +73,19 @@ namespace gomaengine {
 		this->graphicComponent.update(_window);
 		this->sound_component.update();
 
+		move_to_target(_delta_time);
+		
+	}
 
+	
+	void GameObject::move_to_target(float _delta_time)
+	{
 		Vector difference = target_position.subs(this->position);
-		//std::cout << "\n dif: ";
-		//difference.print();
 		if (difference.magnitude() > velocity) {
 			Vector norm_dif = difference.normalize();
+			std::cout << _delta_time;
 			translate(norm_dif.multiply(velocity));
 		}
-		
 	}
 
 	void GameObject::set_target(Vector _target)

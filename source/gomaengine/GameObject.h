@@ -18,7 +18,7 @@ namespace gomaengine {
 	/** 
 	* Clase que define los modelos del engine.
 	*
-	* Model define las caracteristicas intrisecas de una unidad en el game engine.
+	* GameObject define las caracteristicas intrinsecas de una unidad en el game engine.
 	*
 	*/
 	class GameObject {
@@ -27,22 +27,35 @@ namespace gomaengine {
 			/// Vector que identifica la posicion abstracta del modelo en el juego.
 			/// </summary>
 			Vector position = Vector(0.0f, 0.0f);
+
 			/// <summary>
 			/// Int que define si mira hacia la derecha o la izquierda
 			/// </summary>
 			int orientation = 1;
+
 			/// <summary>
-			/// Textura que define la visualizacion del modelo
+			/// Componente de graficos del modelo
 			/// </summary>
 			GraphicComponent graphicComponent = GraphicComponent("", Vector(0.0, 0.0), Vector(0.0, 0.0));
 
+			/// <summary>
+			/// Componente de sonido del modelo
+			/// </summary>
 			SoundComponent sound_component;
 
+			/// <summary>
+			/// Posicion objetivo en la que deberia estar el modelo en pantalla
+			/// </summary>
 			Vector target_position = Vector(0.0f, 0.0f);
 
+			/// <summary>
+			/// Velocidad del modelo
+			/// </summary>
 			float velocity = 1.0f;
-			//CR_MovableComponent* movable_component;
-
+			
+			/// <summary>
+			/// Nombre del modelo
+			/// </summary>
 			std::string name = "";
 			
 
@@ -52,6 +65,7 @@ namespace gomaengine {
 			/// </summary>
 			/// <returns> Un vector de la posicion del modelo</returns>
 			Vector get_position();
+
 			/// <summary>
 			/// Funcion que retorna la textura usada por el modelo.
 			/// </summary>
@@ -83,14 +97,17 @@ namespace gomaengine {
 			void set_orientation(int _orientation); 
 
 			/// <summary>
-			/// Constructor de Model.
+			/// Constructor de GameObject.
 			/// </summary>
 			/// <param name="_position">Posicion abstracta del modelo</param>
 			/// <param name="_texture"> Textura del modelo</param>
 			/// <param name="_orientation">Orientacion del modelo</param>
 			/// <param name="_soundComponent">Componente de sonido</param>
-			//Model(Vector _position, GraphicComponent _graphicComponent, int _orientation, SoundComponent _soundComponent, CR_MovableComponent* _movableComponent);
 			GameObject(Vector _position, std::string _name, GraphicComponent _graphicComponent, SoundComponent _soundComponent);
+			
+			/// <summary>
+			/// Destructor de GameObject.
+			/// </summary>
 			~GameObject();
 
 			/// <summary>
@@ -105,22 +122,45 @@ namespace gomaengine {
 			/// <returns>Un std string del modelo</returns>
 			std::string get_name();
 
+			/// <summary>
+			/// Funcion que devuelve el componente de sonido
+			/// </summary>
+			/// <returns>SoundComponent devuelto</returns>
 			SoundComponent get_sound_component();
 
-
+			/// <summary>
+			/// Funcion que define la velocidad en el modelo
+			/// </summary>
+			/// <param name="_velocity"></param>
 			void set_velocity(float _velocity);
-			//CR_MovableComponent get_movableCompoment();
 
-			//void insert_movableComponent_data(float _velocity);
-
+			/// <summary>
+			/// Funcion que define algoritmos para cuando el objeto se cliquea
+			/// </summary>
 			void is_clicked();
 
-			//bool has_soundComponent();
-
+			/// <summary>
+			/// Funcion que se devuelve a si mismo
+			/// </summary>
+			/// <returns>This</returns>
 			GameObject* get_me();
 
+			/// <summary>
+			/// Funcion que define la actualizacion del modelo en el gameloop
+			/// </summary>
+			/// <param name="_delta_time">Tiempo entre cada frame</param>
+			/// <param name="_window">Ventana de visualizacion</param>
 			void update(float _delta_time, sf::RenderWindow& _window);
 
+			/// <summary>
+			/// Funcion que mueve el objeto al vector objetivo target
+			/// </summary>
+			void move_to_target(float _delta_time);
+
+			/// <summary>
+			/// Funcion que settea la posicion objetivo del modelo
+			/// </summary>
+			/// <param name="_target">Vector del nuevo objetivo</param>
 			void set_target(Vector _target);
 	};
 	

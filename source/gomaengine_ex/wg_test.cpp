@@ -53,13 +53,13 @@ int main() {
 
     ge::GameObject* pony_model = new ge::GameObject(
         ge::Vector(pony_pos_x, pony_pos_y),
-        "pony",
+        "Guy on a horse",
         pony_gc,
         pony_sc
         
     );
     pony_model->set_velocity(5.0f);
-/*
+
 
  //   //mouse def
     
@@ -68,15 +68,20 @@ int main() {
     float mouse_scale_x = 4; float mouse_scale_y = 4;
     float mouse_speed = 20;
     float mouse_dir = 1;
-    ge::Model* mouse_model = new ge::Model(
-        ge::Vector(mouse_pos_x, mouse_pos_y),
-        ge::Texture(mouse_path,
-            ge::Vector(mouse_pos_x, mouse_pos_y),
-            ge::Vector(mouse_scale_x, mouse_scale_y)), 
-        mouse_dir,
-        ge::SoundComponent(ge::getPath("assets/sounds/horse_sound.wav").string())
-    );
 
+    ge::SoundComponent mouse_sc = ge::SoundComponent(); mouse_sc.insert_clicked(ge::getPath("assets/sounds/animal melee sound.wav").string());
+    ge::GraphicComponent mouse_gc = ge::GraphicComponent(mouse_path, ge::Vector(mouse_pos_x, mouse_pos_y), ge::Vector(mouse_scale_x, mouse_scale_y));
+
+    ge::GameObject* mouse_model = new ge::GameObject(
+        ge::Vector(mouse_pos_x, mouse_pos_y),
+        "Soldier awa",
+        mouse_gc,
+        mouse_sc
+
+    );
+    mouse_model->set_velocity(5.0f);
+
+    /*
  //   //rectUI def
     std::string rectUI_path = ge::getPath("assets/imgs/RECTANGULO_1.png").string();
     float rectUI_pos_x = 35.0; float rectUI_pos_y = 460.0;
@@ -91,28 +96,29 @@ int main() {
         rectUI_dir,
         ge::SoundComponent(ge::getPath("assets/sounds/horse_sound.wav").string())
     );
-
+     */
     //  grass def
     std::string grass_path = ge::getPath("assets/imgs/grass.png").string();
     float grass_pos_x = 60.0; float grass_pos_y = 10.0;
     float grass_scale_x = 9; float grass_scale_y = 9;
     float grass_speed = 20;
     float grass_dir = 1;
-    ge::Model* grass_model = new ge::Model(
+
+    ge::SoundComponent grass_sc = ge::SoundComponent(); grass_sc.insert_clicked(ge::getPath("assets/sounds/animal melee sound.wav").string());
+    ge::GraphicComponent grass_gc = ge::GraphicComponent(grass_path, ge::Vector(grass_pos_x, grass_pos_y), ge::Vector(grass_scale_x, grass_scale_y));
+
+    ge::GameObject* grass_model = new ge::GameObject(
         ge::Vector(grass_pos_x, grass_pos_y),
-        ge::Texture(grass_path,
-            ge::Vector(grass_pos_x, grass_pos_y),
-            ge::Vector(grass_scale_x, grass_scale_y)), 
-        grass_dir,
-        ge::SoundComponent(ge::getPath("assets/sounds/horse_sound.wav").string())
+        "Captain uwu",
+        grass_gc,
+        grass_sc
+
     );
+    grass_model->set_velocity(0.0f);
 
 
-    */
-    //std::vector<ge::Model*> model_vector = { grass_model, rectUI_model, boo_model, pony_model, mouse_model };
-
- 
-    std::vector<ge::GameObject*> model_vector = {boo_model, pony_model};
+   
+    std::vector<ge::GameObject*> model_vector = { grass_model, boo_model, pony_model, mouse_model };
 
 
 
