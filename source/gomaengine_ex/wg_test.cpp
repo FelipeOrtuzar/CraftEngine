@@ -82,6 +82,26 @@ int main() {
     mouse_model->set_velocity(5.0f);
 
 
+    //   //mouse def
+
+    std::string arbol_path = ge::getPath("assets/imgs/spr_tree_0.png").string();
+    float arbol_pos_x = 50.0; float arbol_pos_y = 100.0;
+    float arbol_scale_x = 4; float arbol_scale_y = 4;
+    float arbol_speed = 20;
+    float arbol_dir = 1;
+
+    ge::SoundComponent arbol_sc = ge::SoundComponent(); arbol_sc.insert_clicked(ge::getPath("assets/sounds/animal melee sound.wav").string());
+    ge::GraphicComponent arbol_gc = ge::GraphicComponent(arbol_path, ge::Vector(arbol_pos_x, arbol_pos_y), ge::Vector(arbol_scale_x, arbol_scale_y));
+
+    ge::GameObject* arbol_model = new ge::GameObject(
+        ge::Vector(arbol_pos_x, arbol_pos_y),
+        "Soldier awa",
+        arbol_gc,
+        arbol_sc
+
+    );
+    arbol_model->set_velocity(5.0f);
+
 
     //GX
 
@@ -98,7 +118,7 @@ int main() {
     ge::AnimationComponent gx_ac = ge::AnimationComponent(gx_path, gx_pos,
         gx_sprite_shape, gx_start_position, 6, gx_scale, gx_distance_between_textures);
     
-    gx_ac.link_dir_with_detail(0,   ge::Vector(1, 10), 8);
+    gx_ac.link_dir_with_detail(0,   ge::Vector(1, 10),8);
     gx_ac.link_dir_with_detail(45,  ge::Vector(1, 9), 8);
     gx_ac.link_dir_with_detail(90,  ge::Vector(1, 2), 8);
     gx_ac.link_dir_with_detail(135, ge::Vector(1, 3), 8);
@@ -134,8 +154,8 @@ int main() {
      */
     //  grass def
     std::string grass_path = ge::getPath("assets/imgs/grass.png").string();
-    float grass_pos_x = 60.0; float grass_pos_y = 10.0;
-    float grass_scale_x = 9; float grass_scale_y = 9;
+    float grass_pos_x = 60.0; float grass_pos_y = 30.0;
+    float grass_scale_x = 10; float grass_scale_y = 10;
     float grass_speed = 20;
     float grass_dir = 1;
 
@@ -152,8 +172,51 @@ int main() {
     grass_model->set_velocity(0.0f);
 
 
+
+    std::string roca_path = ge::getPath("assets/imgs/spr_big_rock_0.png").string();
+    float roca_pos_x = 700.0; float roca_pos_y = 400.0;
+    float roca_scale_x = 4; float roca_scale_y = 4;
+    float roca_speed = 20;
+    float roca_dir = 1;
+
+    ge::SoundComponent roca_sc = ge::SoundComponent(); roca_sc.insert_clicked(ge::getPath("assets/sounds/animal melee sound.wav").string());
+    ge::GraphicComponent roca_gc = ge::GraphicComponent(roca_path, ge::Vector(roca_pos_x, roca_pos_y), ge::Vector(roca_scale_x, roca_scale_y));
+
+    ge::GameObject* roca_model = new ge::GameObject(
+        ge::Vector(roca_pos_x, roca_pos_y),
+        "Soldier awa",
+        roca_gc,
+        roca_sc
+
+    );
+    roca_model->set_velocity(5.0f);
+
+
+
+
+    std::string arbusto_path = ge::getPath("assets/imgs/spr_spruce_0.png").string();
+    float arbusto_pos_x = 900.0; float arbusto_pos_y = 200.0;
+    float arbusto_scale_x = 4; float arbusto_scale_y = 4;
+    float arbusto_speed = 20;
+    float arbusto_dir = 1;
+
+    ge::SoundComponent arbusto_sc = ge::SoundComponent(); arbusto_sc.insert_clicked(ge::getPath("assets/sounds/animal melee sound.wav").string());
+    ge::GraphicComponent arbusto_gc = ge::GraphicComponent(arbusto_path, ge::Vector(arbusto_pos_x, arbusto_pos_y), ge::Vector(arbusto_scale_x, arbusto_scale_y));
+
+    ge::GameObject* arbusto_model = new ge::GameObject(
+        ge::Vector(arbusto_pos_x, arbusto_pos_y),
+        "Soldier awa",
+        arbusto_gc,
+        arbusto_sc
+
+    );
+    arbusto_model->set_velocity(5.0f);
+
+
+
+
    
-    std::vector<ge::GameObject*> model_vector = { grass_model, boo_model, pony_model, mouse_model, gx_model};
+    std::vector<ge::GameObject*> model_vector = { grass_model, boo_model, roca_model, arbusto_model, arbol_model, pony_model, mouse_model, gx_model};
 
 
 

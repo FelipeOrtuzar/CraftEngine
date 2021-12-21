@@ -14,7 +14,7 @@ namespace gomaengine {
 
 	int Aplication::update() {
 
-        sf::RenderWindow window(sf::VideoMode(window_app.window_size_x, window_app.window_size_y), "My windoow");
+        sf::RenderWindow window(sf::VideoMode(window_app.window_size_x, window_app.window_size_y), "My window");
 
         sf::View terrain_view(sf::Vector2f(window_app.window_size_x/2.f, window_app.window_size_y / 2.f),
             sf::Vector2f(window_app.window_size_x , window_app.window_size_y));
@@ -70,7 +70,7 @@ namespace gomaengine {
         text2.setString("Clicked object: None");
         // set the character size
         text2.setCharacterSize(24);
-        text2.setPosition(500.0, 500.0);
+        text2.setPosition(800.0, 10.0);
 
 
         //TEXTO3
@@ -82,7 +82,7 @@ namespace gomaengine {
         text3.setString("FPS: None");
         // set the character size
         text3.setCharacterSize(24);
-        text3.setPosition(1050.0, 20.0);
+        text3.setPosition(50.0, 10.0);
 
         sf::Time elapsed_time = sf::seconds(0);
 
