@@ -1,0 +1,59 @@
+\hypertarget{_graphic_component_8h_source}{}\doxysection{Graphic\+Component.\+h}
+\label{_graphic_component_8h_source}\index{source/gomaengine/GraphicComponent.h@{source/gomaengine/GraphicComponent.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Utils.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{namespace }gomaengine \{}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7     }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{12     \textcolor{keyword}{class }\mbox{\hyperlink{classgomaengine_1_1_graphic_component}{GraphicComponent}} \{}
+\DoxyCodeLine{13     \textcolor{keyword}{private}:}
+\DoxyCodeLine{17         sf::Texture* texture;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{22         sf::Sprite* sprite;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27         std::string path\_to\_texture = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{32         sf::Vector2f position;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{37         sf::Vector2f scale;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keyword}{public}:}
+\DoxyCodeLine{46         \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a43aea95d3d1b37e071ec4207f1e0ba6e}{GraphicComponent}}(std::string \_path\_to\_texture, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_scale);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{52         sf::Texture* \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a6d8e3dee786703caf7729c0ec49c6b5e}{get\_texture}}();}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{58         sf::Sprite* \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a900edfd553f8fdf488482758d7704dad}{get\_sprite}}();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{64         std::string \mbox{\hyperlink{classgomaengine_1_1_graphic_component_ad455e63941bf2dbee7b33a9de739f2a4}{get\_path\_to\_texture}}();}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{70         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_aeb5fec2c36cd19cb703c2114da226f01}{get\_position}}();}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{76         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_aa915e39c124efc213680b0fe19064243}{get\_scale}}();}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{82         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_ad9ff3dd294976228c6a1082ad3fd4630}{set\_texture}}(sf::Texture* \_texture);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a40116e59410573c27d160a64be59a99c}{set\_sprite}}(sf::Sprite* \_sprite);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{94         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a51baf21ec5f0c53a7163a268a258e95c}{set\_path\_to\_texture}}(std::string \_path\_to\_texture);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{100         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a7a1b85a01fe69e94157eb3b61537f360}{set\_sprite\_position}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{106         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a708d6eba4c526cb69a936fb1f39e27f8}{set\_sprite\_scale}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_scale);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{111         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_ad26eddc59d388063101ebad999438a42}{load\_resources}}();}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{117         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a60abcce9508d24275db357eb9dba2df4}{translate}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_vector);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{123         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_aa42e6e90f64905ab222858df23fbb366}{update}}(sf::RenderWindow\& \_window);}
+\DoxyCodeLine{124     \};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,111 @@
+\hypertarget{classgomaengine_1_1_animation_component}{}\doxysection{gomaengine\+::Animation\+Component Class Reference}
+\label{classgomaengine_1_1_animation_component}\index{gomaengine::AnimationComponent@{gomaengine::AnimationComponent}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgomaengine_1_1_animation_component_a4280ee91522b81970ce53c7186171299}{Animation\+Component}} (std\+::string \+\_\+path\+\_\+to\+\_\+animation, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+position\+\_\+in\+\_\+world, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+shape\+\_\+size, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+start\+\_\+position, int \+\_\+n\+\_\+sprites, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+scale, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+dist\+\_\+textures)
+\begin{DoxyCompactList}\small\item\em Componente de animacion que debera ser puesto en el modelo, tiene lo necesario para que el modelo provea una animacion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgomaengine_1_1_animation_component_aa05dbe7aa94a2b4c6ec406b0f6768df5}\label{classgomaengine_1_1_animation_component_aa05dbe7aa94a2b4c6ec406b0f6768df5}} 
+{\bfseries Animation\+Component} ()
+\begin{DoxyCompactList}\small\item\em Constructor default de la clase \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgomaengine_1_1_animation_component_aaccae324524b098a43ccf6c91a48f805}\label{classgomaengine_1_1_animation_component_aaccae324524b098a43ccf6c91a48f805}} 
+void {\bfseries load\+\_\+resources} ()
+\begin{DoxyCompactList}\small\item\em Funcion que carga un template inicial de la animacion al principio del update \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgomaengine_1_1_animation_component_a94a0e65f5261b01de7210a388d587c5f}{update\+\_\+animation}} (sf\+::\+Render\+Window \&\+\_\+window, int \+\_\+facing\+\_\+angle, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+new\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Funcion que actualiza el estado de la animacion \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgomaengine_1_1_animation_component_a00c08d2a5973acb121837e45a498823e}{set\+\_\+object\+\_\+angle}} (float \+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Funcion que define el angulo de la animacion \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgomaengine_1_1_animation_component_aabc580dbb0b1f5e35f9b838a2eb58c04}{link\+\_\+dir\+\_\+with\+\_\+detail}} (int \+\_\+angle, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+position, int \+\_\+nframes)
+\begin{DoxyCompactList}\small\item\em Funcion que conecta un angulo a un conjunto de caracteristicas, como la posicion y el numero de frames \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgomaengine_1_1_animation_component_a4280ee91522b81970ce53c7186171299}\label{classgomaengine_1_1_animation_component_a4280ee91522b81970ce53c7186171299}} 
+\index{gomaengine::AnimationComponent@{gomaengine::AnimationComponent}!AnimationComponent@{AnimationComponent}}
+\index{AnimationComponent@{AnimationComponent}!gomaengine::AnimationComponent@{gomaengine::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{AnimationComponent()}{AnimationComponent()}}
+{\footnotesize\ttfamily gomaengine\+::\+Animation\+Component\+::\+Animation\+Component (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+path\+\_\+to\+\_\+animation,  }\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+position\+\_\+in\+\_\+world,  }\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+shape\+\_\+size,  }\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+start\+\_\+position,  }\item[{int}]{\+\_\+n\+\_\+sprites,  }\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+scale,  }\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+dist\+\_\+textures }\end{DoxyParamCaption})}
+
+
+
+Componente de animacion que debera ser puesto en el modelo, tiene lo necesario para que el modelo provea una animacion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+path\+\_\+to\+\_\+animation} & Path al archivo de animacion\\
+\hline
+{\em \+\_\+position\+\_\+in\+\_\+world} & Posicion de la animacion en el mundo\\
+\hline
+{\em \+\_\+shape\+\_\+size} & tamanho de los sprites en la animacion\\
+\hline
+{\em \+\_\+start\+\_\+position} & Posicion offset para ajustar los sprites \\
+\hline
+{\em \+\_\+n\+\_\+sprites} & Cantidad sprites por animacion\\
+\hline
+{\em \+\_\+scale} & tamanho de los sprites en el mundo\\
+\hline
+{\em \+\_\+dist\+\_\+textures} & Distancia entre diferentes sprites dentro de la animacion\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgomaengine_1_1_animation_component_aabc580dbb0b1f5e35f9b838a2eb58c04}\label{classgomaengine_1_1_animation_component_aabc580dbb0b1f5e35f9b838a2eb58c04}} 
+\index{gomaengine::AnimationComponent@{gomaengine::AnimationComponent}!link\_dir\_with\_detail@{link\_dir\_with\_detail}}
+\index{link\_dir\_with\_detail@{link\_dir\_with\_detail}!gomaengine::AnimationComponent@{gomaengine::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{link\_dir\_with\_detail()}{link\_dir\_with\_detail()}}
+{\footnotesize\ttfamily void gomaengine\+::\+Animation\+Component\+::link\+\_\+dir\+\_\+with\+\_\+detail (\begin{DoxyParamCaption}\item[{int}]{\+\_\+angle,  }\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+position,  }\item[{int}]{\+\_\+nframes }\end{DoxyParamCaption})}
+
+
+
+Funcion que conecta un angulo a un conjunto de caracteristicas, como la posicion y el numero de frames 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+angle} & Angulo en grados que es la llave del mapeo\\
+\hline
+{\em \+\_\+position} & Posicion cardinal del sprite en la imagen de la animacion\\
+\hline
+{\em \+\_\+nframes} & Cantidad de sprites que tiene esta par angulo-\/animacion\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgomaengine_1_1_animation_component_a00c08d2a5973acb121837e45a498823e}\label{classgomaengine_1_1_animation_component_a00c08d2a5973acb121837e45a498823e}} 
+\index{gomaengine::AnimationComponent@{gomaengine::AnimationComponent}!set\_object\_angle@{set\_object\_angle}}
+\index{set\_object\_angle@{set\_object\_angle}!gomaengine::AnimationComponent@{gomaengine::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{set\_object\_angle()}{set\_object\_angle()}}
+{\footnotesize\ttfamily void gomaengine\+::\+Animation\+Component\+::set\+\_\+object\+\_\+angle (\begin{DoxyParamCaption}\item[{float}]{\+\_\+angle }\end{DoxyParamCaption})}
+
+
+
+Funcion que define el angulo de la animacion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+angle} & Nuevo angulo\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgomaengine_1_1_animation_component_a94a0e65f5261b01de7210a388d587c5f}\label{classgomaengine_1_1_animation_component_a94a0e65f5261b01de7210a388d587c5f}} 
+\index{gomaengine::AnimationComponent@{gomaengine::AnimationComponent}!update\_animation@{update\_animation}}
+\index{update\_animation@{update\_animation}!gomaengine::AnimationComponent@{gomaengine::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{update\_animation()}{update\_animation()}}
+{\footnotesize\ttfamily void gomaengine\+::\+Animation\+Component\+::update\+\_\+animation (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{\+\_\+window,  }\item[{int}]{\+\_\+facing\+\_\+angle,  }\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+new\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Funcion que actualiza el estado de la animacion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+window} & Ventana donde dibujar la animacion\\
+\hline
+{\em \+\_\+facing\+\_\+angle} & Angulo al que debe dibujarse la animacion\\
+\hline
+{\em \+\_\+new\+\_\+pos} & Nueva posicion donde debe dibujarse la animacion\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/gomaengine/Animation\+Component.\+h\item 
+source/gomaengine/Animation\+Component.\+cpp\end{DoxyCompactItemize}

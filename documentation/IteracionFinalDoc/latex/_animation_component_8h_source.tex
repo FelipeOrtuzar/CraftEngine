@@ -1,0 +1,93 @@
+\hypertarget{_animation_component_8h_source}{}\doxysection{Animation\+Component.\+h}
+\label{_animation_component_8h_source}\index{source/gomaengine/AnimationComponent.h@{source/gomaengine/AnimationComponent.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Utils.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }gomaengine \{}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11     \textcolor{keyword}{struct }\mbox{\hyperlink{structgomaengine_1_1_animation__detail}{Animation\_detail}} \{}
+\DoxyCodeLine{12     }
+\DoxyCodeLine{16         \textcolor{keywordtype}{int} \mbox{\hyperlink{structgomaengine_1_1_animation__detail_a907350a54153002ad8d545e1a3a76b84}{nframes}};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{21         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{structgomaengine_1_1_animation__detail_aaa926529a9db99de6a552800832c13f7}{sprite\_pos}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{26         \textcolor{keywordtype}{int} \mbox{\hyperlink{structgomaengine_1_1_animation__detail_ad69d39b92eb937acc5a0ef2b2e0bf548}{cur\_frame}} = 0;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{structgomaengine_1_1_animation__detail_adfb2d63ac0a6b67ad495a1f4fa53bfad}{next\_frame}}() \{}
+\DoxyCodeLine{32             \textcolor{keywordflow}{if} (\mbox{\hyperlink{structgomaengine_1_1_animation__detail_ad69d39b92eb937acc5a0ef2b2e0bf548}{cur\_frame}} >= \mbox{\hyperlink{structgomaengine_1_1_animation__detail_a907350a54153002ad8d545e1a3a76b84}{nframes}}) \{ }
+\DoxyCodeLine{33                 \mbox{\hyperlink{structgomaengine_1_1_animation__detail_ad69d39b92eb937acc5a0ef2b2e0bf548}{cur\_frame}} = 0; }
+\DoxyCodeLine{34             \}}
+\DoxyCodeLine{35             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{36                 \mbox{\hyperlink{structgomaengine_1_1_animation__detail_ad69d39b92eb937acc5a0ef2b2e0bf548}{cur\_frame}}++; }
+\DoxyCodeLine{37             \}}
+\DoxyCodeLine{38             }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40         \}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46         \textcolor{keywordtype}{int} \mbox{\hyperlink{structgomaengine_1_1_animation__detail_a10334017e9ca9e79b53a93c8b76f8550}{get\_frame}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structgomaengine_1_1_animation__detail_ad69d39b92eb937acc5a0ef2b2e0bf548}{cur\_frame}}; \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         }
+\DoxyCodeLine{49             }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keyword}{class }\mbox{\hyperlink{classgomaengine_1_1_animation_component}{AnimationComponent}} \{}
+\DoxyCodeLine{56     \textcolor{keyword}{private}:}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{61         sf::Texture* texture;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66         sf::Sprite* sprite;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{71         sf::Vector2f scale;}
+\DoxyCodeLine{72         }
+\DoxyCodeLine{76         sf::Vector2f position;}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{81         std::string path\_to\_animation;}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} shape\_size;}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{91         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} dist\_between\_texture;}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{96         \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} offset\_position;}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{101         \textcolor{keywordtype}{int} n\_sprites;}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103         \textcolor{comment}{//bool walkable = 0;}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{108         \textcolor{keywordtype}{int} object\_angle = 0;}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{113         \textcolor{keywordtype}{int} angle\_delta = 10;}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{118         std::map<int, Animation\_detail> map\_to\_anim\_detail = std::map<int, Animation\_detail>();}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{123         \textcolor{keywordtype}{float} change\_rate = 0.2f;}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{128         \textcolor{keywordtype}{float} start\_change = 0.0f;}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130          }
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132     \textcolor{keyword}{public}:}
+\DoxyCodeLine{143         \mbox{\hyperlink{classgomaengine_1_1_animation_component_aa05dbe7aa94a2b4c6ec406b0f6768df5}{AnimationComponent}}(std::string \_path\_to\_animation, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position\_in\_world, }
+\DoxyCodeLine{144             \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_shape\_size, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_start\_position, \textcolor{keywordtype}{int} \_n\_sprites, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_scale, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_dist\_textures);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{149         \mbox{\hyperlink{classgomaengine_1_1_animation_component_aa05dbe7aa94a2b4c6ec406b0f6768df5}{AnimationComponent}}();}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{154         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_animation_component_aaccae324524b098a43ccf6c91a48f805}{load\_resources}}();}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{162         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_animation_component_a94a0e65f5261b01de7210a388d587c5f}{update\_animation}}(sf::RenderWindow\& \_window, \textcolor{keywordtype}{int} \_facing\_angle, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_new\_pos);}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{168         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_animation_component_a00c08d2a5973acb121837e45a498823e}{set\_object\_angle}}(\textcolor{keywordtype}{float} \_angle);}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{176         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_animation_component_aabc580dbb0b1f5e35f9b838a2eb58c04}{link\_dir\_with\_detail}}(\textcolor{keywordtype}{int} \_angle, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position, \textcolor{keywordtype}{int} \_nframes);}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178         \textcolor{comment}{//static int get\_closest(int \_value, std::list<int> \_list);}}
+\DoxyCodeLine{179     \};}
+\DoxyCodeLine{180 \}}
+
+\end{DoxyCode}

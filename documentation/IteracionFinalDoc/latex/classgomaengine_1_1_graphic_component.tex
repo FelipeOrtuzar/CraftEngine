@@ -1,0 +1,252 @@
+\hypertarget{classgomaengine_1_1_graphic_component}{}\doxysection{gomaengine\+::Graphic\+Component Class Reference}
+\label{classgomaengine_1_1_graphic_component}\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+
+
+Class para definir la textura de un objeto  
+
+
+
+
+{\ttfamily \#include $<$Graphic\+Component.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgomaengine_1_1_graphic_component_a43aea95d3d1b37e071ec4207f1e0ba6e}{Graphic\+Component}} (std\+::string \+\_\+path\+\_\+to\+\_\+texture, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+position, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase Texture \end{DoxyCompactList}\item 
+sf\+::\+Texture $\ast$ \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a6d8e3dee786703caf7729c0ec49c6b5e}{get\+\_\+texture}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que obtiene la textura \end{DoxyCompactList}\item 
+sf\+::\+Sprite $\ast$ \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a900edfd553f8fdf488482758d7704dad}{get\+\_\+sprite}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que devuelve el sprite \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classgomaengine_1_1_graphic_component_ad455e63941bf2dbee7b33a9de739f2a4}{get\+\_\+path\+\_\+to\+\_\+texture}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que retorna el string de la direccion en memoria del archivo de la textura \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_aeb5fec2c36cd19cb703c2114da226f01}{get\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que retorna el \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{classgomaengine_1_1_graphic_component_aa915e39c124efc213680b0fe19064243}{get\+\_\+scale}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que retorna el \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} del escalamiento de la textura \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgomaengine_1_1_graphic_component_ad9ff3dd294976228c6a1082ad3fd4630}{set\+\_\+texture}} (sf\+::\+Texture $\ast$\+\_\+texture)
+\begin{DoxyCompactList}\small\item\em Funcion que establece la textura \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a40116e59410573c27d160a64be59a99c}{set\+\_\+sprite}} (sf\+::\+Sprite $\ast$\+\_\+sprite)
+\begin{DoxyCompactList}\small\item\em Funcion que establece el sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a51baf21ec5f0c53a7163a268a258e95c}{set\+\_\+path\+\_\+to\+\_\+texture}} (std\+::string \+\_\+path\+\_\+to\+\_\+texture)
+\begin{DoxyCompactList}\small\item\em Funcion que establece el string de la direccion de memoria del archivo usado en la textura \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a7a1b85a01fe69e94157eb3b61537f360}{set\+\_\+sprite\+\_\+position}} (\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+position)
+\begin{DoxyCompactList}\small\item\em Funcion que establece la posicion del sprite de la textura \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a708d6eba4c526cb69a936fb1f39e27f8}{set\+\_\+sprite\+\_\+scale}} (\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Funcion que establece la escala del sprite en la textura \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_ad26eddc59d388063101ebad999438a42}\label{classgomaengine_1_1_graphic_component_ad26eddc59d388063101ebad999438a42}} 
+void {\bfseries load\+\_\+resources} ()
+\begin{DoxyCompactList}\small\item\em Funcion que carga los atributos y genera lo objetos en la textura \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgomaengine_1_1_graphic_component_a60abcce9508d24275db357eb9dba2df4}{translate}} (\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Funcion para mover de posicion la posicion de la textura \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgomaengine_1_1_graphic_component_aa42e6e90f64905ab222858df23fbb366}{update}} (sf\+::\+Render\+Window \&\+\_\+window)
+\begin{DoxyCompactList}\small\item\em Funcion que es llamada para actualizar las variables graficas \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class para definir la textura de un objeto 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_a43aea95d3d1b37e071ec4207f1e0ba6e}\label{classgomaengine_1_1_graphic_component_a43aea95d3d1b37e071ec4207f1e0ba6e}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!GraphicComponent@{GraphicComponent}}
+\index{GraphicComponent@{GraphicComponent}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{GraphicComponent()}{GraphicComponent()}}
+{\footnotesize\ttfamily gomaengine\+::\+Graphic\+Component\+::\+Graphic\+Component (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+path\+\_\+to\+\_\+texture,  }\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+position,  }\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+scale }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase Texture 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+path\+\_\+to\+\_\+texture} & String de la direccion en memoria del archivo\\
+\hline
+{\em \+\_\+position} & \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} con la posicion de la textura en pantalla\\
+\hline
+{\em \+\_\+scale} & \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} con el escalamiento de la textura\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_ad455e63941bf2dbee7b33a9de739f2a4}\label{classgomaengine_1_1_graphic_component_ad455e63941bf2dbee7b33a9de739f2a4}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!get\_path\_to\_texture@{get\_path\_to\_texture}}
+\index{get\_path\_to\_texture@{get\_path\_to\_texture}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{get\_path\_to\_texture()}{get\_path\_to\_texture()}}
+{\footnotesize\ttfamily std\+::string gomaengine\+::\+Graphic\+Component\+::get\+\_\+path\+\_\+to\+\_\+texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcion que retorna el string de la direccion en memoria del archivo de la textura 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_aeb5fec2c36cd19cb703c2114da226f01}\label{classgomaengine_1_1_graphic_component_aeb5fec2c36cd19cb703c2114da226f01}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} gomaengine\+::\+Graphic\+Component\+::get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcion que retorna el 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} de la posicion de la textura 
+\end{DoxySeeAlso}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} de la posicion
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_aa915e39c124efc213680b0fe19064243}\label{classgomaengine_1_1_graphic_component_aa915e39c124efc213680b0fe19064243}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!get\_scale@{get\_scale}}
+\index{get\_scale@{get\_scale}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{get\_scale()}{get\_scale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} gomaengine\+::\+Graphic\+Component\+::get\+\_\+scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcion que retorna el \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} del escalamiento de la textura 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} de escalamiento
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_a900edfd553f8fdf488482758d7704dad}\label{classgomaengine_1_1_graphic_component_a900edfd553f8fdf488482758d7704dad}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!get\_sprite@{get\_sprite}}
+\index{get\_sprite@{get\_sprite}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{get\_sprite()}{get\_sprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite $\ast$ gomaengine\+::\+Graphic\+Component\+::get\+\_\+sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcion que devuelve el sprite 
+
+\begin{DoxyReturn}{Returns}
+El sprite de la libreria SFML
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_a6d8e3dee786703caf7729c0ec49c6b5e}\label{classgomaengine_1_1_graphic_component_a6d8e3dee786703caf7729c0ec49c6b5e}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!get\_texture@{get\_texture}}
+\index{get\_texture@{get\_texture}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{get\_texture()}{get\_texture()}}
+{\footnotesize\ttfamily sf\+::\+Texture $\ast$ gomaengine\+::\+Graphic\+Component\+::get\+\_\+texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcion que obtiene la textura 
+
+\begin{DoxyReturn}{Returns}
+Textura de la libreria SFML
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_a51baf21ec5f0c53a7163a268a258e95c}\label{classgomaengine_1_1_graphic_component_a51baf21ec5f0c53a7163a268a258e95c}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!set\_path\_to\_texture@{set\_path\_to\_texture}}
+\index{set\_path\_to\_texture@{set\_path\_to\_texture}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{set\_path\_to\_texture()}{set\_path\_to\_texture()}}
+{\footnotesize\ttfamily void gomaengine\+::\+Graphic\+Component\+::set\+\_\+path\+\_\+to\+\_\+texture (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+path\+\_\+to\+\_\+texture }\end{DoxyParamCaption})}
+
+
+
+Funcion que establece el string de la direccion de memoria del archivo usado en la textura 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+path\+\_\+to\+\_\+texture} & String de la direccion\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_a40116e59410573c27d160a64be59a99c}\label{classgomaengine_1_1_graphic_component_a40116e59410573c27d160a64be59a99c}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!set\_sprite@{set\_sprite}}
+\index{set\_sprite@{set\_sprite}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{set\_sprite()}{set\_sprite()}}
+{\footnotesize\ttfamily void gomaengine\+::\+Graphic\+Component\+::set\+\_\+sprite (\begin{DoxyParamCaption}\item[{sf\+::\+Sprite $\ast$}]{\+\_\+sprite }\end{DoxyParamCaption})}
+
+
+
+Funcion que establece el sprite 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sprite} & Sprite a establecer\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_a7a1b85a01fe69e94157eb3b61537f360}\label{classgomaengine_1_1_graphic_component_a7a1b85a01fe69e94157eb3b61537f360}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!set\_sprite\_position@{set\_sprite\_position}}
+\index{set\_sprite\_position@{set\_sprite\_position}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{set\_sprite\_position()}{set\_sprite\_position()}}
+{\footnotesize\ttfamily void gomaengine\+::\+Graphic\+Component\+::set\+\_\+sprite\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Funcion que establece la posicion del sprite de la textura 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+position} & \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} de la nueva posicion\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_a708d6eba4c526cb69a936fb1f39e27f8}\label{classgomaengine_1_1_graphic_component_a708d6eba4c526cb69a936fb1f39e27f8}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!set\_sprite\_scale@{set\_sprite\_scale}}
+\index{set\_sprite\_scale@{set\_sprite\_scale}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{set\_sprite\_scale()}{set\_sprite\_scale()}}
+{\footnotesize\ttfamily void gomaengine\+::\+Graphic\+Component\+::set\+\_\+sprite\+\_\+scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+scale }\end{DoxyParamCaption})}
+
+
+
+Funcion que establece la escala del sprite en la textura 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+scale} & \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} de la escala\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_ad9ff3dd294976228c6a1082ad3fd4630}\label{classgomaengine_1_1_graphic_component_ad9ff3dd294976228c6a1082ad3fd4630}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!set\_texture@{set\_texture}}
+\index{set\_texture@{set\_texture}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{set\_texture()}{set\_texture()}}
+{\footnotesize\ttfamily void gomaengine\+::\+Graphic\+Component\+::set\+\_\+texture (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{\+\_\+texture }\end{DoxyParamCaption})}
+
+
+
+Funcion que establece la textura 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+texture} & La textura a establecer\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_a60abcce9508d24275db357eb9dba2df4}\label{classgomaengine_1_1_graphic_component_a60abcce9508d24275db357eb9dba2df4}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!translate@{translate}}
+\index{translate@{translate}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void gomaengine\+::\+Graphic\+Component\+::translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}}]{\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Funcion para mover de posicion la posicion de la textura 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vector} & Delta distancia\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgomaengine_1_1_graphic_component_aa42e6e90f64905ab222858df23fbb366}\label{classgomaengine_1_1_graphic_component_aa42e6e90f64905ab222858df23fbb366}} 
+\index{gomaengine::GraphicComponent@{gomaengine::GraphicComponent}!update@{update}}
+\index{update@{update}!gomaengine::GraphicComponent@{gomaengine::GraphicComponent}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void gomaengine\+::\+Graphic\+Component\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{\+\_\+window }\end{DoxyParamCaption})}
+
+
+
+Funcion que es llamada para actualizar las variables graficas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+window} & Ventana de visualizacion en la que se dibujara\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/gomaengine/Graphic\+Component.\+h\item 
+source/gomaengine/Graphic\+Component.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{_game_object_8h_source}{}\doxysection{Game\+Object.\+h}
+\label{_game_object_8h_source}\index{source/gomaengine/GameObject.h@{source/gomaengine/GameObject.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}GraphicComponent.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}SoundComponent.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}AnimationComponent.h"{}}}
+\DoxyCodeLine{8 \textcolor{comment}{//\#include "{}CR\_MovableComponent.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{comment}{//class CR\_MovableComponent;}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }gomaengine \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18     \textcolor{keyword}{class }\mbox{\hyperlink{classgomaengine_1_1_game_object}{GameObject}} \{}
+\DoxyCodeLine{19         \textcolor{keyword}{private}:}
+\DoxyCodeLine{23             \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} position = \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(0.0f, 0.0f);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{28             \textcolor{keywordtype}{int} orientation = 1;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{33             \mbox{\hyperlink{classgomaengine_1_1_graphic_component}{GraphicComponent}} graphicComponent = \mbox{\hyperlink{classgomaengine_1_1_graphic_component}{GraphicComponent}}(\textcolor{stringliteral}{"{}"{}}, \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(0.0, 0.0), \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(0.0, 0.0));}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{38             \mbox{\hyperlink{classgomaengine_1_1_sound_component}{SoundComponent}} sound\_component;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43             \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} target\_position = \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}}(0.0f, 0.0f);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48             \textcolor{keywordtype}{float} velocity = 1.0f;}
+\DoxyCodeLine{49             }
+\DoxyCodeLine{53             std::string name = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58             \mbox{\hyperlink{classgomaengine_1_1_animation_component}{AnimationComponent}} animation\_component;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63             \textcolor{keywordtype}{bool} has\_graphic\_component = 0;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{68             \textcolor{keywordtype}{bool} has\_animation\_component = 0;}
+\DoxyCodeLine{69             }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71         \textcolor{keyword}{public}:}
+\DoxyCodeLine{76             \mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \mbox{\hyperlink{classgomaengine_1_1_game_object_a76cf69ff1dc2701dce763fb9b76aa75c}{get\_position}}();}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{82             \mbox{\hyperlink{classgomaengine_1_1_graphic_component}{GraphicComponent}} \mbox{\hyperlink{classgomaengine_1_1_game_object_a38987365e507d8ddf7f30c8c2e11a9a1}{get\_texture}}();}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88             \textcolor{keywordtype}{int} \mbox{\hyperlink{classgomaengine_1_1_game_object_ac1d14b21cbe294e8a51d1f7e2e32be70}{get\_orientation}}();}
+\DoxyCodeLine{89             }
+\DoxyCodeLine{94             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_game_object_a9d598e1af60093b7929e3f8fa677a7f5}{set\_position}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{100             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_game_object_ad02abbb592ff3f568916957c2c191653}{set\_graphicComponent}}(\mbox{\hyperlink{classgomaengine_1_1_graphic_component}{GraphicComponent}} \_graphicComponent);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{106             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_game_object_aed1f44e92f4b1d6b23a94ce108288a4d}{set\_orientation}}(\textcolor{keywordtype}{int} \_orientation); }
+\DoxyCodeLine{107 }
+\DoxyCodeLine{115             \mbox{\hyperlink{classgomaengine_1_1_game_object_a9adcd34c7ea1f7f128de819a1f2858b4}{GameObject}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position, std::string \_name, \mbox{\hyperlink{classgomaengine_1_1_graphic_component}{GraphicComponent}} \_graphicComponent, \mbox{\hyperlink{classgomaengine_1_1_sound_component}{SoundComponent}} \_soundComponent);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{124             \mbox{\hyperlink{classgomaengine_1_1_game_object_a9adcd34c7ea1f7f128de819a1f2858b4}{GameObject}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_position, std::string \_name, \mbox{\hyperlink{classgomaengine_1_1_animation_component}{AnimationComponent}} \_animationComponent, \mbox{\hyperlink{classgomaengine_1_1_sound_component}{SoundComponent}} \_soundComponent);}
+\DoxyCodeLine{125             }
+\DoxyCodeLine{129             \mbox{\hyperlink{classgomaengine_1_1_game_object_ad39d1d14bb03658d6991a0e325e12869}{\string~GameObject}}();}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{135             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_game_object_a5d6a414003baa21722254cb98a7905f3}{translate}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_delta\_pos);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{141             std::string \mbox{\hyperlink{classgomaengine_1_1_game_object_a70c438101a5b5c9bf7f3cf7eb4639330}{get\_name}}();}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{147             \mbox{\hyperlink{classgomaengine_1_1_sound_component}{SoundComponent}} \mbox{\hyperlink{classgomaengine_1_1_game_object_a41d626a5d5dd0a2bdad070da6caee532}{get\_sound\_component}}();}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{153             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_game_object_a169057587a1dea4dbb6fdf0fcad6c0c9}{set\_velocity}}(\textcolor{keywordtype}{float} \_velocity);}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{158             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_game_object_a22b648b13c2bb159647510adcdc6ef08}{is\_clicked}}();}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{164             \mbox{\hyperlink{classgomaengine_1_1_game_object}{GameObject}}* \mbox{\hyperlink{classgomaengine_1_1_game_object_ab8fb5f67a845327161507739f1dcfc07}{get\_me}}();}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{171             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_game_object_a8e6c00070d22715d09df577f2a3610de}{update}}(\textcolor{keywordtype}{float} \_delta\_time, sf::RenderWindow\& \_window);}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{176             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_game_object_a2ab104eaa6cd2e1d58f6a5d5d4b6e8a3}{move\_to\_target}}(\textcolor{keywordtype}{float} \_delta\_time);}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{182             \textcolor{keywordtype}{void} \mbox{\hyperlink{classgomaengine_1_1_game_object_a4f88fee54cbf9a371558c2af073185da}{set\_target}}(\mbox{\hyperlink{structgomaengine_1_1_vector}{Vector}} \_target);}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{188             \textcolor{keywordtype}{float} \mbox{\hyperlink{classgomaengine_1_1_game_object_a28cd01e8eeec3a32450a9419221241e0}{get\_angle}}();}
+\DoxyCodeLine{189     \};}
+\DoxyCodeLine{190     }
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \};}
+
+\end{DoxyCode}
