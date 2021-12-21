@@ -4,6 +4,7 @@
 #include <SFML/Window.hpp>
 #include "GraphicComponent.h"
 #include "SoundComponent.h"
+#include "AnimationComponent.h"
 //#include "CR_MovableComponent.h"
 #include <SFML/Audio.hpp>
 
@@ -50,6 +51,21 @@ namespace gomaengine {
 			/// Nombre del modelo
 			/// </summary>
 			std::string name = "";
+
+			/// <summary>
+			/// Componente de animacion del modelo
+			/// </summary>
+			AnimationComponent animation_component;
+
+			/// <summary>
+			/// Booleano sobre si el modelo tiene componente grafico
+			/// </summary>
+			bool has_graphic_component = 0;
+
+			/// <summary>
+			/// Booleano sobre si el modelo tiene componente de animacion
+			/// </summary>
+			bool has_animation_component = 0;
 			
 
 		public:
@@ -90,13 +106,22 @@ namespace gomaengine {
 			void set_orientation(int _orientation); 
 
 			/// <summary>
-			/// Constructor de GameObject.
+			/// Constructor de GameObject cuando tiene un componente grafico.
 			/// </summary>
-			/// <param name="_position">Posicion abstracta del modelo</param>
-			/// <param name="_texture"> Textura del modelo</param>
-			/// <param name="_orientation">Orientacion del modelo</param>
-			/// <param name="_soundComponent">Componente de sonido</param>
+			/// <param name="_position">Posicion en el que se dibujara el modelo</param>
+			/// <param name="_name">Nombre del modelo</param>
+			/// <param name="_graphicComponent">Componente grafico del modelo</param>
+			/// <param name="_soundComponent">Componente de sonido del modelo</param>
 			GameObject(Vector _position, std::string _name, GraphicComponent _graphicComponent, SoundComponent _soundComponent);
+
+			/// <summary>
+			/// Constructor de GameObject cuando tiene un componente animado.
+			/// </summary>
+			/// <param name="_position">Posicion en el que se dibujara el modelo</param>
+			/// <param name="_name">Nombre del modelo</param>
+			/// <param name="_graphicComponent">Componente de animacion del modelo</param>
+			/// <param name="_soundComponent">Componente de sonido del modelo</param>
+			GameObject(Vector _position, std::string _name, AnimationComponent _animationComponent, SoundComponent _soundComponent);
 			
 			/// <summary>
 			/// Destructor de GameObject.
@@ -155,6 +180,12 @@ namespace gomaengine {
 			/// </summary>
 			/// <param name="_target">Vector del nuevo objetivo</param>
 			void set_target(Vector _target);
+
+			/// <summary>
+			/// Funcion que devuelve la direccion en angulos del objeto
+			/// </summary>
+			/// <returns>El angulo en grados</returns>
+			float get_angle();
 	};
 	
 

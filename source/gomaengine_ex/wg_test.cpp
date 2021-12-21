@@ -81,6 +81,41 @@ int main() {
     );
     mouse_model->set_velocity(5.0f);
 
+
+
+    //GX
+
+    std::string gx_path = ge::getPath("assets/imgs/ACrossAnimations_fixed2.png").string();
+    ge::Vector gx_pos = ge::Vector(200.0, 300.0);
+    ge::Vector gx_sprite_shape = ge::Vector(50.0, 80.0);
+    ge::Vector gx_start_position = ge::Vector(27.0,  20.0);
+    ge::Vector gx_distance_between_textures = ge::Vector(100.0, 100.0);
+    ge::Vector gx_scale = ge::Vector(1.0, 1.0);
+    float gx_speed = 20;
+    float gx_dir = 1;
+
+    ge::SoundComponent gx_sc = ge::SoundComponent(); mouse_sc.insert_clicked(ge::getPath("assets/sounds/animal melee sound.wav").string());
+    ge::AnimationComponent gx_ac = ge::AnimationComponent(gx_path, gx_pos,
+        gx_sprite_shape, gx_start_position, 6, gx_scale, gx_distance_between_textures);
+    
+    gx_ac.link_dir_with_detail(0,   ge::Vector(1, 10), 8);
+    gx_ac.link_dir_with_detail(45,  ge::Vector(1, 9), 8);
+    gx_ac.link_dir_with_detail(90,  ge::Vector(1, 2), 8);
+    gx_ac.link_dir_with_detail(135, ge::Vector(1, 3), 8);
+    gx_ac.link_dir_with_detail(180, ge::Vector(1, 4), 8);
+    gx_ac.link_dir_with_detail(225, ge::Vector(1, 5), 8);
+    gx_ac.link_dir_with_detail(270, ge::Vector(1, 6), 8);
+    gx_ac.link_dir_with_detail(315, ge::Vector(1, 11), 8);
+
+    ge::GameObject* gx_model = new ge::GameObject(
+        gx_pos,
+        "Gx",
+        gx_ac,
+        gx_sc
+
+    );
+    gx_model->set_velocity(5.0f);
+
     /*
  //   //rectUI def
     std::string rectUI_path = ge::getPath("assets/imgs/RECTANGULO_1.png").string();
@@ -118,7 +153,7 @@ int main() {
 
 
    
-    std::vector<ge::GameObject*> model_vector = { grass_model, boo_model, pony_model, mouse_model };
+    std::vector<ge::GameObject*> model_vector = { grass_model, boo_model, pony_model, mouse_model, gx_model};
 
 
 

@@ -126,7 +126,29 @@ namespace gomaengine {
         bool eq(Vector _vector) {
             return x == _vector.x && y == _vector.y;
         }
+
+        /// <summary>
+        /// Funcion que calcula el angulo a partir de un vector
+        /// </summary>
+        /// <returns>Angulo en grados</returns>
+        float get_deg_angle() {
+            if (!x) {
+                x += 0.0000000001f;
+            }
+            int neg = 0;
+            if (x < 0) { neg = 180; }
+
+            float ret = std::atan(y / x) * 180.0f / M_PI + neg;
+
+            while (ret < 0) { ret += 360; }
+            return ret;
+        
+        }
     };
+
+
+
+    
 
     /// <summary>
     /// Mapa de componentes

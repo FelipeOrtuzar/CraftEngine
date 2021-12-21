@@ -15,11 +15,26 @@ namespace gomaengine {
 		graphicComponent = _graphicComponent;
 		orientation = 1;
 		sound_component = _soundComponent;
+		animation_component = AnimationComponent();
 		name = _name;
+		has_graphic_component = 1;
 
 		//movable_component = _movableComponent;
 		
 	};
+
+	GameObject::GameObject(Vector _position, std::string _name, AnimationComponent _animationComponent, SoundComponent _soundComponent) {
+		std::cout << "Constructor Model\n";
+		position = _position;
+		target_position = _position;
+		animation_component = _animationComponent;
+		orientation = 1;
+		sound_component = _soundComponent;
+		name = _name;
+		has_animation_component = 1;
+	
+	}
+
 
 	GameObject::~GameObject() {
 		std::cout << "Destructor of Model\n";
@@ -70,10 +85,17 @@ namespace gomaengine {
 	void GameObject::update(float _delta_time, sf::RenderWindow& _window) {
 	
 
-		this->graphicComponent.update(_window);
-		this->sound_component.update();
+
+		
 
 		move_to_target(_delta_time);
+
+		if (has_graphic_component) this->graphicComponent.update(_window);
+		float new_angle = get_angle();
+		//std::cout << "new_angle: " << new_angle << "\n";
+		if (has_animation_component) this->animation_component.update_animation(_window, new_angle, position);
+
+		this->sound_component.update();
 		
 	}
 
@@ -91,6 +113,13 @@ namespace gomaengine {
 	void GameObject::set_target(Vector _target)
 	{
 		target_position = _target;
+	}
+
+	float GameObject::get_angle() {
+		Vector difference = target_position.subs(this->position);
+		float angle = difference.get_deg_angle();
+		//std::cout <<"Angle: "<< angle << "Difx: " << difference.x << "Dify: " << difference.y << "\n";
+		return angle;
 	}
 
 	/*bool Model::has_soundComponent() {
